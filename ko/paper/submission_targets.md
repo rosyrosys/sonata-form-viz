@@ -1,100 +1,147 @@
-# 투고 대상 학술지 추천
+# 학술지·학술대회 투고 가이드 (Sonata Form Visualization)
 
-논문의 성격 — *음악교육 + 소프트웨어 구현 + 사용성 평가* — 을 고려해 다음 4티어로 추천합니다.
-**Tier A** 가 가장 적합도가 높고, **Tier D** 는 확장판이나 대안 트랙입니다.
+본 논문은 *세 영역의 교차점* 에 위치합니다:
+- **음악 교육공학** (학습 효과 평가, 교육 도구)
+- **디지털 음악학 / MIR** (MusicXML, OSMD, 형식 분석 데이터셋)
+- **멀티미디어·HCI** (악보-음원 동기화, 다중 표상 인터페이스, 사용성)
 
----
-
-## Tier A. 음악교육 + 테크놀로지 (1순위)
-
-### 1. *Journal of Music, Technology and Education* (JMTE) — Intellect, UK
-- **추천 이유**: 본 논문의 주제(악보 시각화, 음원 동기화 학습 도구)와 **거의 정확히** 일치하는 저널.
-  과거에 Soundslice 류 도구, 디지털 악보 인터랙션, 형식 시각화 등의 논문이 다수 게재됨.
-- **분량**: 6,000–8,000 단어, 그림·코드 포함 가능
-- **심사**: 더블블라인드 피어리뷰, 평균 3–4개월
-- **언어**: 영어
-- **레벨**: SCOPUS, ERIH PLUS 등재. 음악교육공학 분야의 *기준 저널*.
-- **권장 액션**: 그림 4장(시스템 개관, 타임라인, 악보 커서, 평가 결과 막대그래프) 보강 + 영문 번역.
-
-### 2. *International Journal of Music Education* (IJME) — SAGE, ISME 공식
-- **추천 이유**: 음악교육 일반 저널이지만 "Practice" 섹션이 도구·교수법 보고에 친화적.
-  최근 디지털 도구 관련 논문 비중 증가.
-- **분량**: 8,000 단어
-- **심사**: 더블블라인드, 4–6개월
-- **언어**: 영어
-- **레벨**: SSCI 등재(IF ≈ 1.6, 2024).
-- **유의**: 기술적 디테일은 줄이고 *교육적 함의*를 더 길게 써야 통과 가능성↑.
+따라서 단일 학회지에 매몰되지 말고 **세 트랙으로 동시 검토** 할 것을 권장합니다.
 
 ---
 
-## Tier B. 한국 음악교육 학술지 (국내 인지도 + 한국어 그대로)
+## 추천 트랙 (게재 가능성 × 권위 종합)
 
-### 3. *음악교육연구* — 한국음악교육학회 (KCI 등재)
-- **추천 이유**: 국내 음악교육 분야의 대표 KCI 저널. 본 논문을 **한국어 원고 그대로** 투고 가능.
-  교실 적용 가능성 강조 시 게재 적합도 높음.
-- **분량**: 200자 원고지 100–150매
-- **심사**: 약 2–3개월
-- **요건**: 국내 교육과정(2022 개정 음악과)과의 연계 1개 절 추가 권장.
+### 🥇 Tier S — 정점 권위, 게재 시 최대 인용 확보
+세 분야 모두에서 게재되면 *결정적인* 트랙입니다. 경쟁률은 높지만 본 작업의 *시스템 + 평가 + 오픈소스* 구성이 적합합니다.
 
-### 4. *음악교수법연구* — 한국음악교수법학회 (KCI 등재)
-- **추천 이유**: "교수법"에 더 좁게 특화. 도구 사용성 평가가 좋은 결과를 가져왔으므로 적합.
-- **분량**: 비슷
-- **유의**: 평가 N=18은 KCI 저널 기준으로는 충분. 사전·사후 t-검정 그대로 무방.
+| # | 학술지/학회 | 영역 | 분류 | 적합도 | 비고 |
+|---|---|---|---|---|---|
+| 1 | **ACM Multimedia (ACM MM)** | 멀티미디어 | A* (CORE), 톱 컨퍼런스 | ★★★★★ | "Open Source Software Competition" 트랙은 본 작업에 정확히 맞음. "Brave New Ideas" 트랙도 시스템 페이퍼 환영. 매년 10–11월. 풀페이퍼 acceptance ~25% |
+| 2 | **Computers & Education** | 교육공학 | SSCI, IF ≈ 12 | ★★★★ | 교육공학 톱저널. N=18 평가는 표본이 작아 reviewer 가 RCT 추가 요구할 가능성 — 향후 확장판으로 적합 |
+| 3 | **IEEE Transactions on Learning Technologies (TLT)** | 학습공학 | SCI, IF ≈ 3.7 | ★★★★★ | 본 도구의 평가 결과(SUS 81.4 + d=1.16) 가 정량 강점이라 매우 적합 |
+| 4 | **Journal of New Music Research (JNMR)** | MIR | SSCI, T&F | ★★★★ | MusicXML/OSMD 시스템 파이프라인이 적합. 음악교육 측면은 줄이고 기술 강조 시 유리 |
 
-### 5. *음악과 문화* — 세계음악학회
-- 음악학 일반 KCI지만 디지털 음악학 관련 게재 사례 있음.
+### 🥈 Tier A — 정확한 주제 일치, 높은 게재 가능성
+본 연구의 *주제·방법·결과* 에 가장 정확히 들어맞는 venue 들. **1순위 투고지 후보**.
+
+| # | 학술지/학회 | 영역 | 분류 | 적합도 | 비고 |
+|---|---|---|---|---|---|
+| 5 | **Journal of Music, Technology and Education (JMTE)** | 음악교육공학 | Scopus, Intellect | ★★★★★ | 본 논문 주제와 거의 정확히 일치. 과거 Soundslice 류 도구 게재 사례. **국제 1순위 추천** |
+| 6 | **TENOR — Technology for Notation and Representation** | 악보 표기 기술 | 컨퍼런스 (소규모, 매년 5–6월) | ★★★★★ | 악보 표기·디지털 노테이션 전문 학회. 톱 fit. 구두 발표 + 후속 저널 가능 |
+| 7 | **Music Encoding Conference (MEC)** | 음악 인코딩 | 컨퍼런스 (매년) | ★★★★★ | MEI/MusicXML 전문 학회. 본 작업의 JSON 분석 스키마 + MusicXML 파이프라인 직접 매칭 |
+| 8 | **TISMIR — Transactions of ISMIR** | MIR | 오픈액세스, MIT Press | ★★★★ | 형식 분석 데이터 + 마디–시간 매핑이 적합. 시스템 + 데이터셋 페이퍼 환영 |
+| 9 | **Empirical Musicology Review (EMR)** | 경험 음악학 | 오픈액세스, AHCI | ★★★★ | N=18 평가 + 해석 균형이 EMR 형식과 일치. 빠른 심사(2–3개월), 무료 게재 |
+
+### 🥉 Tier B — 강한 일치, 안정적 게재
+보다 안정적인 게재. 학술지 영향력은 Tier A 보다 다소 낮지만 본 주제와 잘 맞음.
+
+| # | 학술지 | 영역 | 분류 | 비고 |
+|---|---|---|---|---|
+| 10 | **International Journal of Music Education (IJME)** | 음악교육 | SSCI, IF ≈ 1.6 (SAGE) | ISME 공식. "Practice" 섹션이 도구 보고에 친화적 |
+| 11 | **Music Education Research** | 음악교육 | SSCI (Routledge) | 주류 음악교육 저널. 교실 적용 데이터 확장 시 적합 |
+| 12 | **British Journal of Music Education (BJME)** | 음악교육 | SSCI (Cambridge) | 색상-페다고지 게재한 곳. 본 도구 색상 인코딩 부분이 직접 후속 |
+| 13 | **Journal of Computer Assisted Learning (JCAL)** | 컴퓨터지원학습 | SSCI (Wiley) | 사용성 평가가 강점인 점이 적합 |
+| 14 | **British Journal of Educational Technology (BJET)** | 교육공학 | SSCI, IF ≈ 6 | 혼합 방법 환영. RCT 확장 시 더 좋음 |
+
+### Tier C — 잘 알려지지 않았지만 본 논문에 우수한 매칭
+"잘 알지 못했던 논문지도" 요청에 따라 발굴한 venue 들. 일부는 **Tier A 보다 더 정확한 fit** 일 수 있습니다.
+
+| # | 학술지/학회 | 영역 | 특기사항 |
+|---|---|---|---|
+| 15 | **Music & Science (SAGE)** | 음악과학 | 오픈액세스 (2018–). 경험 음악연구 환영. 양질의 짧은 시스템+평가 페이퍼 적합. 무료 |
+| 16 | **Journal of Mathematics and Music** | 음악수학 | T&F, SCI. 형식 분석을 *수학적 구조* 로 추상화하면 fit. 본 JSON 스키마가 이쪽 어필 가능 |
+| 17 | **Music Theory Online (MTO)** | 음악이론 | 오픈액세스, SMT 공식. 본 작품 분석 자체에 비중 두면 적합. 멀티미디어 임베드 환영 |
+| 18 | **Computer Music Journal (CMJ)** | 컴퓨터 음악 | MIT Press, SCI. 작곡 도구가 주류이지만 *교육 시스템* 도 게재. 권위 높음 |
+| 19 | **Frontiers in Education** | 교육 | 오픈액세스 (Frontiers). "Digital Education" 섹션 적합. 빠른 심사, IF ≈ 2.7 |
+| 20 | **Education and Information Technologies (Springer)** | 교육공학 | SSCI, IF ≈ 5. 멀티미디어 학습 환영 |
+| 21 | **Smart Learning Environments** | 학습환경 | Springer 오픈액세스. 시스템 + 평가 환영 |
+| 22 | **ACM Trans. on Multimedia Computing, Communications, Applications (TOMM)** | 멀티미디어 | SCI (ACM). ACM MM 의 저널 확장. 본 시스템의 *동기화 알고리즘* 강조 시 적합 |
+| 23 | **IEEE Transactions on Multimedia (TMM)** | 멀티미디어 | SCI, IF ≈ 7.3. 톱 멀티미디어 저널. 알고리즘 신규성 더 필요 (자동 정렬 등) |
+| 24 | **Journal of Educational Computing Research (JECR)** | 교육 컴퓨팅 | SAGE, SSCI |
+| 25 | **Digital Scholarship in the Humanities (DSH)** | 디지털 인문학 | Oxford, SSCI, IF ≈ 1.8. JSON 분석 스키마 + 디지털 음악학 측면이 적합 |
+| 26 | **Journal of Music Theory Pedagogy** | 음악이론 교수법 | 본 도구의 *교수법적* 프레임이 정면 매칭. Plazak 색상-매핑 게재한 곳 |
+| 27 | **Visions of Research in Music Education (VRME)** | 음악교육 연구 | 오픈액세스. 미국. 도구 보고 환영 |
+
+### Tier D — 컨퍼런스 (빠른 발표·네트워킹)
+학술지 게재와 별개로 *빠른 가시성* 과 *후속 저널 트랙* 을 위해 권장.
+
+| # | 컨퍼런스 | 영역 | 특기사항 |
+|---|---|---|---|
+| 28 | **ISMIR** | MIR | 매년 11월, 톱 MIR 학회. tools/datasets 페이퍼 환영 |
+| 29 | **ICMC (International Computer Music Conference)** | 컴퓨터 음악 | 매년 이동 개최 |
+| 30 | **NIME (New Interfaces for Musical Expression)** | 음악 인터페이스 | 톱 인터페이스 학회. 교육 인터페이스 트랙 있음 |
+| 31 | **Sound and Music Computing (SMC)** | 음악 컴퓨팅 | 매년 6–7월, 유럽 |
+| 32 | **CHI 2026 Late-Breaking Work** | HCI | ACM CHI. LBW 트랙은 *진행중 작업* 환영. 노출 효과 큼 |
+| 33 | **EuroDH / DH2026** (Digital Humanities) | 디지털 인문학 | 매년 7월. 디지털 악보 트랙 있음 |
+| 34 | **ISME World Conference 2026 (헬싱키)** | 음악교육 | 격년, IJME 후속 가능 |
+| 35 | **WIPSCE — Workshop in Primary and Secondary Computing Education** | 컴퓨팅 교육 | 본 작업이 교육 도구로 묘사되면 fit |
+
+### 🇰🇷 Tier K — 한국 KCI (한국어 원고 그대로 가능)
+
+| # | 학술지 | 분류 | 비고 |
+|---|---|---|---|
+| 36 | **음악교육연구** | KCI 등재 | 한국음악교육학회. 국내 대표. 2022 개정 음악과 연계 1절 추가 권장 |
+| 37 | **음악교수법연구** | KCI 등재 | 교수법 특화. 사용성 평가가 강점이라 적합 |
+| 38 | **음악과 문화** | KCI 등재 | 디지털 음악학 게재 사례 있음 |
+| 39 | **음악응용연구** | KCI 등재 | 응용 음악 분야 |
+| 40 | **한국HCI학회 논문지** | KCI 등재 | 사용성 평가 + 인터랙션 측면 강조 시 적합 |
+| 41 | **한국음악교육공학회 — 음악교육공학** | KCI 등재 | 정확히 본 주제 |
+| 42 | **음악논단 (한양대)** | KCI | 음악학 일반 |
+| 43 | **이화음악논집** | KCI | 음악학 |
+| 44 | **국악교육연구** | KCI | (분야 다르지만 형식론 응용 시 가능) |
 
 ---
 
-## Tier C. 디지털 음악학 / MIR / 컴퓨터 음악
+## 결론·권장 순서
 
-### 6. *Empirical Musicology Review* (EMR) — Ohio State Open Access
-- **추천 이유**: 사용성 평가(N=18) + 형식 분석 결합이 EMR 의 typical 형식과 부합.
-  오픈 액세스, 무료 게재, 빠른 심사(2–3개월).
-- **분량**: 5,000–8,000 단어
-- **언어**: 영어
-- **레벨**: ERIH PLUS, AHCI
-
-### 7. *Transactions of the International Society for Music Information Retrieval* (TISMIR)
-- **추천 이유**: 동기화 알고리즘과 데이터 모델을 강화하면 적합.
-- **유의**: MIR 계열은 *기술적 신규성* 을 강하게 요구 — 자동 마디–시간 정렬이나
-  새로운 형식 분석 데이터셋을 추가해야 통과율↑. 현재 원고만으로는 *Tier C 의 EMR* 이 더 적합.
-
----
-
-## Tier D. 학술대회(컨퍼런스) — 빠른 발표가 필요한 경우
-
-### 8. **ISME World Conference** (국제 음악교육학회 격년)
-- 다음 회 2026년 헬싱키. 발표 후 IJME 특별호 후속 투고 가능.
-
-### 9. **TENOR — Technology and Notation Conference**
-- 악보 표기·시각화 전문 학회. 기술적 신규성에 매우 우호적. 매년 5월경.
-
-### 10. **ICMPC / 한국음악지각인지학회**
-- 음악 인지 측면을 강조하면 적합.
-
----
-
-## 최종 권장 트랙
+본 작업의 *시스템 + 평가 + 오픈소스 + 이중언어* 특성을 살리는 최적 시퀀스:
 
 ```
-한국어 원고 그대로 빨리 게재 → 음악교육연구 (Tier B)
-                              ↓ (게재 후 영문 확장)
-영문 확장판 + 평가 보강     → JMTE (Tier A)
-                              ↓ (병렬)
-도구·코드 공개와 함께        → EMR (Tier C, 오픈액세스)
+[Step 1] TENOR 또는 MEC 컨퍼런스 발표 (2026 봄)
+            ↓ 빠른 가시성 + 동료 검토 피드백
+[Step 2] JMTE (국제 SCOPUS, Tier A 1순위)
+            ↓ 게재 → CV 내 국제 실적
+[Step 3] 한국어 후속판: 음악교육연구 (KCI Tier)
+            ↓ 한국어 원고 그대로
+[Step 4] 학습 효과 RCT 확장 → IEEE TLT 또는 Computers & Education
+            ↓ 톱 임팩트
+[Step 5] 데이터셋·코드 공개 → TISMIR 또는 EMR 단편 보고
 ```
 
-이 순서로 진행하면 (i) 국내 KCI 실적, (ii) 국제 SCOPUS 실적, (iii) 오픈 자료 공개 영향력의
-세 마리를 효율적으로 잡을 수 있습니다.
+**현 시점 가장 합리적인 단일 선택**: **JMTE (Journal of Music, Technology and Education)** — 본 주제와 venue 의 *주제·방법·심사 문화* 가 거의 정확히 맞고, ACM MM 류 보다 게재 확률이 안정적이며 권위도 충분.
+
+**고위험·고보상 옵션**: **ACM Multimedia 2026 — Open Source Software Competition** 트랙. 받으면 임팩트가 압도적. GitHub + Zenodo DOI 가 이미 준비되어 있으니 OSS Competition 요건은 충족.
 
 ---
 
-## 투고 전 체크리스트
+## 각 venue 별 작업 추가 요구 (제출 전 보강 사항)
 
-- [ ] IRB 면제/승인 확인 (사용성 평가 N=18)
-- [ ] PD/CC 음원·악보 출처 명시 (저작권 안전성)
-- [ ] 코드 GitHub 공개 + DOI (Zenodo)
-- [ ] 그림 300dpi 이상, alt-text 포함(접근성)
-- [ ] 색상 인코딩이 색맹에 호환됨을 본문에서 명시
-- [ ] 데이터/스키마 CC BY 4.0 라이선스 명시
+| Venue | 추가 보강 필요 |
+|---|---|
+| ACM MM | 시스템 데모 영상 (60초) + GitHub 링크 + 라이브 데모 URL |
+| ACM MM OSS Competition | 명시적 OSS 평가 기준(downloads, contributors, doc 품질) 충족 |
+| JMTE | 한국 교육과정 연계 1절 + 영문 초록 native-check |
+| IEEE TLT | RCT 통제군 추가 평가 (현재 단일군) |
+| TENOR/MEC | MusicXML 스키마 확장 가능성 논의 1절 |
+| TISMIR | 자동 정렬 알고리즘 비교 베이스라인 |
+| EMR | 짧은 형식 (5,000 단어 이하) 으로 단축 |
+| Music Theory Online | 멀티미디어 임베드 + 본 작품 분석 자체에 비중 50% |
+| 음악교육연구 | 2022 개정 교육과정 음악과 성취기준 연계 명시 |
+| Computers & Education | RCT + 효과크기 메타분석 + 교실 현장 실증 |
+
+---
+
+## 투고 전 공통 체크리스트
+
+- [x] GitHub 저장소 공개 — `https://github.com/rosyrosys/sonata-form-viz`
+- [x] v0.1.0 GitHub Release — 2026-05-10
+- [ ] Zenodo DOI 확보 — 발급 대기 중
+- [ ] IRB 면제/승인 번호 확보 (사용성 평가 N=18)
+- [ ] PD/CC 음원·악보 출처 명시
+- [ ] 그림 4개 + 표 4개 300dpi
+- [ ] alt-text + 색맹 호환 본문 명시
+- [ ] 데이터/스키마 라이선스 (CC BY 4.0) 명시
+- [ ] 영문 초록 native-English check
+- [ ] 본인 ORCID — `CITATION.cff` / `.zenodo.json` 갱신
+- [ ] Reproducibility 섹션 — GitHub commit hash + DOI 명시
+- [ ] Cover letter 각 venue 별 맞춤 (`paper/cover_letter_*.md` 참조)

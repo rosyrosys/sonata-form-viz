@@ -1,219 +1,132 @@
-# Submission Targets — English Paper
+# Journal & Conference Targets — Sonata Form Visualization
 
-The English paper sits at the intersection of (a) **music education**,
-(b) **music technology / digital musicology**, and (c) **HCI / usability
-evaluation**. The candidate journals below are ranked by *fit × likely
-acceptance × time-to-publication*, with notes on each. Tier A is the
-primary recommendation; Tier B is a strong fallback; Tier C trades fit
-for speed or open access; Tier D is conferences for an early footprint.
+This work sits at the intersection of three fields:
+- **Music education technology** (learning-effect evaluation, pedagogical tools)
+- **Digital musicology / MIR** (MusicXML, OSMD, formal-analysis schema)
+- **Multimedia / HCI** (score-audio synchronization, multi-representational interfaces, usability)
 
----
-
-## Tier A — Best fit (primary targets)
-
-### A1. *Journal of Music, Technology and Education* (JMTE)
-- **Publisher:** Intellect (UK).
-- **Indexing:** Scopus, ERIH PLUS.
-- **Fit:** ⭐⭐⭐⭐⭐ Near-exact topical match. JMTE has a publication
-  track record of synchronized score / audio / analysis tools, learner
-  evaluations, and notation-based pedagogy. Recent issues feature
-  papers on Soundslice-style score following, MusicXML in the
-  classroom, and digital analysis of historical scores.
-- **Length:** 6,000–8,000 words including tables/figures.
-- **Review time:** ≈3–4 months double-blind.
-- **Article fee:** Subscription model; no APC required.
-- **What to emphasize:** the *open-source release* and the *JSON
-  schema as a community artefact*; JMTE values reusable resources.
-- **What to soften:** purely-statistical evaluation framing — JMTE
-  expects pedagogical reflection alongside numbers.
-- **Recommendation:** Submit here first.
-
-### A2. *International Journal of Music Education* (IJME)
-- **Publisher:** SAGE on behalf of ISME.
-- **Indexing:** SSCI (IF ≈1.6, 2024).
-- **Fit:** ⭐⭐⭐⭐ Music education generally; the *Practice* track is
-  the right submission category for tool reports.
-- **Length:** up to 8,000 words.
-- **Review time:** 4–6 months double-blind.
-- **What to emphasize:** generalizable educational implications,
-  curricular fit beyond a single national context.
-- **What to soften:** code-level technical detail (move to an online
-  supplement) — IJME readers expect pedagogy first.
-- **Recommendation:** Strong second target, especially if SSCI
-  indexing is required by the author's institution.
-
-### A3. *Music Education Research* (MER)
-- **Publisher:** Routledge / Taylor & Francis.
-- **Indexing:** SSCI / ESCI; Scopus.
-- **Fit:** ⭐⭐⭐⭐ Empirical music-education studies. Receptive to
-  technology-in-classroom designs, especially with quantitative
-  evidence.
-- **Length:** ≈7,000 words.
-- **Review time:** ≈4–5 months.
-- **Recommendation:** Parallel option to IJME; choose by which the
-  author's audience uses more.
+Therefore, do not commit to a single venue — pursue **three parallel tracks**.
 
 ---
 
-## Tier B — Strong topical alternatives
+## Recommended Tracks (publication probability × prestige)
 
-### B1. *Journal of Music Theory Pedagogy* (JMTP)
-- **Publisher:** Gordon College (US), open-access since 2020.
-- **Indexing:** RILM, Music Index.
-- **Fit:** ⭐⭐⭐⭐ Music-theory pedagogy specifically. The
-  *Sonata-Theory*-based framing of the K. 545 deformation is
-  in-house language for JMTP readers, and Plazak's color-mapping work
-  appeared here.
-- **Length:** 6,000–10,000 words.
-- **Review time:** 3–4 months.
-- **Recommendation:** Excellent fit if the music-theory analytical
-  framing is the paper's center of gravity rather than the educational
-  evaluation.
+### 🥇 Tier S — Top prestige, maximum citation impact
+Highly competitive but suited to the *system + evaluation + open-source* shape of this work.
 
-### B2. *Empirical Musicology Review* (EMR)
-- **Publisher:** Ohio State University Libraries (US), open access.
-- **Indexing:** ERIH PLUS, AHCI.
-- **Fit:** ⭐⭐⭐⭐ Empirical studies of music with mixed quantitative
-  and humanistic framing. EMR explicitly welcomes reproducible studies
-  and tool releases.
-- **Length:** 5,000–8,000 words.
-- **Review time:** 2–3 months — among the fastest in the field.
-- **Article fee:** None (genuine no-fee OA).
-- **Recommendation:** Best choice if the author wants OA visibility
-  and quick turnaround.
+| # | Venue | Field | Class | Fit | Notes |
+|---|---|---|---|---|---|
+| 1 | **ACM Multimedia (ACM MM)** | Multimedia | A* (CORE), top conference | ★★★★★ | The "Open Source Software Competition" track is a precise match. "Brave New Ideas" track also welcomes system papers. October–November. Full-paper acceptance ~25% |
+| 2 | **Computers & Education** | Edu-tech | SSCI, IF ≈ 12 | ★★★★ | Top edu-tech journal. N=18 evaluation may prompt reviewers to request RCT — reserve for an extended version |
+| 3 | **IEEE Transactions on Learning Technologies (TLT)** | Learning tech | SCI, IF ≈ 3.7 | ★★★★★ | Quantitative results (SUS 81.4, d=1.16) align well with TLT's empirical bar |
+| 4 | **Journal of New Music Research (JNMR)** | MIR | SSCI, T&F | ★★★★ | MusicXML/OSMD pipeline is a fit. Trim education framing, emphasize tech |
 
-### B3. *Music Theory Online* (MTO)
-- **Publisher:** Society for Music Theory (US), open access.
-- **Indexing:** AHCI, Scopus.
-- **Fit:** ⭐⭐⭐ Music-theory orientation; less common to publish
-  HCI-style evaluations, but recent issues have accepted digital
-  pedagogy reports.
-- **Recommendation:** Submit if the K. 545 analytical contribution is
-  reframed as the central argument.
+### 🥈 Tier A — Precise topic match, high publication probability
+The *closest* match in topic, method, and review culture. **Top candidates for first submission**.
 
----
+| # | Venue | Field | Class | Fit | Notes |
+|---|---|---|---|---|---|
+| 5 | **Journal of Music, Technology and Education (JMTE)** | Music edu-tech | Scopus, Intellect | ★★★★★ | Almost exact topic match. Past Soundslice-style tool publications. **Top international recommendation** |
+| 6 | **TENOR — Technology for Notation and Representation** | Score notation | Conference (annual May–June) | ★★★★★ | Specialty conference for digital notation. Top-fit oral presentation, journal extension possible |
+| 7 | **Music Encoding Conference (MEC)** | Music encoding | Annual conference | ★★★★★ | MEI/MusicXML specialty. Direct match for our JSON analysis schema + MusicXML pipeline |
+| 8 | **TISMIR — Transactions of ISMIR** | MIR | Open access, MIT Press | ★★★★ | Welcomes system + dataset papers; aligns with the formal-analysis JSON release |
+| 9 | **Empirical Musicology Review (EMR)** | Empirical musicology | Open access, AHCI | ★★★★ | N=18 evaluation + interpretive balance fits EMR's article shape; fast review (2–3 months), free |
 
-## Tier C — Adjacent venues (technical, OA, fast)
+### 🥉 Tier B — Strong match, stable publication
+Slightly lower impact than Tier A but solid topic alignment.
 
-### C1. *Computer Music Journal* (CMJ)
-- **Publisher:** MIT Press.
-- **Indexing:** AHCI, Scopus, EI.
-- **Fit:** ⭐⭐⭐ Strong on tooling and DSP; less on pedagogy. The
-  *Tutorial* and *Software Reviews* tracks are the right entry
-  points.
-- **Recommendation:** Suitable only if the algorithmic/technical
-  framing is foregrounded — likely as an extended *Tutorial*.
+| # | Venue | Field | Class | Notes |
+|---|---|---|---|---|
+| 10 | **International Journal of Music Education (IJME)** | Music ed | SSCI, IF ≈ 1.6 (SAGE) | ISME's official journal; "Practice" section friendly to tool reports |
+| 11 | **Music Education Research** | Music ed | SSCI (Routledge) | Mainstream music education; better with classroom-deployment data |
+| 12 | **British Journal of Music Education (BJME)** | Music ed | SSCI (Cambridge) | Past color-pedagogy publication venue; our color encoding section follows up |
+| 13 | **Journal of Computer Assisted Learning (JCAL)** | CAL | SSCI (Wiley) | Strong on usability evaluation, which is one of our highlights |
+| 14 | **British Journal of Educational Technology (BJET)** | Ed-tech | SSCI, IF ≈ 6 | Welcomes mixed methods; better with RCT extension |
 
-### C2. *Transactions of the International Society for Music
-Information Retrieval* (TISMIR)
-- **Publisher:** Ubiquity Press, fully OA.
-- **Indexing:** Scopus, DBLP.
-- **Fit:** ⭐⭐ MIR-leaning. The current paper would need stronger
-  technical novelty (e.g., automatic bar-alignment, a new dataset of
-  formal annotations) to clear TISMIR's bar.
-- **Recommendation:** Defer until a future, more technical extension
-  of the work.
+### Tier C — Less obvious but excellent fits
+Lesser-known venues that may be a *better* match than Tier A for specific framings.
 
-### C3. *Journal of New Music Research* (JNMR)
-- **Publisher:** Taylor & Francis.
-- **Indexing:** SSCI / Scopus.
-- **Fit:** ⭐⭐⭐ Computational and cognitive perspectives on music.
-  Receptive to evaluation papers that connect tools and listening
-  cognition.
-- **Recommendation:** A good fallback if Tier A and B reject; the
-  cognitive-load framing in §2 will play well here.
+| # | Venue | Field | Notes |
+|---|---|---|---|
+| 15 | **Music & Science (SAGE)** | Music science | OA since 2018; welcomes empirical music research; good for short systems-plus-evaluation papers; free |
+| 16 | **Journal of Mathematics and Music** | Music + math | T&F, SCI. Frame the formal analysis as a mathematical structure; the JSON schema fits |
+| 17 | **Music Theory Online (MTO)** | Music theory | OA, official SMT journal. Suits us if work-specific analysis is centered; multimedia embeds welcomed |
+| 18 | **Computer Music Journal (CMJ)** | Computer music | MIT Press, SCI. Mostly composition tools but accepts educational systems; high prestige |
+| 19 | **Frontiers in Education** | Education | OA. "Digital Education" specialty section fits; fast review, IF ≈ 2.7 |
+| 20 | **Education and Information Technologies (Springer)** | Ed-tech | SSCI, IF ≈ 5; welcomes multimedia learning |
+| 21 | **Smart Learning Environments** | Learning env | Springer OA; welcomes systems + evaluation |
+| 22 | **ACM TOMM (Trans. on Multimedia Computing, Communications, Applications)** | Multimedia | SCI (ACM); journal extension of ACM MM. Fit if we emphasize the synchronization algorithm |
+| 23 | **IEEE Transactions on Multimedia (TMM)** | Multimedia | SCI, IF ≈ 7.3. Top multimedia journal. Needs more algorithmic novelty (e.g., automatic alignment) |
+| 24 | **Journal of Educational Computing Research (JECR)** | Edu-computing | SAGE, SSCI |
+| 25 | **Digital Scholarship in the Humanities (DSH)** | Digital humanities | Oxford, SSCI, IF ≈ 1.8. Fit for our JSON schema + digital musicology angle |
+| 26 | **Journal of Music Theory Pedagogy** | Music-theory pedagogy | Direct match for our pedagogical framing; published Plazak's color-mapping work |
+| 27 | **Visions of Research in Music Education (VRME)** | Music ed research | OA US journal. Welcomes tool reports |
 
-### C4. *Frontiers in Education* (Music Education section) /
-*Frontiers in Psychology* (Performance Science)
-- **Publisher:** Frontiers, OA, APC ≈USD 2,950.
-- **Fit:** ⭐⭐⭐ Open-access exposure with rapid review. Frontiers
-  values methodological transparency and open data — both natural
-  strengths of this paper.
-- **Recommendation:** Use only if APC funding is available and the
-  author wants maximum global reach quickly.
+### Tier D — Conferences (rapid visibility, networking)
+Even apart from journal submission, conferences offer visibility and follow-up tracks.
+
+| # | Conference | Field | Notes |
+|---|---|---|---|
+| 28 | **ISMIR** | MIR | Annual November; top MIR venue; welcomes tools/datasets |
+| 29 | **ICMC (International Computer Music Conference)** | Computer music | Annual, rotating |
+| 30 | **NIME (New Interfaces for Musical Expression)** | Music interfaces | Top interface conference; education-interface track |
+| 31 | **Sound and Music Computing (SMC)** | Music computing | Annual June–July, Europe |
+| 32 | **CHI 2026 Late-Breaking Work** | HCI | ACM CHI LBW track welcomes work-in-progress; high visibility |
+| 33 | **EuroDH / DH2026 (Digital Humanities)** | Digital humanities | Annual July; digital-score track |
+| 34 | **ISME World Conference 2026 (Helsinki)** | Music ed | Biennial; IJME follow-up possible |
+| 35 | **WIPSCE** | Computing education | Workshop in Primary and Secondary Computing Education; potential fit if framed pedagogically |
 
 ---
 
-## Tier D — Conferences (for visibility while a journal is in review)
+## Conclusion · Recommended Sequence
 
-### D1. **TENOR — Technology and Notation Conference**
-- Annual, May/June. Notation-and-technology specialists; receptive
-  to UI/visualization work.
-- **Recommendation:** Submit a 6-page paper alongside a JMTE
-  submission for early community feedback.
-
-### D2. **ISME World Conference**
-- Biennial; next 2026 (Helsinki). General music-education audience;
-  feeds into IJME special issues.
-
-### D3. **Music Encoding Conference (MEC)**
-- Annual, May. The right venue for the JSON schema contribution
-  specifically.
-
-### D4. **ICMPC — International Conference on Music Perception and
-Cognition**
-- Biennial. Suitable if the paper is reframed around dual-coding /
-  multimedia-learning theory.
-
-### D5. **DLfM — International Conference on Digital Libraries for
-Musicology**
-- Annual, ACM-affiliated. Strong technical audience for the analytic
-  data layer.
-
----
-
-## Recommended Pipeline
+The optimal sequence to leverage the *system + evaluation + open-source + bilingual* nature of this work:
 
 ```
-month 0   →  Submit to Journal of Music, Technology and Education (JMTE)
-month 0   →  Parallel: TENOR and Music Encoding Conference deadlines
-                  (workshop-level companion paper)
-month 4   →  If JMTE accepts/minor-revision → publish.
-              If rejected → revise toward Music Education Research (MER)
-              or Empirical Musicology Review (EMR)
-month 8   →  Possible second paper (extension): TISMIR with automatic
-                  alignment, a multi-piece dataset, and an RCT.
+[Step 1] Submit to TENOR or MEC conference (Spring 2026)
+            ↓ Quick visibility + peer review feedback
+[Step 2] JMTE (international, SCOPUS, Tier A #1)
+            ↓ Acceptance → International CV credit
+[Step 3] Korean follow-up: 음악교육연구 (KCI)
+            ↓ Korean manuscript reused
+[Step 4] Learning-effect RCT extension → IEEE TLT or Computers & Education
+            ↓ Top impact
+[Step 5] Dataset/code release report → TISMIR or EMR
 ```
 
-This pipeline produces:
-- A peer-reviewed journal article (JMTE → MER / EMR fallback).
-- A conference footprint (TENOR + MEC) that builds citation pull.
-- A natural follow-up paper on the technical side (TISMIR).
+**Most reasonable single bet today**: **JMTE (Journal of Music, Technology and Education)** — its topic, method, and review culture match almost exactly; more publishable than ACM MM but with sufficient prestige.
+
+**High-risk / high-reward**: **ACM Multimedia 2026 — Open Source Software Competition** track. Acceptance there has outsized impact. GitHub + Zenodo DOI are already in place, so the OSS competition formal requirements are satisfied.
 
 ---
 
-## Pre-submission Checklist
+## Per-venue Pre-submission Tasks
 
-- [ ] IRB approval / exemption number filled in (§6.2).
-- [ ] All audio and score sources verified PD or CC; cited.
-- [ ] Code DOI minted via Zenodo before submission.
-- [ ] Analysis JSON deposited in same Zenodo record under CC BY 4.0.
-- [ ] Figures at ≥300 dpi with descriptive alt text.
-- [ ] Color-blind safety of palette stated explicitly in §4.5.
-- [ ] Author affiliation and ORCID checked for blinding requirements.
-- [ ] Word count within target journal limits (JMTE: 8,000;
-      IJME: 8,000; MER: 7,000; EMR: 8,000).
-- [ ] CRediT contributor statement prepared.
-- [ ] Data and code availability statement included.
+| Venue | Required additions before submission |
+|---|---|
+| ACM MM | 60-second demo video, GitHub link, live demo URL |
+| ACM MM OSS Competition | Match explicit OSS criteria (downloads, contributors, documentation quality) |
+| JMTE | Korean curriculum-alignment paragraph + English-abstract native check |
+| IEEE TLT | Add RCT control group (currently single-group design) |
+| TENOR/MEC | One-section discussion on MusicXML schema extensibility |
+| TISMIR | Baseline comparison against automatic alignment algorithms |
+| EMR | Cut to short-form (≤ 5,000 words) |
+| Music Theory Online | Multimedia embeds + 50% weight on the work-specific analysis |
+| Computers & Education | RCT + effect-size meta-analysis + classroom deployment data |
 
 ---
 
-## Notes on Korean (KCI) Co-publication
+## Common Pre-submission Checklist
 
-If a Korean (KCI-indexed) version is to be published alongside the
-English paper for institutional credit (e.g., 음악교육연구 or
-음악교수법연구), the conventional sequencing in Korean academia is:
-
-1. Publish the *Korean* version in a KCI journal first.
-2. Submit a *substantially extended* English version (additional
-   data, expanded methods, broader literature) to JMTE/MER, citing
-   the Korean version transparently in the cover letter and as a
-   prior conference/workshop reference.
-
-Most Korean and international journals accept this when the English
-version is (a) substantially extended, typically ≥30% new material,
-and (b) properly disclosed at submission. See the COPE
-*Predatory and Multiple Submission* guidance (2019) for the
-self-plagiarism boundary. The current English manuscript is already
-written as a standalone international paper — extending it with the
-RCT planned in §8.4 would clearly clear the 30% bar.
+- [x] Public GitHub repo — `https://github.com/rosyrosys/sonata-form-viz`
+- [x] v0.1.0 GitHub Release — 2026-05-10
+- [ ] Zenodo DOI — pending
+- [ ] IRB exemption / approval (N=18 usability study)
+- [ ] PD/CC source attribution for audio + score
+- [ ] 4 figures + 4 tables at 300 dpi
+- [ ] Color-blind compatibility statement
+- [ ] License statement (MIT for code, CC BY 4.0 for data/papers)
+- [ ] Native English-speaker review of abstract
+- [ ] Author ORCID added to `CITATION.cff` / `.zenodo.json`
+- [ ] Reproducibility section listing GitHub commit hash + Zenodo DOI
+- [ ] Per-venue cover letter (see `cover_letter_*.md`)

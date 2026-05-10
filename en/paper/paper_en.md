@@ -650,6 +650,41 @@ under CC BY 4.0. Both invite reuse, extension, and peer scrutiny in
 the spirit of open digital musicology.
 
 
+# 10. Reproducibility
+
+All artifacts of this study are released with persistent identifiers.
+
+| Resource | Location |
+|---|---|
+| Source code (HTML / CSS / JS) | https://github.com/rosyrosys/sonata-form-viz |
+| v0.1.0 release | https://github.com/rosyrosys/sonata-form-viz/releases/tag/v0.1.0 |
+| Long-term archive (Zenodo DOI) | 10.5281/zenodo.[pending] |
+| Formal-analysis JSON schema | `data/sonata_structure.json` (CC BY 4.0) |
+| Measure-to-time mapping | `data/measure_times.json` (CC BY 4.0) |
+| MusicXML (public domain) | `data/mozart_k545_mvt1.musicxml` |
+| Manuscript drafts (KO / EN) | `paper/paper_ko.md`, `paper/paper_en.md` |
+
+The repository ships with two parallel editions, **`ko/`** (Korean) and
+**`en/`** (English), sharing the same code base and analysis schema.
+
+**Audio is intentionally excluded.** The recording used in our evaluation
+(András Schiff, Carnegie Hall 2015) is a commercial release and is not
+redistributed. To reproduce the evaluation, obtain a public-domain
+recording from the sources listed in `assets/README.md` (Musopen, IMSLP)
+and place it in the same folder. The system's measure-to-time mapping
+adapts to arbitrary recordings via proportional rescaling and an
+interactive tap-calibration mode (press *T*).
+
+**Dependencies.** The only external runtime dependency is
+*OpenSheetMusicDisplay* v1.8.7. Browser compatibility is verified on
+Chrome 120+, Edge 120+, and Firefox 121+. Any static-file server suffices
+(e.g., `python -m http.server`).
+
+**Evaluation data.** The anonymized N=18 usability data are available
+on request to the corresponding author, subject to research-ethics
+guidelines.
+
+
 # Acknowledgments
 
 [To be added after blinding requirements are met.]
