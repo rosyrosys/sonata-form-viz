@@ -62,6 +62,43 @@
 | 26 | **Journal of Music Theory Pedagogy** | 음악이론 교수법 | 본 도구의 *교수법적* 프레임이 정면 매칭. Plazak 색상-매핑 게재한 곳 |
 | 27 | **Visions of Research in Music Education (VRME)** | 음악교육 연구 | 오픈액세스. 미국. 도구 보고 환영 |
 
+### Tier E — 음악인지·음악이론 권위지 (전문성 ↑)
+"잘 알려지지 않았지만 권위 있는" 발굴. 본 논문의 *형식 인지·교수법* 측면에 정확히 부합합니다.
+
+| # | 학술지 | 영역 | 분류 | 비고 |
+|---|---|---|---|---|
+| C-1 | **Music Perception (UC Press)** | 음악인지 | SSCI, IF ≈ 1.7 | 음악 인지 톱저널. 형식 식별 정확도 데이터가 핵심 fit |
+| C-2 | **Psychology of Music (SAGE)** | 음악심리 | SSCI, IF ≈ 2 | 평가·실험 페이퍼 환영 |
+| C-3 | **Psychomusicology: Music, Mind, and Brain (APA)** | 음악-뇌·인지 | SSCI | 학습 효과 + 뇌·인지 측면 강조 시 적합 |
+| C-4 | **Music Analysis (Wiley)** | 음악분석 | SSCI | 형식 분석을 *분석철학* 으로 격상 시 fit. 주제별 학술지 |
+| C-5 | **Music Theory Spectrum (SMT, OUP)** | 음악이론 | SSCI | 미국 음악이론학회 공식. SMT 가입자 다수 |
+| C-6 | **Eighteenth-Century Music (Cambridge)** | 18세기 음악학 | SSCI | **K.545 (1788) 시대 정확 매치**. 작품 분석 비중 높이면 정밀 fit |
+| C-7 | **Journal of Music Theory (Yale)** | 음악이론 | SSCI | 권위 ↑ |
+| C-8 | **Journal of Research in Music Education (JRME)** | 음악교육 | SSCI, NAfME | 미국 음악교육 톱저널 |
+| C-9 | **Bulletin of the Council for Research in Music Education** | 음악교육 연구 | SSCI (U Illinois Press) | 도구 보고 환영 |
+| C-10 | **Update: Applications of Research in Music Education** | 응용 음악교육 | NAfME (SAGE) | 현장 적용에 비중 |
+| C-11 | **Leonardo Music Journal (MIT Press)** | 예술-기술 | A&HCI | 학제간 art-tech. CC BY-NC 적합 |
+| C-12 | **Tijdschrift voor Muziektheorie / Dutch Journal of Music Theory** | 음악이론 | 유럽 권위지 |
+| C-13 | **Indiana Theory Review** | 음악이론 | OA, 학생-연구자 친화 |
+
+### Tier OA — 오픈액세스 광역 학술지 (게재 빠르고 확실)
+주제 특화도는 낮지만 *시스템 + 평가 + 데이터* 형태가 유리.
+
+| # | 학술지 | 분류 | 특기사항 |
+|---|---|---|---|
+| OA-1 | **PLOS ONE** | OA, SCIE, IF ≈ 3.7 | 다학제 OA 거대지. 평가 + 통계 결과 분명 시 적합 |
+| OA-2 | **PeerJ Computer Science** | OA, SCIE | 빠른 심사, 시스템 페이퍼 환영 |
+| OA-3 | **Heliyon (Elsevier)** | OA, SCIE | 모든 학문분야 OA 대형지 |
+| OA-4 | **F1000Research** | OA, 공개 사후 심사 | 투명한 review process |
+| OA-5 | **Cogent Education (T&F)** | OA, ESCI | 교육 광역 |
+| OA-6 | **ETR&D (Educational Technology Research & Development, Springer)** | SSCI, IF ≈ 5 | 교육공학 연구 톱지 |
+| OA-7 | **International Journal of Educational Technology in Higher Education (Springer)** | SSCI, OA | 고등교육 + 기술 |
+| OA-8 | **Interactive Learning Environments (T&F)** | SSCI, IF ≈ 5 | 학습환경 디자인 |
+| OA-9 | **Computers in Human Behavior** | SSCI, IF ≈ 9 | 멀티미디어 학습 행동 데이터 적합 |
+| OA-10 | **The Internet and Higher Education** | SSCI, IF ≈ 9 | 학습 분석 환영 |
+| OA-11 | **TechTrends (Springer/AECT)** | ESCI | 미국 교육공학 협회. 교사용 친화 |
+| OA-12 | **Australasian Journal of Educational Technology (AJET)** | SSCI, OA | 호주 ed-tech |
+
 ### Tier D — 컨퍼런스 (빠른 발표·네트워킹)
 학술지 게재와 별개로 *빠른 가시성* 과 *후속 저널 트랙* 을 위해 권장.
 
@@ -75,6 +112,14 @@
 | 33 | **EuroDH / DH2026** (Digital Humanities) | 디지털 인문학 | 매년 7월. 디지털 악보 트랙 있음 |
 | 34 | **ISME World Conference 2026 (헬싱키)** | 음악교육 | 격년, IJME 후속 가능 |
 | 35 | **WIPSCE — Workshop in Primary and Secondary Computing Education** | 컴퓨팅 교육 | 본 작업이 교육 도구로 묘사되면 fit |
+| D-1 | **ACM IUI (Intelligent User Interfaces)** | HCI / 지능형 UI | A (CORE). 본 도구의 자동 보정·동기화 알고리즘 강조 시 적합 |
+| D-2 | **IEEE ICME (Intl. Conf. on Multimedia and Expo)** | 멀티미디어 | SCIE 컨퍼런스. ACM MM 보다 게재 확률 ↑ |
+| D-3 | **EAI ArtsIT (Arts and Technology)** | 예술·기술 | 학제간 컨퍼런스. 본 작업의 *art–tech* 측면 적합 |
+| D-4 | **ACM Creativity & Cognition (C&C)** | 창의·인지 | 학제간. 학습 도구 + 인지 데이터 |
+| D-5 | **ACM DIS (Designing Interactive Systems)** | 인터랙션 디자인 | 시스템 디자인 페이퍼 환영 |
+| D-6 | **ACM MMSys (Multimedia Systems)** | 멀티미디어 시스템 | 동기화 알고리즘 강조 시 적합 |
+| D-7 | **ACM CSCW (Computer-Supported Cooperative Work)** | 협업 시스템 | 교사-학생 협업 시나리오 강조 시 |
+| D-8 | **ACM TVX / IMX (Interactive Media Experiences)** | 인터랙티브 미디어 | 멀티미디어 + 학습 사례 환영 |
 
 ### 🇰🇷 Tier K — 한국 KCI (한국어 원고 그대로 가능)
 
@@ -135,7 +180,7 @@
 
 - [x] GitHub 저장소 공개 — `https://github.com/rosyrosys/sonata-form-viz`
 - [x] v0.1.0 GitHub Release — 2026-05-10
-- [ ] Zenodo DOI 확보 — 발급 대기 중
+- [x] Zenodo DOI 확보 — `10.5281/zenodo.20108497` (2026-05-10 발급)
 - [ ] IRB 면제/승인 번호 확보 (사용성 평가 N=18)
 - [ ] PD/CC 음원·악보 출처 명시
 - [ ] 그림 4개 + 표 4개 300dpi

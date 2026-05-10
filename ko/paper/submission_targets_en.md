@@ -62,6 +62,43 @@ Lesser-known venues that may be a *better* match than Tier A for specific framin
 | 26 | **Journal of Music Theory Pedagogy** | Music-theory pedagogy | Direct match for our pedagogical framing; published Plazak's color-mapping work |
 | 27 | **Visions of Research in Music Education (VRME)** | Music ed research | OA US journal. Welcomes tool reports |
 
+### Tier E — Music cognition / theory authoritative journals
+"Less famous but authoritative" venues that fit the *form-perception and pedagogy* dimensions of this work precisely.
+
+| # | Venue | Field | Class | Notes |
+|---|---|---|---|---|
+| C-1 | **Music Perception (UC Press)** | Music cognition | SSCI, IF ≈ 1.7 | Top music-cognition journal. Form-identification accuracy data fits well |
+| C-2 | **Psychology of Music (SAGE)** | Music psychology | SSCI, IF ≈ 2 | Welcomes evaluation/experimental papers |
+| C-3 | **Psychomusicology: Music, Mind, and Brain (APA)** | Music + cognition / brain | SSCI | Good fit when learning effects are framed cognitively |
+| C-4 | **Music Analysis (Wiley)** | Music analysis | SSCI | Suits a more analytic-philosophical framing of formal analysis |
+| C-5 | **Music Theory Spectrum (SMT, OUP)** | Music theory | SSCI | Society for Music Theory's official journal |
+| C-6 | **Eighteenth-Century Music (Cambridge)** | 18th-c. musicology | SSCI | **Exact period match for K. 545 (1788)**; ideal if work-specific analysis is centered |
+| C-7 | **Journal of Music Theory (Yale)** | Music theory | SSCI | High prestige |
+| C-8 | **Journal of Research in Music Education (JRME)** | Music ed | SSCI, NAfME | Top US music-education journal |
+| C-9 | **Bulletin of the Council for Research in Music Education** | Music-ed research | SSCI (U Illinois) | Welcomes tool reports |
+| C-10 | **Update: Applications of Research in Music Education** | Applied music ed | NAfME (SAGE) | Practitioner-leaning |
+| C-11 | **Leonardo Music Journal (MIT Press)** | Art–technology | A&HCI | Cross-disciplinary art-tech |
+| C-12 | **Tijdschrift voor Muziektheorie (Dutch Journal of Music Theory)** | Music theory | European authoritative |
+| C-13 | **Indiana Theory Review** | Music theory | OA, friendly to graduate-level work |
+
+### Tier OA — Open-access broad journals (fast, reliable publication)
+Less topically specific but well suited to a *system + evaluation + dataset* paper.
+
+| # | Venue | Class | Notes |
+|---|---|---|---|
+| OA-1 | **PLOS ONE** | OA, SCIE, IF ≈ 3.7 | Multidisciplinary; clear stats and evaluation favor acceptance |
+| OA-2 | **PeerJ Computer Science** | OA, SCIE | Fast review, system papers welcome |
+| OA-3 | **Heliyon (Elsevier)** | OA, SCIE | All disciplines |
+| OA-4 | **F1000Research** | OA with open peer review | Transparent process |
+| OA-5 | **Cogent Education (T&F)** | OA, ESCI | Education broad |
+| OA-6 | **Educational Technology Research & Development (ETR&D, Springer)** | SSCI, IF ≈ 5 | Top edu-tech research journal |
+| OA-7 | **International Journal of Educational Technology in Higher Education (Springer)** | SSCI, OA | Higher-ed + tech |
+| OA-8 | **Interactive Learning Environments (T&F)** | SSCI, IF ≈ 5 | Learning-environment design |
+| OA-9 | **Computers in Human Behavior** | SSCI, IF ≈ 9 | Suits multimedia-learning behavioral data |
+| OA-10 | **The Internet and Higher Education** | SSCI, IF ≈ 9 | Welcomes learning analytics |
+| OA-11 | **TechTrends (Springer/AECT)** | ESCI | US AECT; teacher-friendly |
+| OA-12 | **Australasian Journal of Educational Technology (AJET)** | SSCI, OA | Australian ed-tech |
+
 ### Tier D — Conferences (rapid visibility, networking)
 Even apart from journal submission, conferences offer visibility and follow-up tracks.
 
@@ -75,6 +112,14 @@ Even apart from journal submission, conferences offer visibility and follow-up t
 | 33 | **EuroDH / DH2026 (Digital Humanities)** | Digital humanities | Annual July; digital-score track |
 | 34 | **ISME World Conference 2026 (Helsinki)** | Music ed | Biennial; IJME follow-up possible |
 | 35 | **WIPSCE** | Computing education | Workshop in Primary and Secondary Computing Education; potential fit if framed pedagogically |
+| D-1 | **ACM IUI (Intelligent User Interfaces)** | HCI / intelligent UI | A (CORE). Good fit when emphasizing the auto-calibration / synchronization algorithms |
+| D-2 | **IEEE ICME (International Conference on Multimedia and Expo)** | Multimedia | SCIE conference; higher acceptance probability than ACM MM |
+| D-3 | **EAI ArtsIT (Arts and Technology)** | Art–tech | Cross-disciplinary venue; matches our art-tech intersection |
+| D-4 | **ACM Creativity & Cognition (C&C)** | Creativity / cognition | Cross-disciplinary; learning tool + cognition data |
+| D-5 | **ACM DIS (Designing Interactive Systems)** | Interaction design | System-design papers welcome |
+| D-6 | **ACM MMSys (Multimedia Systems)** | Multimedia systems | Strong fit if the synchronization algorithm is emphasized |
+| D-7 | **ACM CSCW (Computer-Supported Cooperative Work)** | Cooperative systems | Good fit if framed around teacher–student collaboration |
+| D-8 | **ACM IMX / TVX (Interactive Media Experiences)** | Interactive media | Welcomes multimedia + learning case studies |
 
 ---
 
@@ -120,7 +165,7 @@ The optimal sequence to leverage the *system + evaluation + open-source + biling
 
 - [x] Public GitHub repo — `https://github.com/rosyrosys/sonata-form-viz`
 - [x] v0.1.0 GitHub Release — 2026-05-10
-- [ ] Zenodo DOI — pending
+- [x] Zenodo DOI — `10.5281/zenodo.20108497` (issued 2026-05-10)
 - [ ] IRB exemption / approval (N=18 usability study)
 - [ ] PD/CC source attribution for audio + score
 - [ ] 4 figures + 4 tables at 300 dpi
