@@ -238,11 +238,7 @@ Table 2 presents the analysis adopted by the tool.
 K. 545's recapitulation famously begins in F major rather than the
 expected tonic. Hepokoski & Darcy (2006: ch. 17) classify this as a
 *subdominant recapitulation*, a recognized but unusual deformation.
-Korean-language scholarship corroborates the same observation — Bong
-(2017) describes the recap-key choice as a transposition "a fifth
-below the dominant" while emphasizing the unifying role of the
-Alberti bass across all three movements. Its functional motivation,
-often glossed in textbooks, is illuminating:
+Its functional motivation, often glossed in textbooks, is illuminating:
 
 > If the recapitulation P had begun in the tonic C, then mechanically
 > reusing the exposition's I→V harmonic plan would have placed S in G
@@ -696,10 +692,6 @@ guidelines.
 
 # References
 
-- Bong, J.-J. (2017). *A study on Piano Sonata K. 545 by W. A. Mozart*
-  [Master's thesis in Musicology, Konkuk University Graduate School,
-  Seoul]. Advisor: J.-M. Kim. (Korean: 모차르트 〈피아노 소나타 K. 545〉
-  분석 연구.)
 - Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W.
   Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.),
   *Usability Evaluation in Industry* (pp. 189–194). Taylor & Francis.
