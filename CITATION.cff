@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software in research or teaching, please cite it as below."
+title: "Sonata Form Visualization: a synchronized score-audio-form learning tool"
+abstract: >
+  A web-based learning tool that synchronizes a notated score, audio, and
+  formal analysis along a single timeline, allowing learners to experience
+  the hierarchical structure of sonata form simultaneously through auditory,
+  visual, and cognitive channels. The case study is W. A. Mozart's Piano
+  Sonata in C major, K. 545, Mvt. I — chosen because it combines textbook
+  formal landmarks with a celebrated subdominant recapitulation. Korean and
+  English editions are provided.
+authors:
+  - given-names: "[Given Name]"
+    family-names: "[Family Name]"
+    affiliation: "[Affiliation]"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+type: software
+version: "0.1.0"
+date-released: "2026-05-10"
+url: "https://github.com/rosyrosys/sonata-form-viz"
+repository-code: "https://github.com/rosyrosys/sonata-form-viz"
+license: MIT
+keywords:
+  - music education
+  - music education technology
+  - sonata form
+  - Mozart
+  - K. 545
+  - MusicXML
+  - OpenSheetMusicDisplay
+  - score visualization
+  - synchronized playback
+  - digital musicology
+  - multimodal learning
+identifiers:
+  - description: "The Concept DOI for all versions, issued by Zenodo upon first release."
+    type: doi
+    value: "PENDING"
