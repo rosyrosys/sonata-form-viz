@@ -1,0 +1,31 @@
+# Audio (commercial recordings — supply your own per assets/README.md)
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.ogg
+
+# Word artifacts left by Microsoft Word
+~$*.docx
+~$*.doc
+
+# Random PDFs that may live next to the project
+000002354153_*.pdf
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.tmp
+*~
+
+# Local Claude / preview server config
+.claude/
+_extract/
+
+# Node (if anyone adds tooling later)
+node_modules/
+package-lock.json

@@ -1,0 +1,122 @@
+{
+  "$schema": "https://example.org/sonata-form-schema/v1",
+  "work": {
+    "composer": "W. A. Mozart",
+    "title": "Piano Sonata in C Major, K. 545",
+    "movement": 1,
+    "tempo": "Allegro",
+    "meter": "C",
+    "tonic": "C major",
+    "year": 1788,
+    "total_measures": 73
+  },
+  "analysis_source": "User-provided form analysis + Schiff Carnegie Hall 2015 timing",
+  "sections": [
+    {
+      "id": "exposition",
+      "name_ko": "Exposition",
+      "start_measure": 1,
+      "end_measure": 28,
+      "start_time": 0.0,
+      "end_time": 55.0,
+      "key": "C major to G major",
+      "note": "Primary theme (C major), Secondary theme (G major), then a codetta. The two themes are stated in the tonic and dominant. In Schiff's reading, the entire exposition is repeated.",
+      "themes": [
+        {
+          "id": "P",
+          "name_ko": "Primary theme",
+          "start_measure": 1,
+          "end_measure": 13,
+          "start_time": 0.0,
+          "end_time": 27.0,
+          "key": "C major",
+          "note": "C major opening with a clear eighth-note melody over Alberti bass. A four-bar antecedent and consequent appear twice."
+        },
+        {
+          "id": "S",
+          "name_ko": "Secondary theme",
+          "start_measure": 14,
+          "end_measure": 25,
+          "start_time": 27.0,
+          "end_time": 50.0,
+          "key": "G major",
+          "note": "Gentle second theme in the dominant. The two hands engage in a dialogue-like texture."
+        },
+        {
+          "id": "K",
+          "name_ko": "Codetta",
+          "start_measure": 26,
+          "end_measure": 28,
+          "start_time": 50.0,
+          "end_time": 55.0,
+          "key": "G major",
+          "note": "A short codetta with alternating scales and trills that confirms the cadence of the exposition."
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "name_ko": "Development",
+      "start_measure": 29,
+      "end_measure": 41,
+      "start_time": 55.0,
+      "end_time": 79.0,
+      "key": "g minor, d minor, a minor, C major, a minor, F major",
+      "note": "A short development moves through g, d, a, C, a, then F major using the primary motive. The final F-major area prepares the unusual subdominant recapitulation.",
+      "themes": [
+        {
+          "id": "P",
+          "name_ko": "Development (modulating progression)",
+          "start_measure": 29,
+          "end_measure": 41,
+          "start_time": 55.0,
+          "end_time": 79.0,
+          "key": "g, d, a, C, a, F",
+          "note": "Tonal trajectory through six brief regions, ending on F major as the structural pivot."
+        }
+      ]
+    },
+    {
+      "id": "recapitulation",
+      "name_ko": "Recapitulation",
+      "start_measure": 42,
+      "end_measure": 73,
+      "start_time": 79.0,
+      "end_time": 140.0,
+      "key": "F major to C major",
+      "note": "Famously, the recapitulation does not begin in the tonic but in the subdominant (F major). By starting a fifth lower, Mozart can reuse the exposition's modulation pattern so that the secondary theme arrives in the tonic on the second hearing.",
+      "themes": [
+        {
+          "id": "P",
+          "name_ko": "Recapitulation Primary theme (subdominant)",
+          "start_measure": 42,
+          "end_measure": 58,
+          "start_time": 79.0,
+          "end_time": 112.0,
+          "key": "F major",
+          "note": "Subdominant (F major) recapitulation, the central pedagogical point of this movement."
+        },
+        {
+          "id": "S",
+          "name_ko": "Recapitulation Secondary theme (tonic)",
+          "start_measure": 59,
+          "end_measure": 70,
+          "start_time": 112.0,
+          "end_time": 134.4,
+          "key": "C major",
+          "note": "Stated this time in the tonic and heading toward the Essential Structural Closure. The form's core function of unifying both themes in the tonic is finally fulfilled."
+        },
+        {
+          "id": "K",
+          "name_ko": "Recapitulation codetta",
+          "start_measure": 71,
+          "end_measure": 73,
+          "start_time": 134.4,
+          "end_time": 140.0,
+          "key": "C major",
+          "note": "Scales and trills return to close the movement."
+        }
+      ]
+    }
+  ]
+}

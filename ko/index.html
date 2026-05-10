@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>소나타 형식 시각화 — Mozart K. 545 1악장</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- OpenSheetMusicDisplay (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.7/build/opensheetmusicdisplay.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>소나타 형식 시각화 학습 도구</h1>
+    <p class="subtitle">W. A. Mozart, Piano Sonata in C Major, K. 545, Mvt. I (Allegro)</p>
+  </header>
+
+  <!-- 1) 소나타 형식 타임라인 -->
+  <section id="form-timeline" aria-label="소나타 형식 타임라인">
+    <div class="timeline-track" id="timeline-track"></div>
+    <div class="timeline-labels" id="timeline-labels"></div>
+    <div class="timeline-playhead" id="timeline-playhead"></div>
+  </section>
+
+  <!-- 2) 현재 섹션/주제 라벨 -->
+  <section id="now-playing" aria-live="polite">
+    <span id="now-section" class="badge section">제시부</span>
+    <span id="now-subsection" class="badge subsection">제1주제 (P)</span>
+    <span id="now-key" class="badge key">C장조</span>
+    <span id="now-measure" class="badge measure">m. 1</span>
+  </section>
+
+  <!-- 3) 악보 + 커서 -->
+  <main id="score-area">
+    <div id="osmd-container"></div>
+    <div id="score-loading">악보를 불러오는 중…</div>
+  </main>
+
+  <!-- 4) 컨트롤 -->
+  <section id="controls">
+    <audio id="audio" preload="auto" controls>
+      <source src="assets/mozart_k545_mvt1.mp3" type="audio/mpeg" />
+      브라우저가 오디오 재생을 지원하지 않습니다.
+    </audio>
+    <div class="jump-buttons" id="jump-buttons" aria-label="섹션 점프"></div>
+    <div class="speed-control">
+      <label for="speed">재생 속도</label>
+      <input type="range" id="speed" min="0.5" max="1.5" step="0.05" value="1.0" />
+      <span id="speed-value">1.00×</span>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="toggle-color" checked /> 섹션 색상</label>
+      <label><input type="checkbox" id="toggle-cursor" /> 악보 커서</label>
+      <label><input type="checkbox" id="toggle-loop" /> 섹션 반복</label>
+    </div>
+    <div class="toolbar" style="grid-column:1/-1; display:flex; gap:.4rem; flex-wrap:wrap; padding-top:.4rem; border-top:1px solid var(--border);">
+      <button id="btn-calibrate" title="6개 핵심 마디에서 스페이스 탭으로 73마디 타이밍을 보정합니다 (단축키: T)">🎯 마디 동기 보정 (T)</button>
+      <button id="btn-zoom-out" title="악보 축소 (단축키: -)">악보 −</button>
+      <button id="btn-zoom-in" title="악보 확대 (단축키: +)">악보 +</button>
+      <button id="btn-reset-cal" title="저장된 보정값을 초기화합니다">보정 초기화</button>
+      <span style="margin-left:auto; font-size:.78rem; color:var(--muted); align-self:center;">
+        키: Space 재생 · ←→ 섹션 · L 반복 · C 색상 · T 보정 · +/- 줌
+      </span>
+    </div>
+  </section>
+
+  <!-- 5) 분석 패널 -->
+  <aside id="analysis-panel">
+    <h2>현재 섹션 해설</h2>
+    <p id="analysis-text">재생을 시작하면 이 자리에 해설이 나타납니다.</p>
+  </aside>
+
+  <footer>
+    <small>
+      교육 연구 목적 · MusicXML / 오디오는 Public Domain 또는 CC 라이선스 자료를 사용해야 합니다.
+      (IMSLP, Musopen 권장)
+    </small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

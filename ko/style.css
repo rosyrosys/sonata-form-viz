@@ -1,0 +1,243 @@
+/* ======================================================================
+   소나타 형식 시각화 — 색상 시스템
+   섹션 색은 음악교육 문헌(Reichweger 2018; Plazak 2014)에서 권장하는
+   "구분이 잘 되는 채도-낮은 파스텔" 팔레트를 사용합니다.
+   ====================================================================== */
+:root {
+  --bg: #fafaf7;
+  --fg: #1a1a1a;
+  --muted: #666;
+  --border: #d8d8d2;
+
+  /* 대형 섹션 */
+  --c-exposition: #e8f1ff;
+  --c-development: #fff3e0;
+  --c-recapitulation: #e8f7ec;
+  --c-coda: #f3e8ff;
+
+  /* 하위 주제(테두리/액센트) */
+  --c-P: #2e6fb3;
+  --c-T: #b07a2e;
+  --c-S: #2e8a4e;
+  --c-K: #7a3eb0;
+
+  /* 강조 */
+  --accent: #d4504a;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+.app-header {
+  padding: 1rem 1.5rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.app-header h1 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.subtitle { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.9rem; }
+
+/* ----- 1) 타임라인 ----- */
+#form-timeline {
+  position: relative;
+  margin: 1rem 1.5rem 0;
+  height: 70px;
+  user-select: none;
+}
+.timeline-track {
+  position: relative;
+  display: flex;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.timeline-segment {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  border-right: 1px solid rgba(0,0,0,0.08);
+  transition: filter 0.15s;
+}
+.timeline-segment:last-child { border-right: 0; }
+.timeline-segment:hover { filter: brightness(0.95); }
+.timeline-segment.exposition       { background: var(--c-exposition); }
+.timeline-segment.development      { background: var(--c-development); }
+.timeline-segment.recapitulation   { background: var(--c-recapitulation); }
+.timeline-segment.coda             { background: var(--c-coda); }
+
+.timeline-segment .seg-tag {
+  position: absolute;
+  top: 4px; left: 4px;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.timeline-segment.theme-P { box-shadow: inset 0 -3px 0 var(--c-P); }
+.timeline-segment.theme-T { box-shadow: inset 0 -3px 0 var(--c-T); }
+.timeline-segment.theme-S { box-shadow: inset 0 -3px 0 var(--c-S); }
+.timeline-segment.theme-K { box-shadow: inset 0 -3px 0 var(--c-K); }
+
+.timeline-labels {
+  position: relative;
+  display: flex;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+.timeline-labels span { flex: none; }
+
+.timeline-playhead {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background: var(--accent);
+  pointer-events: none;
+  transition: left 0.08s linear;
+  box-shadow: 0 0 6px rgba(212, 80, 74, 0.6);
+}
+
+/* ----- 2) 현재 재생중 라벨 ----- */
+#now-playing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.badge.section     { font-weight: 600; }
+.badge.subsection  { color: var(--c-P); border-color: var(--c-P); }
+.badge.key         { font-style: italic; color: var(--muted); }
+.badge.measure     { font-family: "JetBrains Mono", monospace; font-size: 0.8rem; }
+
+/* ----- 3) 악보 ----- */
+#score-area {
+  position: relative;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-height: 320px;
+  box-shadow: var(--shadow);
+}
+#osmd-container { width: 100%; }
+#score-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+#score-loading.hidden { display: none; }
+
+/* OSMD 측마다 배경 오버레이 (JS가 measure 박스 위에 div 삽입) */
+.measure-overlay {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.35;
+  border-radius: 2px;
+  z-index: 1;
+}
+.measure-overlay.exposition     { background: var(--c-exposition); }
+.measure-overlay.development    { background: var(--c-development); }
+.measure-overlay.recapitulation { background: var(--c-recapitulation); }
+.measure-overlay.coda           { background: var(--c-coda); }
+
+/* ----- 4) 컨트롤 ----- */
+#controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 1.5rem;
+  margin: 0 1.5rem 1rem;
+  padding: 0.8rem 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+#audio { width: 100%; grid-column: 1 / -1; }
+
+.jump-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  grid-column: 1 / -1;
+}
+.jump-buttons button {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.1s;
+}
+.jump-buttons button:hover { background: var(--c-exposition); border-color: var(--c-P); }
+.jump-buttons button[data-section="exposition"]     { border-left: 4px solid var(--c-P); }
+.jump-buttons button[data-section="development"]    { border-left: 4px solid var(--c-T); }
+.jump-buttons button[data-section="recapitulation"] { border-left: 4px solid var(--c-S); }
+.jump-buttons button[data-section="coda"]           { border-left: 4px solid var(--c-K); }
+.jump-buttons button.active {
+  background: #ffe9e7;
+  border-color: var(--accent);
+}
+
+.speed-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.speed-control input { flex: 1; }
+
+.toggles {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+/* ----- 5) 분석 패널 ----- */
+#analysis-panel {
+  margin: 0 1.5rem 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+#analysis-panel h2 { margin: 0 0 0.5rem; font-size: 1rem; }
+#analysis-text { margin: 0; color: #333; font-size: 0.92rem; }
+
+footer {
+  padding: 1rem 1.5rem 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* OSMD 커서 색상 강조 (생성된 div 에 적용됨) */
+#osmd-container > img { /* 커서는 OSMD가 div로 만듦 */ }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonata Form Visualization — Mozart K. 545, Mvt. I</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- OpenSheetMusicDisplay (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.7/build/opensheetmusicdisplay.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sonata Form Visualization — A Learning Tool</h1>
+    <p class="subtitle">W. A. Mozart, Piano Sonata in C Major, K. 545, Mvt. I (Allegro)</p>
+  </header>
+
+  <!-- 1) Sonata-form timeline -->
+  <section id="form-timeline" aria-label="Sonata form timeline">
+    <div class="timeline-track" id="timeline-track"></div>
+    <div class="timeline-labels" id="timeline-labels"></div>
+    <div class="timeline-playhead" id="timeline-playhead"></div>
+  </section>
+
+  <!-- 2) Current section / theme labels -->
+  <section id="now-playing" aria-live="polite">
+    <span id="now-section" class="badge section">Exposition</span>
+    <span id="now-subsection" class="badge subsection">Primary theme (P)</span>
+    <span id="now-key" class="badge key">C major</span>
+    <span id="now-measure" class="badge measure">m. 1</span>
+  </section>
+
+  <!-- 3) Score + cursor -->
+  <main id="score-area">
+    <div id="osmd-container"></div>
+    <div id="score-loading">Loading score…</div>
+  </main>
+
+  <!-- 4) Controls -->
+  <section id="controls">
+    <audio id="audio" preload="auto" controls>
+      <source src="assets/mozart_k545_mvt1.mp3" type="audio/mpeg" />
+      Your browser does not support audio playback.
+    </audio>
+    <div class="jump-buttons" id="jump-buttons" aria-label="Jump to section"></div>
+    <div class="speed-control">
+      <label for="speed">Playback speed</label>
+      <input type="range" id="speed" min="0.5" max="1.5" step="0.05" value="1.0" />
+      <span id="speed-value">1.00×</span>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" id="toggle-color" checked /> Section color</label>
+      <label><input type="checkbox" id="toggle-cursor" /> Score cursor</label>
+      <label><input type="checkbox" id="toggle-loop" /> Loop section</label>
+    </div>
+    <div class="toolbar" style="grid-column:1/-1; display:flex; gap:.4rem; flex-wrap:wrap; padding-top:.4rem; border-top:1px solid var(--border);">
+      <button id="btn-calibrate" title="Tap Space at 6 key measures to calibrate the 73-measure timing (shortcut: T)">🎯 Calibrate measure timing (T)</button>
+      <button id="btn-zoom-out" title="Zoom out score (shortcut: -)">Score −</button>
+      <button id="btn-zoom-in" title="Zoom in score (shortcut: +)">Score +</button>
+      <button id="btn-reset-cal" title="Reset saved calibration">Reset calibration</button>
+      <span style="margin-left:auto; font-size:.78rem; color:var(--muted); align-self:center;">
+        Keys: Space play · ←→ section · L loop · C color · T calibrate · +/− zoom
+      </span>
+    </div>
+  </section>
+
+  <!-- 5) Analysis panel -->
+  <aside id="analysis-panel">
+    <h2>Section commentary</h2>
+    <p id="analysis-text">Start playback to see commentary here.</p>
+  </aside>
+
+  <footer>
+    <small>
+      For educational research · MusicXML and audio files must be Public Domain or
+      CC-licensed (IMSLP and Musopen recommended).
+    </small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
