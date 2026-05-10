@@ -33,6 +33,6 @@ keywords:
   - digital musicology
   - multimodal learning
 identifiers:
-  - description: "The Concept DOI for all versions, issued by Zenodo upon first release."
+  - description: "DOI issued by Zenodo for v0.1.0."
     type: doi
-    value: "PENDING"
+    value: "10.5281/zenodo.20108497"
