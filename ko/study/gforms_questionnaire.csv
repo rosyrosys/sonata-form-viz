@@ -1,0 +1,39 @@
+section,item_id,type,title_ko,title_en,help_ko,help_en,options_ko,options_en,scale_low,scale_high,scale_low_label_ko,scale_high_label_ko,scale_low_label_en,scale_high_label_en,answer_key_ko,answer_key_en,points,required,excerpt_url
+A,A1,short_text,A1. 익명 코드 (P-XXX),A1. Anonymous code (P-XXX),연구진이 부여한 익명 코드,The code assigned by the researcher,,,,,,,,,,,1,
+A,A2,short_text,A2. 만 나이,A2. Age (years),,,,,,,,,,,,,1,
+A,A3,multiple_choice,A3. 성별,A3. Sex,,,남|여|답하지 않음,Male|Female|Prefer not to say,,,,,,,,,1,
+A,A4,multiple_choice,A4. 학년,A4. Year in school,,,2학년|3학년|4학년|기타,Sophomore|Junior|Senior|Other,,,,,,,,,1,
+A,A5,checkbox,A5. 전공 (해당하는 모두),A5. Major (select all),,,음악교육|작곡|피아노|성악|관현악|음악학|실용음악|기타,Music education|Composition|Piano|Voice|Strings/Winds/Percussion|Musicology|Applied music|Other,,,,,,,,,1,
+A,A6,short_text,A6. 정규 음악 교육 총 연수 (년),A6. Total years of formal music training,,,,,,,,,,,,,1,
+A,A7,short_text,A7. 주 악기,A7. Primary instrument,,,,,,,,,,,,,1,
+A,A8,scale,A8. 소나타 형식 이해도,A8. Self-rated form understanding,,,,,1,5,전혀 모름,잘 알고 가르칠 수 있음,No understanding,Could teach it,,,,1,
+A,A9,multiple_choice,A9. K.545 1악장 연주 경험,A9. Have you performed K.545 Mvt.I?,,,있음 (학습용)|있음 (공연·콩쿠르)|없음,Yes — for study|Yes — public performance|No,,,,,,,,,1,
+A,A10,multiple_choice,A10. K.545 1악장 청취 경험,A10. Have you listened to K.545 Mvt.I?,,,자주 (10회 이상)|가끔 (3–9회)|드물게 (1–2회)|처음,Often (10+)|Sometimes (3–9)|Rarely (1–2)|Never,,,,,,,,,1,
+B-pre,B-α-1,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 1–8),Beethoven Op.49 No.2 Mvt.I (mm. 1–8),,,① 제시부 P|② 제시부 S|③ 제시부 codetta|④ 발전부|⑤ 재현부 P|⑥ 재현부 S|⑦ 재현부 codetta|⑧ 모름,① Exposition P|② Exposition S|③ Exposition codetta|④ Development|⑤ Recap P|⑥ Recap S|⑦ Recap codetta|⑧ Don't know,,,,,,,① 제시부 P,① Exposition P,1,1,REPLACE_ME
+B-pre,B-α-2,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 21–28),Beethoven Op.49 No.2 Mvt.I (mm. 21–28),,,① 제시부 P|② 제시부 S|③ 제시부 codetta|④ 발전부|⑤ 재현부 P|⑥ 재현부 S|⑦ 재현부 codetta|⑧ 모름,① Exposition P|② Exposition S|③ Exposition codetta|④ Development|⑤ Recap P|⑥ Recap S|⑦ Recap codetta|⑧ Don't know,,,,,,,② 제시부 S,② Exposition S,1,1,REPLACE_ME
+B-pre,B-α-3,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 53–60),Beethoven Op.49 No.2 Mvt.I (mm. 53–60),,,(same 8 options),(same 8 options),,,,,,,④ 발전부,④ Development,1,1,REPLACE_ME
+B-pre,B-α-4,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 67–74),Beethoven Op.49 No.2 Mvt.I (mm. 67–74),,,(same 8 options),(same 8 options),,,,,,,⑤ 재현부 P,⑤ Recap P,1,1,REPLACE_ME
+B-pre,B-α-5,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 1–8),Haydn Hob.XVI:35 Mvt.I (mm. 1–8),,,(same 8 options),(same 8 options),,,,,,,① 제시부 P,① Exposition P,1,1,REPLACE_ME
+B-pre,B-α-6,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 24–31),Haydn Hob.XVI:35 Mvt.I (mm. 24–31),,,(same 8 options),(same 8 options),,,,,,,② 제시부 S,② Exposition S,1,1,REPLACE_ME
+B-pre,B-α-7,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 58–65),Haydn Hob.XVI:35 Mvt.I (mm. 58–65),,,(same 8 options),(same 8 options),,,,,,,④ 발전부,④ Development,1,1,REPLACE_ME
+B-pre,B-α-8,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 79–86),Haydn Hob.XVI:35 Mvt.I (mm. 79–86),,,(same 8 options),(same 8 options),,,,,,,⑤ 재현부 P,⑤ Recap P,1,1,REPLACE_ME
+B-pre,B-α-9,multiple_choice,Schubert Op.142 No.2 (A부),Schubert Op.142 No.2 (A section),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-pre,B-α-10,multiple_choice,Schubert Op.142 No.2 (B부),Schubert Op.142 No.2 (B section),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-pre,B-α-11,multiple_choice,Schubert Op.142 No.2 (A부 회귀),Schubert Op.142 No.2 (A return),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-pre,B-α-12,multiple_choice,Bach Two-Part Invention No.1 (마디 1–7),Bach Two-Part Invention No.1 (mm. 1–7),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-post,B-β-1,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 9–14),Beethoven Op.49 No.2 Mvt.I (mm. 9–14),,,(same 8 options),(same 8 options),,,,,,,① 제시부 P,① Exposition P,1,1,REPLACE_ME
+B-post,B-β-2,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 36–44),Beethoven Op.49 No.2 Mvt.I (mm. 36–44),,,(same 8 options),(same 8 options),,,,,,,② 제시부 S,② Exposition S,1,1,REPLACE_ME
+B-post,B-β-3,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 47–52),Beethoven Op.49 No.2 Mvt.I (mm. 47–52),,,(same 8 options),(same 8 options),,,,,,,③ 제시부 codetta,③ Exposition codetta,1,1,REPLACE_ME
+B-post,B-β-4,multiple_choice,Beethoven Op.49 No.2 Mvt.I (마디 75–82),Beethoven Op.49 No.2 Mvt.I (mm. 75–82),,,(same 8 options),(same 8 options),,,,,,,⑥ 재현부 S,⑥ Recap S,1,1,REPLACE_ME
+B-post,B-β-5,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 17–24),Haydn Hob.XVI:35 Mvt.I (mm. 17–24),,,(same 8 options),(same 8 options),,,,,,,① 제시부 P,① Exposition P,1,1,REPLACE_ME
+B-post,B-β-6,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 32–40),Haydn Hob.XVI:35 Mvt.I (mm. 32–40),,,(same 8 options),(same 8 options),,,,,,,② 제시부 S,② Exposition S,1,1,REPLACE_ME
+B-post,B-β-7,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 50–57),Haydn Hob.XVI:35 Mvt.I (mm. 50–57),,,(same 8 options),(same 8 options),,,,,,,④ 발전부,④ Development,1,1,REPLACE_ME
+B-post,B-β-8,multiple_choice,Haydn Hob.XVI:35 Mvt.I (마디 87–94),Haydn Hob.XVI:35 Mvt.I (mm. 87–94),,,(same 8 options),(same 8 options),,,,,,,⑥ 재현부 S,⑥ Recap S,1,1,REPLACE_ME
+B-post,B-β-9,multiple_choice,Schubert Op.90 No.2 (A부),Schubert Op.90 No.2 (A section),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-post,B-β-10,multiple_choice,Schubert Op.90 No.2 (B부),Schubert Op.90 No.2 (B section),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-post,B-β-11,multiple_choice,Bach Two-Part Invention No.8 (마디 1–6),Bach Two-Part Invention No.8 (mm. 1–6),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+B-post,B-β-12,multiple_choice,Mozart Variations K.265 (Theme),Mozart Variations K.265 (Theme),,,(same 8 options),(same 8 options),,,,,,,⑧ 모름,⑧ Don't know,1,1,REPLACE_ME
+C,C1,paragraph,C1. 가장 인상적이었던 발견,C1. Most striking discovery,3–5 문장 권장,3–5 sentences,,,,,,,,,,,1,
+C,C2,checkbox,C2. 도움이 된 기능,C2. Most helpful features,복수 선택 가능,Select all,형식 타임라인|마디 색상 오버레이|분석 패널 해설|섹션 점프|섹션 반복|속도 조절|키보드 단축키|기타,Form timeline|Measure overlay|Analysis panel|Section jump|Section loop|Speed control|Keyboard|Other,,,,,,,,,1,
+C,C3,paragraph,C3. 개선 사항 (선택),C3. What could improve (optional),,,,,,,,,,,,,0,
+D,D1-D10,scale_x10,SUS 10문항 (Brooke 1996 / 김주현 외 2014),SUS 10 items (Brooke 1996),Brooke 공식 본문 직접 입력 필요,Paste official Brooke text,,,1,5,매우 동의 안 함,매우 동의함,Strongly disagree,Strongly agree,,,1,1,
