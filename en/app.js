@@ -113,11 +113,17 @@ async function initScore() {
     const savedZoom = parseFloat(localStorage.getItem("osmdZoom"));
     osmd.Zoom = isFinite(savedZoom) ? savedZoom : 0.7;
     osmd.render();
-    // 악보 커서는 기본 OFF (사용자가 토글로 켤 때만 표시).
-    // 동기 정밀도가 마디 단위라 음표 단위 커서는 거슬릴 수 있어 끔.
     if (toggleCursor && toggleCursor.checked) osmd.cursor.show();
     else if (osmd.cursor) osmd.cursor.hide();
-    paintMeasureOverlays();
+    // SVG 가 DOM 레이아웃을 마치고 getBBox 가 유효해질 때까지 대기.
+    // 두 번 rAF + 폴백 타이머로 가장 견고하게.
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      paintMeasureOverlays();
+      // 0개로 끝났으면 한 번 더 재시도 (느린 환경 대비)
+      if (!document.querySelectorAll(".measure-overlay").length) {
+        setTimeout(paintMeasureOverlays, 250);
+      }
+    }));
     scoreLoading.classList.add("hidden");
   } catch (e) {
     console.warn("Score not loaded — demo mode:", e.message);
