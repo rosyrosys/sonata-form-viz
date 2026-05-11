@@ -44,17 +44,13 @@ shortcuts. A WebAudio metronome demo mode allows the formal
 visualization to function even without an audio file, addressing the
 copyright-sensitivity of classroom use.
 
-A pre/post evaluation with N=18 undergraduate music-education majors
-showed a significant gain in formal-identification accuracy
-(47.2% → 71.8%, *t*(17)=4.92, *p*<.01, Cohen's *d*=1.16, large effect)
-and a System Usability Scale (SUS) score of 81.4 (industry average:
-68). Notably, free-response mention of the subdominant recapitulation
-rose from 0% pre-test to 78% post-test, suggesting that
-multi-representational visualization is effective not only for teaching
-formal *norms* but also for surfacing the *deformations* that animate
-the repertoire. The tool is released as MIT-licensed open source; its
-JSON schema for formal analysis is directly extensible to other works
-and forms.
+This paper focuses on the system's design, implementation, and the
+pedagogical significance of using multi-representational visualization
+to teach *norms and deformations* together — most prominently K. 545's
+atypical subdominant recapitulation. The tool is released as MIT-licensed
+open source; its JSON schema for formal analysis is directly extensible
+to other works and forms. Empirical validation of learning effects is
+deferred to a planned randomized controlled trial.
 
 **Keywords:** music education technology, sonata form, score
 visualization, synchronized playback, MusicXML, OpenSheetMusicDisplay,
@@ -460,140 +456,32 @@ The system handles several failure modes explicitly:
   next section), `L` (loop), `C` (color toggle).
 
 
-# 6. Evaluation
+# 6. Discussion
 
-## 6.1 Design
+## 6.1 Pedagogical Implications
 
-A one-group pretest–posttest design was adopted as a first-pass test
-of directional efficacy (Shadish, Cook, & Campbell, 2002). A
-subsequent randomized comparison with a non-synchronized control
-condition is planned (see §8.4).
+Traditional verbal teaching often presents the recapitulation as
+"return-in-tonic," handling deformations as exceptions; K. 545's
+subdominant recapitulation makes a stronger pedagogical claim
+available — that Mozart *preserves the exposition's modulation pattern*
+by shifting the starting key down a fifth, so that the secondary
+theme arrives in the tonic on the second hearing. The synchronized
+color-coded view makes this *function-preserving* character of the
+deformation visually self-evident, aligning with current form-functional
+approaches to musical analysis (Caplin, 1998, 2009). The pedagogical
+move — from rules-and-exceptions to functional flexibility — is the
+central educational claim of this work.
 
-## 6.2 Participants
-
-Eighteen undergraduate music-education majors (5 male, 13 female; mean
-age 21.4, SD 1.6) at a single university were recruited via voluntary
-on-campus posting. All participants reported prior coursework on
-sonata form. Each received a gift voucher equivalent to USD 35. The
-study was approved by the institutional IRB (No. [_____]).
-
-## 6.3 Instruments
-
-### 6.3.1 Form-identification task
-
-Twelve 30-second random excerpts were presented; participants labeled
-each on a 5-option scale (P / T / S / K / "don't know"). Excerpts
-were drawn from:
-
-- Beethoven, Sonata Op. 49 No. 2, mvt. I — 4 excerpts
-- Haydn, Sonata Hob. XVI:35, mvt. I — 4 excerpts
-- Schubert, Impromptu Op. 142 No. 2 — 4 excerpts (non-sonata-form
-  control)
-
-K. 545 itself, the training piece, was *excluded* from testing so
-that only *transfer* effects were measured.
-
-### 6.3.2 Free response
-
-Single open-ended item: "Describe the most striking discovery you made
-while using this tool." Two raters independently coded responses for
-mention of the subdominant recapitulation (κ = .92).
-
-### 6.3.3 SUS
-
-Brooke's (1996) System Usability Scale (10 items, 0–100).
-
-## 6.4 Procedure
-
-| Stage | Time | Content |
-|---|---|---|
-| 1. Pretest identification | 8 min | 12 excerpts, label-and-confidence |
-| 2. Tool session | 30 min | Free exploration of K. 545 mvt. I |
-| 3. Posttest identification | 8 min | 12 *different* excerpts, same task |
-| 4. Free response | 5 min | Single item |
-| 5. SUS | 5 min | 10 items |
-
-Total: ≈60 min per participant.
-
-## 6.5 Analysis
-
-- Identification accuracy: paired-sample *t*-test, Cohen's *d*.
-- Free response: inter-rater agreement via Cohen's κ; frequency
-  reported.
-- SUS: mean with 95% CI.
-
-
-# 7. Results
-
-## 7.1 Form-Identification Accuracy
-
-**Table 4.** Pre- and post-test accuracy.
-
-| Measure | Mean | SD | Range |
-|---|---|---|---|
-| Pretest | 47.2% | 11.4 | 25 – 67 |
-| Posttest | 71.8% | 9.7 | 58 – 92 |
-| Δ | +24.6 pp | 8.1 | +8 to +42 |
-
-Paired-sample *t*-test: *t*(17) = 4.92, *p* < .01. Cohen's *d* = 1.16,
-indicating a *large* effect (Cohen, 1988).
-
-## 7.2 Recognition of Subdominant Recapitulation
-
-In free response:
-- Pretest awareness: 0 / 18 (0%) — effectively absent.
-- Posttest mention of the subdominant recapitulation: 14 / 18 (77.8%).
-
-Inter-rater κ = .92.
-
-## 7.3 System Usability
-
-SUS mean = 81.4, 95% CI [76.9, 85.9]. Per Sauro and Lewis (2016) this
-falls in the *Excellent (A)* grade band, well above the industry mean
-of 68.
-
-## 7.4 Qualitative Feedback
-
-Representative positive responses (anonymized, used with consent):
-
-- "Watching the timeline made me feel for the first time how *short*
-  the development really is."
-- "The recapitulation suddenly starting in F major — I could *see* it
-  as well as hear it."
-- "The loop function let me compare P in the exposition and P in the
-  recapitulation directly."
-
-Improvement requests:
-
-- "The score is too small on mobile" (7 participants).
-- "The boundary between K and any codetta is sometimes ambiguous"
-  (3 participants).
-- "I'd like more visual contrast for the modulating sequences in the
-  development" (2 participants).
-
-
-# 8. Discussion
-
-## 8.1 Educational Implications
-
-The large effect-size gain in form identification, together with the
-0% → 78% jump in recognition of the K. 545 subdominant recapitulation,
-suggests that the tool conveys not merely the *norms* of sonata form
-but also the *functional logic of its deformations*. Traditional
-verbal teaching often presents the recapitulation as
-"return-in-tonic," handling deformations as exceptions; the
-synchronized color-coded view makes the *function-preserving*
-character of Mozart's deviation visually self-evident. This
-pedagogical move — from rules-and-exceptions to functional flexibility
-— aligns with current form-functional approaches to musical analysis
-(Caplin, 1998, 2009).
-
-## 8.2 Methodological and Tooling Implications
+## 6.2 Methodological and Tooling Implications
 
 - **First-class status of formal analysis.** Encoding the analysis as
   a versioned JSON object — not as ephemeral pedagogical commentary —
   invites peer review of the analysis itself, machine reuse, and
   reproducibility.
+- **Exposition-repeat folding.** The non-monotonic mapping between
+  audio time and analytical time during performer-elected repeats is a
+  practical solution to a problem common across sonata-form recordings
+  and applicable wherever the form contains an indicated repeat.
 - **Demo mode as a copyright-pragmatic default.** The WebAudio
   metronome allows the form layer to function in environments where
   no PD/CC audio is at hand, lowering the barrier to classroom
@@ -603,54 +491,49 @@ pedagogical move — from rules-and-exceptions to functional flexibility
   pipelines — a non-trivial property for syllabi designed to last
   multiple cohorts.
 
-## 8.3 Limitations
+## 6.3 Limitations and Future Work
 
-- **Single session, single piece.** Long-term retention is not
-  assessed.
-- **Sample size.** N = 18 is adequate for an initial directional test
-  but insufficient for SSCI-level generalization.
-- **No control group.** A passive-listening or non-synchronized control
-  is needed to isolate the contribution of synchronization itself
-  versus simple exposure.
-- **Recording-dependence of the time map.** The current map assumes
-  a single reference recording; performances at different tempi
-  introduce up to ±0.5 s alignment error.
-- **Mobile responsiveness.** The most frequent improvement request.
+This paper limits itself to system design, implementation, and
+pedagogical positioning. Empirical validation of learning effects is
+deferred to subsequent work. Planned next steps:
 
-## 8.4 Future Work
-
-1. **Automatic score-audio alignment** (Nakamura et al., 2017) to
+1. **Randomized controlled trial** comparing the synchronized condition
+   to (a) audio + score without synchronization and (b) audio + verbal
+   lecture only, with form-identification accuracy and SUS as primary
+   measures.
+2. **Automatic score-audio alignment** (Nakamura et al., 2017) to
    eliminate recording-dependence.
-2. **Multi-piece dataset.** Beethoven Op. 49 No. 2 mvt. I and Clementi
-   Op. 36 No. 1 mvt. I, encoded against the same JSON schema, to
-   support comparative form study.
-3. **Authoring mode.** Learners label their own compositions with
+3. **Multi-piece dataset.** Beethoven Op. 49 No. 2 mvt. I and Clementi
+   Op. 36 No. 1 mvt. I encoded against the same JSON schema for
+   comparative form study.
+4. **Authoring mode.** Learners label their own compositions with
    formal regions, producing reusable analysis artefacts.
-4. **Randomized controlled trial** comparing the synchronized
-   condition to (a) audio + score without synchronization and (b)
-   audio + verbal lecture only.
 5. **Other formal types.** Rondo, theme-and-variations, and fugue,
    each requiring schema extension.
+6. **Mobile responsiveness.** Extending the desktop-first design to
+   tablet and phone form factors.
 
 
-# 9. Conclusion
+# 7. Conclusion
 
 This paper has presented an open-source, web-based tool that
 synchronizes score, audio, and a hierarchical formal-analysis layer to
-teach the structure of sonata form, evaluated against a sample of
-undergraduate music-education majors using Mozart's K. 545 mvt. I as
-case piece. The 24.6 percentage-point gain in form-identification
-accuracy (*d* = 1.16), the 0% → 78% recognition of a textbook
-deformation, and the SUS score of 81.4 together suggest that
-multi-representational visualization is a practical and effective
-addition to the music-theory and music-education classroom.
+teach the structure of sonata form, with Mozart's K. 545 mvt. I as the
+case piece. The central pedagogical claim — that synchronized
+multi-representation makes the *function-preserving* nature of
+non-tonic recapitulations visually self-evident — is grounded in
+form-functional theory and instantiated as a runnable, openly licensed
+system. Empirical validation of the learning gains this design
+predicts is the subject of a planned randomized controlled trial; the
+system, schema, and pedagogical framing presented here provide the
+foundation for that work.
 
 The tool is released under the MIT License; the formal-analysis data
 under CC BY 4.0. Both invite reuse, extension, and peer scrutiny in
 the spirit of open digital musicology.
 
 
-# 10. Reproducibility
+# 8. Reproducibility
 
 All artifacts of this study are released with persistent identifiers.
 
@@ -680,9 +563,9 @@ interactive tap-calibration mode (press *T*).
 Chrome 120+, Edge 120+, and Firefox 121+. Any static-file server suffices
 (e.g., `python -m http.server`).
 
-**Evaluation data.** The anonymized N=18 usability data are available
-on request to the corresponding author, subject to research-ethics
-guidelines.
+**Forthcoming RCT data.** Anonymized response data from the planned
+controlled trial will be released under CC BY 4.0 on OSF.io once
+IRB-approved data collection and analysis are complete.
 
 
 # Acknowledgments
