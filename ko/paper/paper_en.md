@@ -47,14 +47,20 @@ copyright-sensitivity of classroom use.
 This paper focuses on the system's design, implementation, and the
 pedagogical significance of using multi-representational visualization
 to teach *norms and deformations* together — most prominently K. 545's
-atypical subdominant recapitulation. The tool is released as MIT-licensed
-open source; its JSON schema for formal analysis is directly extensible
-to other works and forms. Empirical validation of learning effects is
-deferred to a planned randomized controlled trial.
+atypical subdominant recapitulation. The work extends the line of
+web-interactive music-annotation systems represented by Dezrann
+(Giraud et al. 2025) and the sonata-form structure-learning study of
+Allegraud et al. (2019), redirecting that line from MIR-corpus
+classification toward learner-facing pedagogy on a single canonical
+work. The tool is released as MIT-licensed open source; its JSON
+schema for formal analysis is licensed CC BY 4.0 and is directly
+extensible to other works and other formal types. Empirical validation
+of learning effects is deferred to a planned randomized controlled
+trial.
 
-**Keywords:** music education technology, sonata form, score
-visualization, synchronized playback, MusicXML, OpenSheetMusicDisplay,
-multi-representational learning, Mozart K. 545
+**Keywords:** sonata form, score-audio synchronization, music notation
+visualization, MusicXML, OpenSheetMusicDisplay, color encoding,
+formal analysis schema, music education, open-source tool, Mozart K. 545
 
 
 # 1. Introduction
@@ -187,23 +193,53 @@ recapitulation as such.
 
 ## 2.4 Related Tools
 
-Table 1 positions the present work against close prior systems.
+The closest precedents for the present work are the Dezrann web
+platform (Giraud et al. 2025) and the sonata-form structure-learning
+study of Allegraud et al. (2019), both published in this journal. Both
+treat formal music annotation as a first-class web-interactive object;
+both have been applied to Mozart sonata movements. The present work
+follows that line and contributes three differences:
 
-**Table 1.** Comparison with related visualization and score-following
-tools.
+1. **Two-level color encoding native to the score.** Where Dezrann
+   places annotation labels as discrete markers on a waveform-and-
+   score view, our tool paints *the score itself* with section colors
+   at the measure level (computed via SVG `getBBox` on the OSMD
+   render). Section and theme-zone colors coexist on the same surface
+   the learner is already reading.
+2. **A two-level analytical schema treated as primary data.** Our
+   `sonata_structure.json` is not metadata attached to a Dezrann
+   annotation but a stand-alone, peer-reviewable, versioned object
+   licensed CC BY 4.0. This makes it directly reusable in MIR
+   pipelines and in derivative analyses of other works, in the same
+   sense that the Allegraud et al. (2019) sonata-form corpus has been
+   reused.
+3. **A learner-facing, single-work focus.** Allegraud et al. (2019)
+   address the *automatic detection* problem on a 32-quartet corpus
+   for the music-information-retrieval community; the present tool
+   addresses the *teaching* problem on a single canonical work for the
+   music-education community. The two are complementary: a robust
+   classifier (Allegraud) and a precise pedagogical instrument
+   (this work) need not target the same evaluation metric.
 
-| Tool | Hierarchical formal labels | Score-audio sync | Color encoding | Section jump | Open source |
-|---|---|---|---|---|---|
-| Sonic Visualiser (Cannam et al., 2010) | △ (annotation only) | × | △ | △ | ✓ |
-| Soundslice (commercial) | × | ✓ | × | △ | × |
-| iAnalyse (Couprie, 2008) | ✓ | △ | ✓ | ✓ | ✓ |
-| Verovio Humdrum Viewer (Sapp, 2017) | △ | △ | × | × | ✓ |
-| MuseScore Web (commercial) | × | ✓ | × | × | × (free reader, closed source) |
-| **This work** | **✓ (two-level)** | **✓** | **✓ (two-level)** | **✓** | **✓** |
+Table 1 positions the present work against several adjacent systems.
 
-To our knowledge, this is the first *open-source* tool to combine
-hierarchical color-coded formal labels, score-audio synchronization,
-and section-level interaction in a single learner-facing interface.
+**Table 1.** Comparison with related visualization, annotation, and
+score-following tools.
+
+| Tool | Hierarchical formal labels | Score-audio sync | Color on score itself | Section jump | Open source | Learner-facing |
+|---|---|---|---|---|---|---|
+| Sonic Visualiser (Cannam et al. 2010) | △ (annotation only) | × | × | △ | ✓ | △ |
+| Soundslice (commercial) | × | ✓ | × | △ | × | ✓ |
+| iAnalyse (Couprie 2008) | ✓ | △ | △ | ✓ | ✓ | △ |
+| Verovio Humdrum Viewer (Sapp 2017) | △ | △ | × | × | ✓ | △ |
+| MuseScore Web (commercial) | × | ✓ | × | × | × | ✓ |
+| Dezrann (Giraud et al. 2025) | ✓ (label-based) | ✓ | △ (track labels) | ✓ | ✓ | ✓ |
+| **This work** | **✓ (two-level)** | **✓** | **✓ (measure-painted)** | **✓** | **✓** | **✓** |
+
+The novelty claim is therefore narrower than "first open-source
+sonata-form visualization": it is "first open-source, learner-facing
+tool combining measure-painted hierarchical formal color, score-audio
+synchronization, and a separable analysis-as-data schema."
 
 
 # 3. Mozart's K. 545, Movement I: An Analytical Walk-Through
