@@ -179,7 +179,8 @@ form-functional reasoning newly accessible to undergraduate learners.
 The source code (MIT) is at https://github.com/rosyrosys/sonata-form-viz
 and the v0.1.0 release is archived at https://doi.org/10.5281/zenodo.20108497.
 A live deployment is available for reviewer use at
-[GitHub Pages URL — to be enabled before submission].
+https://rosyrosys.github.io/sonata-form-viz/ (Korean and English
+editions are linked from the landing page).
 
 Empirical validation of the predicted learning effects is deferred to
 a planned randomized controlled trial; the present manuscript

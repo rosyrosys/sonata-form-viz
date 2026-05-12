@@ -1,6 +1,6 @@
 ﻿# Apply Korean academic styling to paper_ko.docx via Word COM
 $ErrorActionPreference = 'Stop'
-$path = 'C:\Users\drros\OneDrive\Desktop\Visualize Sonata\paper\paper_ko.docx'
+$path = 'C:\Users\drros\OneDrive\Desktop\TISMIR\paper\paper_ko.docx'
 
 # Detect installed Korean fonts
 Add-Type -AssemblyName System.Drawing

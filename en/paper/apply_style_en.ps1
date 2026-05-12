@@ -3,7 +3,7 @@
 # - Most international journals require double-spacing for initial submission;
 #   change LineSpacingRule to 4 (1.5x) if the target journal explicitly asks for 1.5
 $ErrorActionPreference = 'Stop'
-$path = 'C:\Users\drros\OneDrive\Desktop\Visualize Sonata\paper\paper_en.docx'
+$path = 'C:\Users\drros\OneDrive\Desktop\TISMIR\paper\paper_en.docx'
 
 $bodyFont = 'Times New Roman'
 $headingFont = 'Times New Roman'

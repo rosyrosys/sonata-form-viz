@@ -425,10 +425,14 @@ analysis data, and the audio-policy documentation are available
 through the project's GitHub repository and Zenodo archive (see
 *Reproducibility*, §7).
 
-For an MTO reader, the architecturally salient property is not the
-implementation detail but the *coordination*: three representations of
-the same musical present moment are kept in sync, and the user can
-intervene in any one of them.
+For a TISMIR reader, the architecturally salient property is not the
+component list but the *coordination*: three representations of the
+same musical present moment are kept in sync, and the user can
+intervene in any one of them. Two design choices deserve specific
+articulation as Tools-and-Datasets contributions: a stable measure-
+painting scheme that survives OSMD re-layout (§4.2), and a non-monotonic
+time-mapping function that handles performer-elected repeats without
+analytical loss (§4.5).
 
 ## 4.1 The Three Representations
 
@@ -489,6 +493,70 @@ Three interactive affordances are pedagogically central:
 Keyboard shortcuts (Space, ←/→, L for loop, C for color toggle) make
 classroom demonstration responsive in a way mouse-only interaction
 cannot.
+
+## 4.5 Exposition Repeat Folding
+
+When a performer elects to take the exposition repeat — the
+overwhelming majority of K. 545 recordings in the canonical
+discography, including the Schiff Carnegie Hall (2015) recording used
+in our reference deployment — the audio time-line becomes
+*non-monotonic* with respect to analytical time. Audio seconds 0:00 –
+0:55 traverse the exposition; audio seconds 0:55 – 1:48 traverse the
+exposition *again*; audio second 1:48 onwards opens the development.
+Two design responses are available:
+
+1. **Ignore the repeat.** The cursor and analytical pane simply
+   continue forward through audio time, and during the repeat the
+   pane displays an off-by-one section ("development") while the
+   listener is still in the exposition. Pedagogically misleading.
+2. **Fold the repeat.** During the repeat, the cursor returns to the
+   exposition's start and re-traverses it; only when the audio passes
+   the second exposition codetta does the cursor advance into the
+   development.
+
+We adopt the second option. Let *t* be the current audio time and let
+the user-marked or default repeat span be \[*r*₁, *r*₂\]. The
+analytical time *τ* is then a piecewise function:
+
+```
+              ⎧ t                                  if t < r₁
+              ⎪
+   τ(t)   =   ⎨ ((t − r₁) / (r₂ − r₁)) · r₁         if r₁ ≤ t < r₂
+              ⎪
+              ⎩ t − (r₂ − r₁)                      otherwise
+```
+
+Three properties follow:
+
+- **First-pass identity.** For *t* < *r*₁, analytical time equals audio
+  time. The cursor behaves as a simple score-follower until the repeat
+  begins.
+- **Fold-back on repeat.** For *r*₁ ≤ *t* < *r*₂, the cursor re-
+  traverses the analytical interval \[0, *r*₁\] proportionally with
+  the second hearing. The listener hears the exposition a second time
+  while the cursor visibly returns to bar 1 and crawls forward to bar
+  28 again.
+- **Post-repeat offset.** For *t* ≥ *r*₂, analytical time advances at
+  audio rate but offset back by the repeat duration. The development
+  and recapitulation are addressed correctly regardless of repeat
+  length.
+
+The repeat boundaries *r*₁ and *r*₂ are user-adjustable through three
+keyboard shortcuts (M, [, ]) for live calibration against the actual
+recording, and the calibrated values are persisted in
+`localStorage`. The fold is therefore robust to the wide variance in
+recording-specific repeat timings observed across the K. 545
+discography, and the same folding scheme transfers without
+modification to any sonata-form work with a marked exposition repeat.
+
+To our knowledge, no prior open music-visualization system (including
+Dezrann, Sonic Visualiser, and the score-following tools surveyed in
+§2.4) addresses performer-elected repeats with an explicit
+non-monotonic time map. The closest analogue in the MIR literature is
+the structure-following work of Müller (2015, ch. 3), which handles
+repeats by inserting multiple parallel score branches; our approach
+preserves a single score-time axis and is consequently simpler to
+implement and to visualize for a learner.
 
 
 # 5. A Classroom Walk-Through
