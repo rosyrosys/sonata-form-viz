@@ -174,9 +174,13 @@ Paivio(1991)의 이중 부호화 이론(dual coding theory)은 언어 표상과 
 | 시간적 인접 | `timeupdate`로 모든 표상이 1프레임 내 동기 |
 | 공간적 인접 | 색상 오버레이가 *악보 그 자체 위* 에 그려짐 |
 
-색상 매핑은 음악교육에서 형식 구조를 직관적으로 전달하는 표상 수단으로
-사용되어 왔으며, 본 도구의 색상-섹션 인코딩은 이러한 표상 원리를
-체계적으로 적용한 사례이다.
+색상 매핑은 음악교육에서 음악 정보를 직관적으로 전달하는 표상 수단으로
+연구되어 왔다. Kuo and Chuang (2013) 은 음악 초보자를 위해 음높이·길이·
+음역·강도를 색·격자·도형·크기에 매핑하는 *색상 음악 표기 시스템* 을
+제안하면서, Itten 색상환과 Natural Color System 의 12원색을 12음 평균율에
+체계적으로 매핑하였다. 본 도구의 색상-섹션 인코딩은 그러한 *색-음악
+공감각적 표상* 원리를 *음높이 차원* 이 아니라 *형식 위계 차원* 에 적용한
+사례로 위치할 수 있다.
 
 ## 2.3 능동학습과 청취 반복
 
@@ -570,6 +574,10 @@ startDemo() / stopDemo() 데모 모드 (WebAudio 메트로놈)
 - Hepokoski, J., & Darcy, W. (2006). *Elements of Sonata Theory: Norms, Types,
   and Deformations in the Late-Eighteenth-Century Sonata.* Oxford University
   Press.
+- Kuo, Y.-T., & Chuang, M.-C. (2013). A proposal of a color music
+  notation system on a single melody for music beginners.
+  *International Journal of Music Education*, 31(4), 394–412.
+  https://doi.org/10.1177/0255761413489082
 - LaRue, J. (1970). *Guidelines for Style Analysis.* Norton.
 - Margulis, E. H. (2014). *On Repeat: How Music Plays the Mind.* Oxford
   University Press.

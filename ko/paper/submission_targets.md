@@ -37,7 +37,7 @@
 
 | # | 학술지 | 영역 | 분류 | 비고 |
 |---|---|---|---|---|
-| 10 | **International Journal of Music Education (IJME)** | 음악교육 | SSCI, IF ≈ 1.6 (SAGE) | ISME 공식. "Practice" 섹션이 도구 보고에 친화적 |
+| 10 | **International Journal of Music Education (IJME)** | 음악교육 | SSCI, IF ≈ 1.6 (SAGE) | ISME 공식. **Kuo & Chuang (2013) 의 color music notation system 게재한 곳** — 본 작업의 색상-위계 인코딩이 직접 후속 라인 |
 | 11 | **Music Education Research** | 음악교육 | SSCI (Routledge) | 주류 음악교육 저널. 교실 적용 데이터 확장 시 적합 |
 | 12 | **British Journal of Music Education (BJME)** | 음악교육 | SSCI (Cambridge) | 색상-페다고지 게재한 곳. 본 도구 색상 인코딩 부분이 직접 후속 |
 | 13 | **Journal of Computer Assisted Learning (JCAL)** | 컴퓨터지원학습 | SSCI (Wiley) | 사용성 평가가 강점인 점이 적합 |

@@ -162,10 +162,17 @@ here:
 | Temporal contiguity | All representations updated within a single render frame on `timeupdate` |
 | Spatial contiguity | Color overlay drawn *directly on the score itself*, not in a separate panel |
 
-Color mapping has long been used as a representational means in music
-pedagogy to make hierarchical structure intuitive; the tool's two-tier
-color scheme (sections + theme zones, with WCAG-compliant contrast and
-non-color redundancy) is a systematic application of this principle.
+Color mapping has been studied as a representational means in music
+pedagogy. Kuo and Chuang (2013), proposing a color music notation system
+for beginners, map pitch, duration, range, and intensity to colors,
+lattices, graphs, and shape sizes respectively, drawing on Itten's color
+wheel and the Natural Color System to align twelve primary colors with
+twelve-tone equal temperament. Their work demonstrates the systematic
+applicability of color–music synesthetic mapping at the *pitch*
+dimension. Our tool's two-tier scheme (sections plus theme zones, with
+WCAG-2.1 contrast and non-color redundancy) applies the same color–music
+representational principle, but at the *formal hierarchy* dimension
+rather than the pitch dimension.
 
 ## 2.3 Active Learning and Comparative Listening
 
@@ -603,6 +610,10 @@ IRB-approved data collection and analysis are complete.
 - Hepokoski, J., & Darcy, W. (2006). *Elements of sonata theory:
   Norms, types, and deformations in the late-eighteenth-century
   sonata.* Oxford University Press.
+- Kuo, Y.-T., & Chuang, M.-C. (2013). A proposal of a color music
+  notation system on a single melody for music beginners.
+  *International Journal of Music Education, 31*(4), 394–412.
+  https://doi.org/10.1177/0255761413489082
 - Margulis, E. H. (2014). *On repeat: How music plays the mind.*
   Oxford University Press.
 - Mayer, R. E. (2009). *Multimedia learning* (2nd ed.). Cambridge

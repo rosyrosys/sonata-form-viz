@@ -37,7 +37,7 @@ Slightly lower impact than Tier A but solid topic alignment.
 
 | # | Venue | Field | Class | Notes |
 |---|---|---|---|---|
-| 10 | **International Journal of Music Education (IJME)** | Music ed | SSCI, IF ≈ 1.6 (SAGE) | ISME's official journal; "Practice" section friendly to tool reports |
+| 10 | **International Journal of Music Education (IJME)** | Music ed | SSCI, IF ≈ 1.6 (SAGE) | ISME's official journal. **Published Kuo & Chuang (2013) on a color music notation system** — direct precedent for our color-hierarchy encoding |
 | 11 | **Music Education Research** | Music ed | SSCI (Routledge) | Mainstream music education; better with classroom-deployment data |
 | 12 | **British Journal of Music Education (BJME)** | Music ed | SSCI (Cambridge) | Past color-pedagogy publication venue; our color encoding section follows up |
 | 13 | **Journal of Computer Assisted Learning (JCAL)** | CAL | SSCI (Wiley) | Strong on usability evaluation, which is one of our highlights |
