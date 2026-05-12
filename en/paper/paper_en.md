@@ -79,10 +79,11 @@ difficulty arises from at least three representational gaps:
   verbal explanation or post-hoc analysis.
 
 Digital tools offer a route to closing these gaps through
-*simultaneous representation*. Sapp (2011) and Smith (2013) demonstrate
-the analytic potential of computational visualization, but their work
-is research-oriented and not aimed at classroom learners. Commercial
-platforms such as Soundslice and MuseScore Web provide score-following
+*simultaneous representation*. Computational visualization has shown
+analytic potential in the computer-musicology literature, but most
+existing tools are research-oriented and not aimed at classroom
+learners. Commercial platforms such as Soundslice and MuseScore Web
+provide score-following
 synchronized to audio, yet they do not treat *formal analysis as a
 first-class data object*: a learner cannot click a "secondary theme"
 label, jump to it, loop it, and see it foregrounded on the score in
@@ -161,10 +162,10 @@ here:
 | Temporal contiguity | All representations updated within a single render frame on `timeupdate` |
 | Spatial contiguity | Color overlay drawn *directly on the score itself*, not in a separate panel |
 
-Plazak (2014) shows empirically that color-mapped form visualization
-improves form-identification accuracy by 14–23% in non-major learners,
-suggesting that hierarchical color encoding distributes cognitive load
-effectively.
+Color mapping has long been used as a representational means in music
+pedagogy to make hierarchical structure intuitive; the tool's two-tier
+color scheme (sections + theme zones, with WCAG-compliant contrast and
+non-color redundancy) is a systematic application of this principle.
 
 ## 2.3 Active Learning and Comparative Listening
 
@@ -615,10 +616,6 @@ IRB-approved data collection and analysis are complete.
   psychology of music.* Oxford University Press.
 - Paivio, A. (1991). Dual coding theory: Retrospect and current status.
   *Canadian Journal of Psychology, 45*(3), 255–287.
-- Plazak, J. (2014). Visualizing musical form: A color-based approach.
-  *Journal of Music Theory Pedagogy, 28*, 39–62.
-- Reichweger, G. (2018). Color in music pedagogy. *British Journal of
-  Music Education, 35*(1), 23–41.
 - Sapp, C. S. (2011). *Computational methods for the analysis of
   musical structure* (Doctoral dissertation). Stanford University,
   CCRMA.
@@ -629,7 +626,6 @@ IRB-approved data collection and analysis are complete.
 - Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental
   and quasi-experimental designs for generalized causal inference.*
   Houghton Mifflin.
-- Smith, N. (2013). *Visualizing music.* Oxford University Press.
 
 
 # Appendix A. Screenshots
@@ -643,32 +639,3 @@ IRB-approved data collection and analysis are complete.
   bars).
 - **Figure A.3.** Score with measure-level color overlay through the
   recapitulation, with the F-major P region clearly distinguished.
-- **Figure A.4.** Pre/post accuracy bar chart with 95% CIs.
-
-
-# Appendix B. Evaluation Materials
-
-## B.1 Excerpt list (form-identification task)
-
-| # | Work | Mm. | Correct label |
-|---|---|---|---|
-| 1 | Beethoven Op. 49 No. 2 mvt. I | 1–8 | P |
-| 2 | Beethoven Op. 49 No. 2 mvt. I | 21–28 | T |
-| 3 | Beethoven Op. 49 No. 2 mvt. I | 36–44 | S |
-| 4 | Beethoven Op. 49 No. 2 mvt. I | 53–60 | K |
-| 5 | Haydn Hob. XVI:35 mvt. I | 1–8 | P |
-| 6 | Haydn Hob. XVI:35 mvt. I | 17–24 | T |
-| 7 | Haydn Hob. XVI:35 mvt. I | 33–40 | S |
-| 8 | Haydn Hob. XVI:35 mvt. I | 56–63 | K |
-| 9–12 | Schubert Op. 142 No. 2 | (non-sonata) | "don't know" credited |
-
-## B.2 Free-response coding criteria
-
-A response was coded as a positive identification of the subdominant
-recapitulation if it contained any of: "F major," "subdominant,"
-"different key on return," "started in a wrong key," "IV instead of
-I." Disagreements were resolved by discussion.
-
-## B.3 SUS
-
-Brooke's (1996) original 10 items, administered without modification.

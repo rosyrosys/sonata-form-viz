@@ -36,4 +36,4 @@ B-post,B-β-12,multiple_choice,Mozart Variations K.265 (Theme),Mozart Variations
 C,C1,paragraph,C1. 가장 인상적이었던 발견,C1. Most striking discovery,3–5 문장 권장,3–5 sentences,,,,,,,,,,,1,
 C,C2,checkbox,C2. 도움이 된 기능,C2. Most helpful features,복수 선택 가능,Select all,형식 타임라인|마디 색상 오버레이|분석 패널 해설|섹션 점프|섹션 반복|속도 조절|키보드 단축키|기타,Form timeline|Measure overlay|Analysis panel|Section jump|Section loop|Speed control|Keyboard|Other,,,,,,,,,1,
 C,C3,paragraph,C3. 개선 사항 (선택),C3. What could improve (optional),,,,,,,,,,,,,0,
-D,D1-D10,scale_x10,SUS 10문항 (Brooke 1996 / 김주현 외 2014),SUS 10 items (Brooke 1996),Brooke 공식 본문 직접 입력 필요,Paste official Brooke text,,,1,5,매우 동의 안 함,매우 동의함,Strongly disagree,Strongly agree,,,1,1,
+D,D1-D10,scale_x10,SUS 10문항 (Brooke 1996),SUS 10 items (Brooke 1996),Brooke 공식 본문 직접 입력 필요,Paste official Brooke text,,,1,5,매우 동의 안 함,매우 동의함,Strongly disagree,Strongly agree,,,1,1,

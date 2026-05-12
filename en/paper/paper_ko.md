@@ -104,9 +104,10 @@ multimodal representation
 
 이 격차들은 비전공 학습자뿐 아니라 음악대학 신입생에게도 공통적으로
 관찰된다(Cook, 1990; Margulis, 2014). 디지털 도구가 위 격차를 *동시 표상*
-으로 메울 수 있다는 가능성은 일찍이 Smith(2013)와 Sapp(2011)이 제기하였으나,
-이들의 작업은 연구자용 분석 도구이거나 특정 디지털 인문학 플랫폼에 종속되어
-있어 학습자 친화도가 낮다. 한편 Soundslice·MuseScore Web 같은 상용 도구는
+으로 메울 수 있다는 가능성은 Sapp(2011)·Cannam et al.(2010)·Couprie(2008)
+등의 컴퓨테이셔널 음악학 연구에서 일찍이 제기되었으나, 이들의 작업은
+연구자용 분석 도구이거나 특정 디지털 인문학 플랫폼에 종속되어 있어
+학습자 친화도가 낮다. 한편 Soundslice·MuseScore Web 같은 상용 도구는
 악보 추적은 잘 지원하지만 *형식 분석 메타데이터를 1급 객체로* 다루지
 않는다 — 즉, 형식 라벨을 색상·점프·반복 학습과 일관되게 결합한 *교육 전용*
 도구는 여전히 공백으로 남아 있다.
@@ -173,9 +174,9 @@ Paivio(1991)의 이중 부호화 이론(dual coding theory)은 언어 표상과 
 | 시간적 인접 | `timeupdate`로 모든 표상이 1프레임 내 동기 |
 | 공간적 인접 | 색상 오버레이가 *악보 그 자체 위* 에 그려짐 |
 
-특히 Plazak(2014)은 형식 구간을 색상으로 매핑하면 비음악전공 학습자의
-형식 식별 정확도가 14–23% 향상된다고 보고하여, 색상 매핑이 인지적
-부하를 분산시키는 효과적 도구임을 시사한다.
+색상 매핑은 음악교육에서 형식 구조를 직관적으로 전달하는 표상 수단으로
+사용되어 왔으며, 본 도구의 색상-섹션 인코딩은 이러한 표상 원리를
+체계적으로 적용한 사례이다.
 
 ## 2.3 능동학습과 청취 반복
 
@@ -543,11 +544,7 @@ startDemo() / stopDemo() 데모 모드 (WebAudio 메트로놈)
 # 참고문헌
 
 - 교육부 (2022). *2022 개정 교육과정 음악과 교육과정*. 교육부 고시 제2022-33호.
-- 김주현, 박준영, 이상호 (2014). 한국어판 시스템 사용성 척도(K-SUS) 의
-  타당화 연구. *한국HCI학회 논문지*, 9(2), 31–40.
 - 이흥렬, 홍정수 (2017). *음악사 — 서양음악사*. 음악춘추사.
-- 이승로 (2018). 모차르트 K. 545 의 형식 분석과 교수법적 활용.
-  *음악교육연구*, 47(2), 75–98. [예시 인용]
 
 ---
 
@@ -587,10 +584,6 @@ startDemo() / stopDemo() 데모 모드 (WebAudio 메트로놈)
   Psychology of Music.* Oxford University Press.
 - Paivio, A. (1991). Dual Coding Theory: Retrospect and Current Status.
   *Canadian Journal of Psychology*, 45(3), 255–287.
-- Plazak, J. (2014). Visualizing Musical Form: A Color-Based Approach.
-  *Journal of Music Theory Pedagogy*, 28, 39–62.
-- Reichweger, G. (2018). Color in Music Pedagogy. *British Journal of Music
-  Education*, 35(1), 23–41.
 - Sapp, C. S. (2011). *Computational Methods for the Analysis of Musical
   Structure.* PhD thesis, Stanford CCRMA.
 - Sapp, C. S. (2017). Verovio Humdrum Viewer. In *Music Encoding Conference*.
@@ -599,41 +592,12 @@ startDemo() / stopDemo() 데모 모드 (WebAudio 메트로놈)
 - Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and
   Quasi-Experimental Designs for Generalized Causal Inference.* Houghton
   Mifflin.
-- Smith, N. (2013). *Visualizing Music.* Oxford University Press.
 
 
 # 부록 A. 시스템 화면
 
-(figures/ 폴더의 PNG 파일 — 본 도구의 스크린샷 4종을 첨부)
+(figures/ 폴더의 PNG 파일 — 본 도구의 스크린샷 3종을 첨부)
 
 - Figure A.1 — 시스템 전체 화면 개관
-- Figure A.2 — 형식 타임라인 클로즈업 (P/T/S/K 색상 인코딩)
-- Figure A.3 — 악보 위 마디 색상 오버레이 (재현부 P 구간)
-- Figure A.4 — 평가 결과 막대그래프 (사전 vs 사후 정확도)
-
-
-# 부록 B. 평가 도구
-
-## B.1 형식 식별 과제 발췌 목록
-
-| # | 작품 | 마디 범위 | 정답 |
-|---|---|---|---|
-| 1 | Beethoven Op.49 No.2 Mvt.I | 1–8 | P |
-| 2 | Beethoven Op.49 No.2 Mvt.I | 21–28 | T |
-| 3 | Beethoven Op.49 No.2 Mvt.I | 36–44 | S |
-| 4 | Beethoven Op.49 No.2 Mvt.I | 53–60 | K |
-| 5 | Haydn Hob.XVI:35 Mvt.I | 1–8 | P |
-| 6 | Haydn Hob.XVI:35 Mvt.I | 17–24 | T |
-| 7 | Haydn Hob.XVI:35 Mvt.I | 33–40 | S |
-| 8 | Haydn Hob.XVI:35 Mvt.I | 56–63 | K |
-| 9–12 | Schubert Op.142 No.2 | (대조군 비-소나타) | "모름" 정답 |
-
-## B.2 SUS 한국어판 10문항
-
-(생략 — 김주현 외, 2014의 한국어판을 그대로 사용)
-
-## B.3 자유서술 코딩 기준
-
-- "재현부의 하속조 시작" 카테고리에 포함되는 키워드: "F장조", "하속조",
-  "재현부 시작 조성", "다른 조성에서 시작", "subdominant"
-- 두 평가자가 독립 코딩 후 불일치는 토의 합의로 해결.
+- Figure A.2 — 형식 타임라인 클로즈업 (P/S/codetta 색상 인코딩)
+- Figure A.3 — 악보 위 마디 색상 오버레이 (재현부 P 구간, F장조)

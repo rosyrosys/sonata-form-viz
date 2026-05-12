@@ -59,7 +59,7 @@
 | 23 | **IEEE Transactions on Multimedia (TMM)** | 멀티미디어 | SCI, IF ≈ 7.3. 톱 멀티미디어 저널. 알고리즘 신규성 더 필요 (자동 정렬 등) |
 | 24 | **Journal of Educational Computing Research (JECR)** | 교육 컴퓨팅 | SAGE, SSCI |
 | 25 | **Digital Scholarship in the Humanities (DSH)** | 디지털 인문학 | Oxford, SSCI, IF ≈ 1.8. JSON 분석 스키마 + 디지털 음악학 측면이 적합 |
-| 26 | **Journal of Music Theory Pedagogy** | 음악이론 교수법 | 본 도구의 *교수법적* 프레임이 정면 매칭. Plazak 색상-매핑 게재한 곳 |
+| 26 | **Journal of Music Theory Pedagogy** | 음악이론 교수법 | 본 도구의 *교수법적* 프레임이 정면 매칭. 음악이론 교수법 전문지 |
 | 27 | **Visions of Research in Music Education (VRME)** | 음악교육 연구 | 오픈액세스. 미국. 도구 보고 환영 |
 
 ### Tier E — 음악인지·음악이론 권위지 (전문성 ↑)

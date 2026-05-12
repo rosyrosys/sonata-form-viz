@@ -59,7 +59,7 @@ Lesser-known venues that may be a *better* match than Tier A for specific framin
 | 23 | **IEEE Transactions on Multimedia (TMM)** | Multimedia | SCI, IF ≈ 7.3. Top multimedia journal. Needs more algorithmic novelty (e.g., automatic alignment) |
 | 24 | **Journal of Educational Computing Research (JECR)** | Edu-computing | SAGE, SSCI |
 | 25 | **Digital Scholarship in the Humanities (DSH)** | Digital humanities | Oxford, SSCI, IF ≈ 1.8. Fit for our JSON schema + digital musicology angle |
-| 26 | **Journal of Music Theory Pedagogy** | Music-theory pedagogy | Direct match for our pedagogical framing; published Plazak's color-mapping work |
+| 26 | **Journal of Music Theory Pedagogy** | Music-theory pedagogy | Direct match for our pedagogical framing; a dedicated theory-pedagogy venue |
 | 27 | **Visions of Research in Music Education (VRME)** | Music ed research | OA US journal. Welcomes tool reports |
 
 ### Tier E — Music cognition / theory authoritative journals
