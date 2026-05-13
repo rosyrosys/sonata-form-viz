@@ -40,23 +40,31 @@ audio time to measure number through a discrete lookup table on each
 `timeupdate` event, (3) overlays section and theme labels in a two-level
 color hierarchy directly onto the score, and (4) supports section
 jumping, looped listening, playback-speed control, and keyboard
-shortcuts. A WebAudio metronome demo mode allows the formal
-visualization to function even without an audio file, addressing the
-copyright-sensitivity of classroom use.
+shortcuts. We further contribute an **exposition-repeat folding map**,
+a piecewise non-monotonic time function that preserves analytical
+monotonicity under performer-elected exposition repeats — a practical
+edge case in score-audio alignment that, to our knowledge, no prior
+open music-visualization system addresses explicitly. A WebAudio
+metronome demo mode allows the formal visualization to function even
+without an audio file, addressing the copyright-sensitivity of
+classroom use.
 
-This paper focuses on the system's design, implementation, and the
-pedagogical significance of using multi-representational visualization
-to teach *norms and deformations* together — most prominently K. 545's
-atypical subdominant recapitulation. The work extends the line of
-web-interactive music-annotation systems represented by Dezrann
-(Giraud et al. 2025) and the sonata-form structure-learning study of
-Allegraud et al. (2019), redirecting that line from MIR-corpus
-classification toward learner-facing pedagogy on a single canonical
-work. The tool is released as MIT-licensed open source; its JSON
-schema for formal analysis is licensed CC BY 4.0 and is directly
-extensible to other works and other formal types. Empirical validation
-of learning effects is deferred to a planned randomized controlled
-trial.
+This paper focuses on the system's design, implementation, the
+exposition-repeat folding technique, and the pedagogical significance
+of multi-representational visualization for teaching *norms and
+deformations* together — most prominently K. 545's atypical subdominant
+recapitulation. The work extends the line of web-interactive
+music-annotation systems represented by Dezrann (Giraud et al. 2025)
+and the sonata-form structure-learning study of Allegraud et al.
+(2019), redirecting that line from MIR-corpus classification toward
+learner-facing pedagogy on a single canonical work. The released
+JSON schema is *intentionally interoperable* with the Algomus
+annotation conventions established in Allegraud et al. (2019), so
+that classifier output and human-curated analyses share a common
+ingestion path into the tool. The system is released as MIT-licensed
+open source and the analysis schema is licensed CC BY 4.0. Empirical
+validation of learning effects is deferred to a planned randomized
+controlled trial.
 
 **Keywords:** sonata form, score-audio synchronization, music notation
 visualization, MusicXML, OpenSheetMusicDisplay, color encoding,
@@ -113,19 +121,35 @@ code under permissive licenses for community reuse.
 
 ## 1.3 Contributions
 
-This work contributes:
+This work contributes four artifacts to the TISMIR Tools-and-Datasets
+layer:
 
-1. **A learner-facing open-source tool** that synchronizes score, audio,
-   and a hierarchical formal-analysis layer in the browser, requiring
-   only a single external dependency.
-2. **A machine-readable, peer-reviewable JSON schema** for sonata-form
-   analysis, populated for K. 545 mvt. I and released under CC BY 4.0
-   for direct reuse and extension.
-3. **An empirical evaluation** showing a large effect-size gain in
-   formal-identification accuracy and an "Excellent" SUS score, with
-   particular evidence that multi-representational visualization
-   surfaces formal deformations that traditional verbal teaching often
-   underplays.
+1. **A learner-facing open-source tool** (MIT) that synchronizes
+   notated score, audio, and a hierarchical formal-analysis layer in
+   the browser, with a single external dependency
+   (OpenSheetMusicDisplay) and a metronome demo mode for
+   copyright-sensitive classroom use.
+2. **An open analysis schema and dataset** (CC BY 4.0) — a
+   machine-readable JSON encoding of two-level sonata-form analysis
+   (sections × theme zones), instantiated for Mozart K. 545 mvt. I
+   and *intentionally interoperable* with the Algomus annotation
+   conventions of Allegraud et al. (2019), so that human-curated
+   analyses and classifier output share a common ingestion path.
+3. **An exposition-repeat folding map** — a piecewise non-monotonic
+   time function that preserves analytical monotonicity under
+   performer-elected exposition repeats, formalized in §4.5. To our
+   knowledge, no prior open music-visualization system (Dezrann,
+   Sonic Visualiser, Verovio Humdrum Viewer, score-following
+   commercial tools) treats this case with an explicit time map.
+4. **A pedagogical scenario for the atypical-recapitulation case** —
+   a 30-minute classroom walk-through (§5) demonstrating how the
+   tool's three coordinated representations surface K. 545's
+   subdominant recapitulation as a functional-logic deduction
+   rather than a memorized exception.
+
+Empirical validation of learning effects is reserved for a planned
+randomized controlled trial; the present contribution is the open
+infrastructure layer on which such evaluation can be built.
 
 
 # 2. Background
@@ -477,6 +501,25 @@ machine reuse by future MIR pipelines. For the present paper this
 matters because it lets us release *both* the tool and the K. 545
 analysis under separable open licenses (MIT and CC BY 4.0,
 respectively).
+
+### Interoperability with the Algomus annotation corpus
+
+The schema's structural categories — `sections[].type ∈ {exposition,
+development, recapitulation, coda}`, `themes[].type ∈ {P, T, S, K,
+codetta, retransition}`, and `(start_measure, end_measure)` ranges —
+deliberately mirror the analytic categories used in Allegraud et al.
+(2019) for the Mozart string-quartet sonata-form corpus. A thin
+ingestion adapter is sufficient to load the 32-movement Algomus
+reference analyses into the tool, because the field names map
+one-to-one and the measure-range conventions are shared. We provide
+the schema specification (`data/sonata_structure.schema.json`) and a
+worked example for K. 545; we leave the adapter for the full Algomus
+corpus as a community contribution opportunity. The architectural
+point is that our learner-facing tool *amplifies* the classifier and
+annotation work of Allegraud et al. rather than competing with it:
+their corpus becomes loadable content for our visualization, and our
+visualization becomes a downstream evaluation surface for their
+classifier output.
 
 ## 4.4 Affordances for Active Listening
 
