@@ -36,13 +36,14 @@ auditory, visual, and cognitive channels.
 
 This manuscript has not been submitted to any other journal and no
 portion of it has been published elsewhere. All authors have approved
-the submission and there are no conflicts of interest. The usability
-study reported was conducted with IRB approval ([institution name],
-approval number [____]).
+the submission and there are no conflicts of interest. The present
+manuscript does not include human-subjects evaluation; planned
+empirical validation through a randomized controlled trial will be
+conducted under IRB approval and reported separately.
 
 The system source code and analytical data are openly released on
 GitHub (https://github.com/rosyrosys/sonata-form-viz) and archived
-under DOI [10.5281/zenodo.XXXXX], following reproducibility guidelines.
+under DOI 10.5281/zenodo.20108497, following reproducibility guidelines.
 
 Thank you for your consideration; I look forward to hearing from the
 editorial board.

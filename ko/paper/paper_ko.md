@@ -610,6 +610,9 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 - Caplin, W. E. (1998). *Classical Form: A Theory of Formal Functions for the
   Instrumental Music of Haydn, Mozart, and Beethoven.* Oxford University
   Press.
+- Caplin, W. E. (2009). What are formal functions? In P. Bergé (Ed.),
+  *Musical form, forms, & formenlehre* (pp. 21–40). Leuven University
+  Press.
 - Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences*
   (2nd ed.). Erlbaum.
 - Cook, N. (1990). *Music, Imagination, and Culture.* Oxford University Press.
@@ -653,8 +656,13 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 
 # 부록 A. 시스템 화면
 
-(figures/ 폴더의 PNG 파일 — 본 도구의 스크린샷 3종을 첨부)
+라이브 배포 (https://rosyrosys.github.io/sonata-form-viz/en/) 에서
+캡처한 스크린샷 3종을 제출 패키지 `figures/` 폴더에 포함한다. 캡션:
 
-- Figure A.1 — 시스템 전체 화면 개관
-- Figure A.2 — 형식 타임라인 클로즈업 (P/S/codetta 색상 인코딩)
-- Figure A.3 — 악보 위 마디 색상 오버레이 (재현부 P 구간, F장조)
+- **Figure A.1.** 시스템 전체 화면 — 상단 타임라인, 중앙 OSMD
+  렌더링 악보, 측면 섹션 점프 제어판.
+- **Figure A.2.** 타임라인 클로즈업 — 두 단계 색상 인코딩 시연.
+  섹션은 파스텔 색상 (청·황·녹), 주제 영역 (P/T/S/codetta) 은 각
+  섹션 위에 액센트 막대, 빨간 플레이헤드.
+- **Figure A.3.** 재현부 마디 색상 오버레이 — F장조 P 구간이 녹색
+  재현부 밴드로 표시되며, 분석 패널은 "F major (IV)" 를 출력.

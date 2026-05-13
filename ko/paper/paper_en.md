@@ -850,12 +850,18 @@ IRB-approved data collection and analysis are complete.
 
 # Appendix A. Screenshots
 
-(See `figures/`. Captions only here.)
+Three screenshots from the live deployment
+(https://rosyrosys.github.io/sonata-form-viz/en/) are included in the
+submission package under `figures/`. Captions:
 
-- **Figure A.1.** System overview at startup, showing timeline,
-  score, and now-playing badges.
-- **Figure A.2.** Timeline close-up, demonstrating the two-level
-  color encoding (sections in pastel hues, theme zones via accent
-  bars).
-- **Figure A.3.** Score with measure-level color overlay through the
-  recapitulation, with the F-major P region clearly distinguished.
+- **Figure A.1.** System overview at startup, showing the timeline
+  (top), the OSMD-rendered MusicXML score (centre), and the
+  section-jump control panel.
+- **Figure A.2.** Timeline close-up demonstrating the two-level color
+  encoding — sections in pastel hues (blue / amber / green) with
+  theme-zone accent bars (P / T / S / codetta) above each section
+  band, and the red playhead.
+- **Figure A.3.** Score view with measure-level color overlay through
+  the recapitulation; the F-major P region is highlighted by the
+  green recapitulation band, with the analysis pane reading
+  "F major (IV)."
