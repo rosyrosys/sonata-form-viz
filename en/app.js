@@ -117,13 +117,57 @@ async function initScore() {
     else if (osmd.cursor) osmd.cursor.hide();
     // SVG 가 DOM 레이아웃을 마치고 getBBox 가 유효해질 때까지 대기.
     // 두 번 rAF + 폴백 타이머로 가장 견고하게.
+    // Multi-stage paint: an immediate try (after double-rAF for layout),
+    // then catch-up attempts at 250 ms, 800 ms, 1500 ms — and once more
+    // 2.5 s after the audio finishes loading (audio-metadata layout
+    // shifts can briefly invalidate measure widths). The function is
+    // idempotent (it clears existing overlays first), so repeat calls
+    // are safe and cheap.
     requestAnimationFrame(() => requestAnimationFrame(() => {
       paintMeasureOverlays();
-      // 0개로 끝났으면 한 번 더 재시도 (느린 환경 대비)
-      if (!document.querySelectorAll(".measure-overlay").length) {
-        setTimeout(paintMeasureOverlays, 250);
-      }
     }));
+    [250, 800, 1500].forEach(ms => setTimeout(() => {
+      if (!document.querySelectorAll(".measure-overlay").length) {
+        paintMeasureOverlays();
+      }
+    }, ms));
+    if (audio) {
+      audio.addEventListener("loadedmetadata", () => {
+        setTimeout(() => {
+          if (!document.querySelectorAll(".measure-overlay").length) {
+            paintMeasureOverlays();
+          }
+        }, 200);
+      }, { once: true });
+    }
+    // Robust catch-up: watch the OSMD container for any size change
+    // (initial layout, browser resize, OSMD re-render). If the container
+    // resizes — including the common case where the page initially loaded
+    // with a 0-width container and then the layout engine assigned the
+    // real width — re-render OSMD and re-paint overlays. Without this,
+    // the very first render can produce invalid measure widths (negative
+    // sizeW from OSMD's SkyBottomLine pass) and overlays never appear.
+    if (typeof ResizeObserver !== "undefined" && !window.__osmdRO) {
+      const containerEl = $("osmd-container");
+      let lastW = containerEl.getBoundingClientRect().width;
+      let renderInFlight = false;
+      window.__osmdRO = new ResizeObserver((entries) => {
+        if (renderInFlight) return;
+        const w = entries[0]?.contentRect?.width || 0;
+        if (w <= 0 || Math.abs(w - lastW) < 8) return;
+        lastW = w;
+        renderInFlight = true;
+        // Re-render OSMD to fix any measure widths captured at a stale
+        // (0-width) container size, then repaint overlays once the new
+        // SVG is laid out.
+        try { osmd.render(); } catch (_) {}
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          paintMeasureOverlays();
+          renderInFlight = false;
+        }));
+      });
+      window.__osmdRO.observe(containerEl);
+    }
     scoreLoading.classList.add("hidden");
   } catch (e) {
     console.warn("Score not loaded — demo mode:", e.message);
@@ -214,6 +258,8 @@ function flattenSegments(struct) {
 /* ----------------------------------------------------------
  * 마디 오버레이 — SVG getBBox 기반(견고)
  * ---------------------------------------------------------- */
+// Guard against repaint storms while we're already waiting for a retry.
+let _paintRetryTimer = null;
 function paintMeasureOverlays() {
   if (!osmd || !toggleColor.checked) return;
   const container = $("osmd-container");
@@ -229,10 +275,23 @@ function paintMeasureOverlays() {
   // 실제 픽셀 비율로 환산해야 정확.
   const svgRect = svg.getBoundingClientRect();
   const containerRect = container.getBoundingClientRect();
-  const offsetX = svgRect.left - containerRect.left;
-  const offsetY = svgRect.top  - containerRect.top;
   const vbW = svg.viewBox.baseVal.width  || svgRect.width;
   const vbH = svg.viewBox.baseVal.height || svgRect.height;
+
+  // If the SVG layout has not settled yet (viewport 0 or pre-layout race),
+  // retry shortly. Otherwise paint geometry collapses to NaN and the
+  // overlays render at 0×0.
+  if (svgRect.width <= 0 || vbW <= 0 || vbH <= 0) {
+    if (_paintRetryTimer) return;
+    _paintRetryTimer = setTimeout(() => {
+      _paintRetryTimer = null;
+      paintMeasureOverlays();
+    }, 200);
+    return;
+  }
+
+  const offsetX = svgRect.left - containerRect.left;
+  const offsetY = svgRect.top  - containerRect.top;
   const sx = svgRect.width  / vbW;
   const sy = svgRect.height / vbH;
   const unitToVB = 10; // OSMD 그래픽 단위 ≈ 10 viewBox 유닛

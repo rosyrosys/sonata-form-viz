@@ -115,14 +115,48 @@ async function initScore() {
     osmd.render();
     if (toggleCursor && toggleCursor.checked) osmd.cursor.show();
     else if (osmd.cursor) osmd.cursor.hide();
-    // SVG 가 DOM 레이아웃을 마치고 getBBox 가 유효해질 때까지 대기.
-    // 두 번 rAF + 폴백 타이머로 가장 견고하게.
+    // 다단계 페인트: 즉시 (double-rAF 후) 시도, 그다음 250 ms · 800 ms ·
+    // 1500 ms 에서 catch-up 시도, 그리고 audio metadata 로드 후 200 ms.
+    // 함수는 idempotent (오버레이를 먼저 비움) 이므로 반복 호출 안전·저비용.
     requestAnimationFrame(() => requestAnimationFrame(() => {
       paintMeasureOverlays();
-      if (!document.querySelectorAll(".measure-overlay").length) {
-        setTimeout(paintMeasureOverlays, 250);
-      }
     }));
+    [250, 800, 1500].forEach(ms => setTimeout(() => {
+      if (!document.querySelectorAll(".measure-overlay").length) {
+        paintMeasureOverlays();
+      }
+    }, ms));
+    if (audio) {
+      audio.addEventListener("loadedmetadata", () => {
+        setTimeout(() => {
+          if (!document.querySelectorAll(".measure-overlay").length) {
+            paintMeasureOverlays();
+          }
+        }, 200);
+      }, { once: true });
+    }
+    // 컨테이너 크기 변화 (초기 layout, 창 리사이즈, OSMD 재렌더) 시 자동
+    // 재렌더 + 재페인트. 0-width 컨테이너 상태에서 첫 렌더가 일어나면
+    // OSMD 의 SkyBottomLine 패스가 음수 sizeW 를 산출하여 오버레이가
+    // 영원히 안 나타날 수 있는데, 이를 catch.
+    if (typeof ResizeObserver !== "undefined" && !window.__osmdRO) {
+      const containerEl = $("osmd-container");
+      let lastW = containerEl.getBoundingClientRect().width;
+      let renderInFlight = false;
+      window.__osmdRO = new ResizeObserver((entries) => {
+        if (renderInFlight) return;
+        const w = entries[0]?.contentRect?.width || 0;
+        if (w <= 0 || Math.abs(w - lastW) < 8) return;
+        lastW = w;
+        renderInFlight = true;
+        try { osmd.render(); } catch (_) {}
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          paintMeasureOverlays();
+          renderInFlight = false;
+        }));
+      });
+      window.__osmdRO.observe(containerEl);
+    }
     scoreLoading.classList.add("hidden");
   } catch (e) {
     console.warn("악보 미로드 — 데모 모드:", e.message);
@@ -213,6 +247,8 @@ function flattenSegments(struct) {
 /* ----------------------------------------------------------
  * 마디 오버레이 — SVG getBBox 기반(견고)
  * ---------------------------------------------------------- */
+// 동시 retry 폭주 방지용 가드
+let _paintRetryTimer = null;
 function paintMeasureOverlays() {
   if (!osmd || !toggleColor.checked) return;
   const container = $("osmd-container");
@@ -228,10 +264,23 @@ function paintMeasureOverlays() {
   // 실제 픽셀 비율로 환산해야 정확.
   const svgRect = svg.getBoundingClientRect();
   const containerRect = container.getBoundingClientRect();
-  const offsetX = svgRect.left - containerRect.left;
-  const offsetY = svgRect.top  - containerRect.top;
   const vbW = svg.viewBox.baseVal.width  || svgRect.width;
   const vbH = svg.viewBox.baseVal.height || svgRect.height;
+
+  // SVG 레이아웃이 아직 안정되지 않은 경우 (viewport 0 또는 pre-layout
+  // race) 짧게 후 재시도. 아니면 좌표가 NaN 으로 collapse 하여 오버레이
+  // 가 0×0 으로 렌더된다.
+  if (svgRect.width <= 0 || vbW <= 0 || vbH <= 0) {
+    if (_paintRetryTimer) return;
+    _paintRetryTimer = setTimeout(() => {
+      _paintRetryTimer = null;
+      paintMeasureOverlays();
+    }, 200);
+    return;
+  }
+
+  const offsetX = svgRect.left - containerRect.left;
+  const offsetY = svgRect.top  - containerRect.top;
   const sx = svgRect.width  / vbW;
   const sy = svgRect.height / vbH;
   const unitToVB = 10; // OSMD 그래픽 단위 ≈ 10 viewBox 유닛
