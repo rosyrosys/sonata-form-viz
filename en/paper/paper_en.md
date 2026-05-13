@@ -854,14 +854,21 @@ Three screenshots from the live deployment
 (https://rosyrosys.github.io/sonata-form-viz/en/) are included in the
 submission package under `figures/`. Captions:
 
-- **Figure A.1.** System overview at startup, showing the timeline
-  (top), the OSMD-rendered MusicXML score (centre), and the
-  section-jump control panel.
-- **Figure A.2.** Timeline close-up demonstrating the two-level color
-  encoding — sections in pastel hues (blue / amber / green) with
-  theme-zone accent bars (P / T / S / codetta) above each section
-  band, and the red playhead.
-- **Figure A.3.** Score view with measure-level color overlay through
-  the recapitulation; the F-major P region is highlighted by the
-  green recapitulation band, with the analysis pane reading
-  "F major (IV)."
+- **Figure A.1.** System overview at startup, showing the title
+  banner, the section-level timeline (top: pastel-blue exposition,
+  pastel-amber development, pastel-green recapitulation), the
+  now-playing analysis pane (theme zone, key, current measure), and
+  the OSMD-rendered MusicXML score below.
+- **Figure A.2.** Active-listening control panel and demo-mode
+  fallback. The yellow *Demo mode* bar is automatically shown when no
+  audio file is available (e.g. on the public deployment, where the
+  copyrighted reference recording is not bundled). Below it: section-
+  jump buttons (Exposition / Development / Recapitulation), playback-
+  speed slider, color/cursor/loop toggles, calibration controls, and a
+  keyboard-shortcut legend.
+- **Figure A.3.** Recapitulation P region (mm. 42–58) on the score
+  with the pastel-amber section overlay visible at the section
+  boundary; the F-major key signature (one flat) is the visible cue
+  that distinguishes the recapitulation P from the C-major exposition
+  P, illustrating K. 545's subdominant-recapitulation deformation
+  discussed in §3.3.
