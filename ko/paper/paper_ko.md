@@ -586,11 +586,17 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 저장소는 **한국어판 (`ko/`)** 과 **영어판 (`en/`)** 두 에디션으로 구성되며,
 양쪽 모두 동일한 코드 베이스와 분석 스키마를 공유한다.
 
-**음원 비포함 정책**: 본 평가에 사용된 András Schiff 의 Carnegie Hall 2015
-녹음은 상용 저작권 음반이므로 저장소에 포함되지 않는다. 재현 시도자는
-`assets/README.md` 에 안내된 Public Domain 출처(Musopen, IMSLP)에서 자유 음원을
-받아 동일 폴더에 두면 된다. 시스템의 마디–시간 매핑은 *비례 보정* 과 *탭
-보정 모드(T 키)* 로 임의 음원에 적응한다.
+**Public Domain 녹음 번들 포함**: 각 에디션은 `assets/mozart_k545_mvt1.ogg`
+— Musopen 및 Wikimedia Commons 를 통해 배포되는 Robin Alciatore 의 Public
+Domain 연주 (2:14, 2.87 MB) — 를 번들로 포함하여 별도 다운로드 없이 즉시
+작동한다. 다른 녹음을 선호하는 사용자 (예: András Schiff Carnegie Hall
+2015 상용 음반) 는 `assets/mozart_k545_mvt1.mp3` 위치에 자신의 파일을
+두면 된다 (MP3 source 가 `index.html` 에 먼저 listed 되어 번들 OGG
+보다 우선). *탭 보정 모드 (T 키 + 6개 마디 지점 Space 탭)* 로 임의
+녹음에 대해 마디–시간 매핑을 1분 이내에 재고정하며 보정값은
+`localStorage` 에 영구 저장된다. 번들 음원이 제거되거나 로드 실패 시
+WebAudio 메트로놈 데모 모드가 자동 활성화되어 형식 시각화는 계속
+작동한다.
 
 **의존성**: 외부 라이브러리는 `OpenSheetMusicDisplay v1.8.7` 단일이며
 브라우저 호환성은 Chrome 120+, Edge 120+, Firefox 121+ 에서 검증되었다.

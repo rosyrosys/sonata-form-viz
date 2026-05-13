@@ -767,13 +767,20 @@ All artifacts of this study are released with persistent identifiers.
 The repository ships with two parallel editions, **`ko/`** (Korean) and
 **`en/`** (English), sharing the same code base and analysis schema.
 
-**Audio is intentionally excluded.** The recording used in our evaluation
-(András Schiff, Carnegie Hall 2015) is a commercial release and is not
-redistributed. To reproduce the evaluation, obtain a public-domain
-recording from the sources listed in `assets/README.md` (Musopen, IMSLP)
-and place it in the same folder. The system's measure-to-time mapping
-adapts to arbitrary recordings via proportional rescaling and an
-interactive tap-calibration mode (press *T*).
+**A Public Domain recording is bundled.** Each edition ships with
+`assets/mozart_k545_mvt1.ogg` — a Public Domain performance by Robin
+Alciatore distributed via Musopen and Wikimedia Commons (2:14,
+2.87 MB). No additional download is required. Users who prefer a
+different recording — for example the András Schiff Carnegie Hall
+(2015) commercial release — can drop their own file at
+`assets/mozart_k545_mvt1.mp3` (the MP3 source is listed first in
+`index.html`, so it takes precedence over the bundled OGG). The
+interactive tap-calibration mode (press *T* and tap *Space* at six
+landmark measures) re-anchors the measure-to-time mapping for any
+recording in under a minute and persists the calibration in
+`localStorage`. If the bundled audio is removed or fails to load,
+the WebAudio metronome demo mode kicks in automatically so the
+form-analysis visualization still operates.
 
 **Dependencies.** The only external runtime dependency is
 *OpenSheetMusicDisplay* v1.8.7. Browser compatibility is verified on

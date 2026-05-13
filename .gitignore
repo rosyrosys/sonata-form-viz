@@ -1,9 +1,11 @@
-# Audio (commercial recordings — supply your own per assets/README.md)
+# Audio
+# We BUNDLE the Public Domain Alciatore K. 545 mvt. I recording as OGG
+# (assets/mozart_k545_mvt1.ogg) so the tool works out of the box. Other
+# commercial recordings supplied by the user remain ignored.
 *.mp3
 *.m4a
 *.wav
 *.flac
-*.ogg
 
 # Word artifacts left by Microsoft Word
 ~$*.docx

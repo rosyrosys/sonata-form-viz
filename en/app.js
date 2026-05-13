@@ -682,16 +682,49 @@ function ensureAudioCtx() {
   if (audioCtx.state === "suspended") audioCtx.resume();
 }
 
-function clickSound(strong) {
+// Pitch frequencies (Hz) for note names; used by the demo-mode synth so
+// section/key changes are *audible*, not just metronome clicks.
+const NOTE_HZ = {
+  "C":  261.63, "C#": 277.18, "Db": 277.18,
+  "D":  293.66, "D#": 311.13, "Eb": 311.13,
+  "E":  329.63, "F":  349.23, "F#": 369.99, "Gb": 369.99,
+  "G":  392.00, "G#": 415.30, "Ab": 415.30,
+  "A":  440.00, "A#": 466.16, "Bb": 466.16,
+  "B":  493.88
+};
+
+// Extract the tonic note name from a key string like "C major", "G major",
+// "F major", "g minor", etc. Returns the note name only (no major/minor).
+function tonicOf(keyStr) {
+  if (!keyStr) return "C";
+  const m = String(keyStr).match(/^\s*([A-Ga-g])([#b]?)/);
+  if (!m) return "C";
+  return m[1].toUpperCase() + (m[2] || "");
+}
+
+// Synthesize a brief piano-like tone at the given frequency with a short
+// envelope. Two simple harmonics make it sound less like a sine pulse.
+function noteSound(freq, strong) {
   if (!audioCtx) return;
-  const o = audioCtx.createOscillator();
-  const g = audioCtx.createGain();
-  o.frequency.value = strong ? 1800 : 1200;
-  g.gain.setValueAtTime(0.2, audioCtx.currentTime);
-  g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
-  o.connect(g).connect(audioCtx.destination);
-  o.start();
-  o.stop(audioCtx.currentTime + 0.05);
+  const now = audioCtx.currentTime;
+  const dur = strong ? 0.55 : 0.30;
+  const peak = strong ? 0.22 : 0.10;
+  const gMaster = audioCtx.createGain();
+  gMaster.gain.setValueAtTime(peak, now);
+  gMaster.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+  gMaster.connect(audioCtx.destination);
+  // Fundamental + a soft 2nd harmonic gives a less harsh timbre
+  [{f: freq, gain: 1.0, type: "triangle"},
+   {f: freq * 2, gain: 0.25, type: "sine"}].forEach(({f, gain, type}) => {
+    const o = audioCtx.createOscillator();
+    o.type = type;
+    o.frequency.value = f;
+    const g = audioCtx.createGain();
+    g.gain.value = gain;
+    o.connect(g).connect(gMaster);
+    o.start(now);
+    o.stop(now + dur);
+  });
 }
 
 function startDemo() {
@@ -705,13 +738,20 @@ function startDemo() {
     if (!demoPlaying) return;
     demoElapsed = (performance.now() / 1000 - t0) * speed;
     if (demoElapsed >= totalDuration) { stopDemo(); return; }
-    // 마디 진입 시 클릭
+    // On entering a new measure: synthesize a pitched tone whose pitch is
+    // the tonic of the *current theme zone* (or section). The first
+    // measure of each section gets a stronger downbeat, so section
+    // boundaries are audibly distinct from intra-section measure ticks.
     const m = findMeasureAtTime(demoElapsed);
     if (m !== lastClickTime) {
       lastClickTime = m;
       const seg = findSegmentByMeasure(m);
       const strong = seg && (m === seg.start_measure || m === 1);
-      clickSound(strong);
+      const tonic = seg ? tonicOf(seg.key) : "C";
+      const baseFreq = NOTE_HZ[tonic] || NOTE_HZ.C;
+      // Section downbeats: tonic an octave up; intra-section: tonic at base
+      const freq = strong ? baseFreq * 2 : baseFreq;
+      noteSound(freq, strong);
     }
     tick(demoElapsed);
     demoTimer = requestAnimationFrame(loop);
