@@ -134,12 +134,21 @@ async function initScore() {
 }
 
 async function initAudioOrDemo() {
+  // 빠른 경로: 본 함수가 리스너를 부착하기 전에 audio 가 이미 실패한 경우
+  // (예: GitHub Pages 에 저작권 음원이 포함되지 않아 404).
+  if (audio.error || audio.networkState === 3 /* NO_SOURCE */) {
+    enableDemoMode();
+    return;
+  }
   await new Promise(resolve => {
     let done = false;
     const ok = () => { if (!done) { done = true; resolve(); } };
     audio.addEventListener("loadedmetadata", ok, { once: true });
     audio.addEventListener("error", () => { demoMode = true; ok(); }, { once: true });
-    setTimeout(() => { if (!audio.duration) { demoMode = true; } ok(); }, 1500);
+    setTimeout(() => {
+      if (!audio.duration || audio.networkState === 3) demoMode = true;
+      ok();
+    }, 1500);
   });
   if (demoMode) enableDemoMode();
 }
@@ -649,14 +658,19 @@ function showToast(msg) {
 let audioCtx = null;
 function enableDemoMode() {
   demoMode = true;
-  audio.style.opacity = "0.5";
+  // 사용자가 (작동하지 않는) 네이티브 재생 버튼을 누르지 않도록
+  // 네이티브 audio 요소를 완전히 숨기고 데모 컨트롤만 노출.
+  audio.style.display = "none";
   audio.title = "음원 파일 없음 — 메트로놈 데모 모드로 동작";
   // 데모용 가짜 컨트롤
   const demoBar = document.createElement("div");
-  demoBar.style.cssText = "grid-column:1/-1; padding:.4rem .6rem; background:#fff8e1; border:1px solid #f3d575; border-radius:6px; font-size:.85rem;";
-  demoBar.innerHTML = `🎵 <strong>데모 모드</strong> — 음원 파일이 없어 메트로놈 클릭으로 형식 흐름을 재현합니다.
-    <button id="demo-play" style="margin-left:.5rem;">▶ 재생</button>
-    <button id="demo-pause" style="margin-left:.25rem;">⏸ 정지</button>`;
+  demoBar.style.cssText = "grid-column:1/-1; padding:.6rem .8rem; background:#fff8e1; border:1px solid #f3d575; border-radius:6px; font-size:.9rem; line-height:1.5;";
+  demoBar.innerHTML = `🎵 <strong>데모 모드</strong> — 저작권으로 음원이 포함되지 않음. 메트로놈 클릭으로 형식 흐름을 재현하며, 형식 시각화는 동일하게 작동합니다.
+    <div style="margin-top:.4rem;">
+      <button id="demo-play" style="padding:.25rem .8rem;">▶ 재생</button>
+      <button id="demo-pause" style="margin-left:.25rem; padding:.25rem .8rem;">⏸ 정지</button>
+      <span style="margin-left:.6rem; font-size:.8em; color:#666;">실제 녹음 사용법은 <code>assets/README.md</code> 참조.</span>
+    </div>`;
   $("controls").insertBefore(demoBar, audio.nextSibling);
   $("demo-play").addEventListener("click", startDemo);
   $("demo-pause").addEventListener("click", stopDemo);

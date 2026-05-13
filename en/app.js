@@ -135,12 +135,21 @@ async function initScore() {
 }
 
 async function initAudioOrDemo() {
+  // Fast path: audio already failed before this function attached listeners
+  // (e.g. 404 on GitHub Pages where the copyrighted MP3 is not shipped).
+  if (audio.error || audio.networkState === 3 /* NO_SOURCE */) {
+    enableDemoMode();
+    return;
+  }
   await new Promise(resolve => {
     let done = false;
     const ok = () => { if (!done) { done = true; resolve(); } };
     audio.addEventListener("loadedmetadata", ok, { once: true });
     audio.addEventListener("error", () => { demoMode = true; ok(); }, { once: true });
-    setTimeout(() => { if (!audio.duration) { demoMode = true; } ok(); }, 1500);
+    setTimeout(() => {
+      if (!audio.duration || audio.networkState === 3) demoMode = true;
+      ok();
+    }, 1500);
   });
   if (demoMode) enableDemoMode();
 }
@@ -650,14 +659,19 @@ function showToast(msg) {
 let audioCtx = null;
 function enableDemoMode() {
   demoMode = true;
-  audio.style.opacity = "0.5";
+  // Hide the native audio element entirely so users don't click its
+  // (broken) play button — demo mode supplies its own controls.
+  audio.style.display = "none";
   audio.title = "No audio file — running in metronome demo mode";
   // 데모용 가짜 컨트롤
   const demoBar = document.createElement("div");
-  demoBar.style.cssText = "grid-column:1/-1; padding:.4rem .6rem; background:#fff8e1; border:1px solid #f3d575; border-radius:6px; font-size:.85rem;";
-  demoBar.innerHTML = `🎵 <strong>Demo mode</strong> — no audio file; metronome clicks reproduce the formal flow.
-    <button id="demo-play" style="margin-left:.5rem;">▶ Play</button>
-    <button id="demo-pause" style="margin-left:.25rem;">⏸ Pause</button>`;
+  demoBar.style.cssText = "grid-column:1/-1; padding:.6rem .8rem; background:#fff8e1; border:1px solid #f3d575; border-radius:6px; font-size:.9rem; line-height:1.5;";
+  demoBar.innerHTML = `🎵 <strong>Demo mode</strong> — no audio file shipped (copyright). Metronome clicks reproduce the formal flow; the form-analysis visualization works identically.
+    <div style="margin-top:.4rem;">
+      <button id="demo-play" style="padding:.25rem .8rem;">▶ Play</button>
+      <button id="demo-pause" style="margin-left:.25rem; padding:.25rem .8rem;">⏸ Pause</button>
+      <span style="margin-left:.6rem; font-size:.8em; color:#666;">To use a real recording, see <code>assets/README.md</code>.</span>
+    </div>`;
   $("controls").insertBefore(demoBar, audio.nextSibling);
   $("demo-play").addEventListener("click", startDemo);
   $("demo-pause").addEventListener("click", stopDemo);
