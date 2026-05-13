@@ -54,7 +54,7 @@ exposition-repeat folding technique, and the pedagogical significance
 of multi-representational visualization for teaching *norms and
 deformations* together — most prominently K. 545's atypical subdominant
 recapitulation. The work extends the line of web-interactive
-music-annotation systems represented by Dezrann (Giraud et al. 2025)
+music-annotation systems represented by Dezrann (Ballester et al. 2025)
 and the sonata-form structure-learning study of Allegraud et al.
 (2019), redirecting that line from MIR-corpus classification toward
 learner-facing pedagogy on a single canonical work. The released
@@ -218,7 +218,7 @@ recapitulation as such.
 ## 2.4 Related Tools
 
 The closest precedents for the present work are the Dezrann web
-platform (Giraud et al. 2025) and the sonata-form structure-learning
+platform (Ballester et al. 2025) and the sonata-form structure-learning
 study of Allegraud et al. (2019), both published in this journal. Both
 treat formal music annotation as a first-class web-interactive object;
 both have been applied to Mozart sonata movements. The present work
@@ -257,7 +257,7 @@ score-following tools.
 | iAnalyse (Couprie 2008) | ✓ | △ | △ | ✓ | ✓ | △ |
 | Verovio Humdrum Viewer (Sapp 2017) | △ | △ | × | × | ✓ | △ |
 | MuseScore Web (commercial) | × | ✓ | × | × | × | ✓ |
-| Dezrann (Giraud et al. 2025) | ✓ (label-based) | ✓ | △ (track labels) | ✓ | ✓ | ✓ |
+| Dezrann (Ballester et al. 2025) | ✓ (label-based) | ✓ | △ (track labels) | ✓ | ✓ | ✓ |
 | **This work** | **✓ (two-level)** | **✓** | **✓ (measure-painted)** | **✓** | **✓** | **✓** |
 
 The novelty claim is therefore narrower than "first open-source
@@ -716,8 +716,8 @@ deferred to subsequent work. Planned next steps:
 
 1. **Randomized controlled trial** comparing the synchronized condition
    to (a) audio + score without synchronization and (b) audio + verbal
-   lecture only, with form-identification accuracy and SUS as primary
-   measures.
+   lecture only, with form-identification accuracy and the System
+   Usability Scale (Brooke, 1996) as primary measures.
 2. **Automatic score-audio alignment** (Nakamura et al., 2017) to
    eliminate recording-dependence.
 3. **Multi-piece dataset.** Beethoven Op. 49 No. 2 mvt. I and Clementi
@@ -792,6 +792,16 @@ IRB-approved data collection and analysis are complete.
 
 # References
 
+- Allegraud, P., Bigo, L., Feisthauer, L., Giraud, M., Groult, R.,
+  Leguy, E., & Levé, F. (2019). Learning sonata form structure on
+  Mozart's string quartets. *Transactions of the International
+  Society for Music Information Retrieval, 2*(1), 82–96.
+  https://doi.org/10.5334/tismir.27
+- Ballester, C., Bacot, B., Bigo, L., Borsan, V. N., Couturier, L.,
+  Déguernel, K., et al. (2025). Interacting with annotated and
+  synchronized music corpora on the Dezrann web platform.
+  *Transactions of the International Society for Music Information
+  Retrieval, 8*(1), 121–139. https://doi.org/10.5334/tismir.212
 - Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W.
   Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.),
   *Usability Evaluation in Industry* (pp. 189–194). Taylor & Francis.
@@ -805,13 +815,11 @@ IRB-approved data collection and analysis are complete.
 - Caplin, W. E. (2009). What are formal functions? In P. Bergé (Ed.),
   *Musical form, forms, & formenlehre* (pp. 21–40). Leuven University
   Press.
-- Cohen, J. (1988). *Statistical power analysis for the behavioral
-  sciences* (2nd ed.). Erlbaum.
 - Cook, N. (1990). *Music, imagination, and culture.* Oxford University
   Press.
-- Couprie, P. (2008). iAnalyse: A software dedicated to the graphical
-  analysis of music. In *Proceedings of the 5th Sound and Music
-  Computing Conference*.
+- Couprie, P. (2008). iAnalyse: un logiciel d'aide à l'analyse
+  musicale. In *Journées d'Informatique Musicale (JIM)* (pp. 115–121).
+  Albi, France. HAL: hal-00823867.
 - Goto, M. (2006). AIST annotation for the RWC music database. In
   *Proceedings of ISMIR 2006*.
 - Hargreaves, D. J. (1986). *The developmental psychology of music.*
@@ -823,29 +831,26 @@ IRB-approved data collection and analysis are complete.
   notation system on a single melody for music beginners.
   *International Journal of Music Education, 31*(4), 394–412.
   https://doi.org/10.1177/0255761413489082
+- LaRue, J. (1970). *Guidelines for style analysis.* Norton.
 - Margulis, E. H. (2014). *On repeat: How music plays the mind.*
   Oxford University Press.
 - Mayer, R. E. (2009). *Multimedia learning* (2nd ed.). Cambridge
   University Press.
 - Mozart, W. A. (1986). *Neue Mozart-Ausgabe IX/25: Klaviersonaten
   Bd. 2.* Bärenreiter.
+- Müller, M. (2015). *Fundamentals of music processing: Audio,
+  analysis, algorithms, applications.* Springer.
+  https://doi.org/10.1007/978-3-319-21945-5
 - Nakamura, E., Yoshii, K., & Katayose, H. (2017). Performance error
   detection and post-processing for fast and accurate symbolic music
-  alignment. In *Proceedings of ISMIR 2017*.
+  alignment. In *Proceedings of the 18th International Society for
+  Music Information Retrieval Conference (ISMIR)* (pp. 347–353).
 - North, A. C., & Hargreaves, D. J. (2008). *The social and applied
   psychology of music.* Oxford University Press.
 - Paivio, A. (1991). Dual coding theory: Retrospect and current status.
   *Canadian Journal of Psychology, 45*(3), 255–287.
-- Sapp, C. S. (2011). *Computational methods for the analysis of
-  musical structure* (Doctoral dissertation). Stanford University,
-  CCRMA.
 - Sapp, C. S. (2017). Verovio Humdrum Viewer. In *Music Encoding
   Conference 2017*.
-- Sauro, J., & Lewis, J. R. (2016). *Quantifying the user experience:
-  Practical statistics for user research* (2nd ed.). Morgan Kaufmann.
-- Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental
-  and quasi-experimental designs for generalized causal inference.*
-  Houghton Mifflin.
 
 
 # Appendix A. Screenshots

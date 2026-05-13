@@ -152,7 +152,7 @@ in this journal:
    underlying analytic categories are compatible and the JSON schema
    we release is intentionally interoperable.
 
-2. Giraud, Bigo, Levé, and colleagues (2025, TISMIR) on the Dezrann
+2. Ballester, Bacot, Bigo, and colleagues (2025, TISMIR 8(1):121–139) on the Dezrann
    web platform for synchronized annotation. Where Dezrann places
    annotation labels alongside a waveform-and-score view, our tool
    paints the score itself with measure-level color overlays computed

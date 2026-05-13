@@ -225,7 +225,7 @@ Hargreaves(1986)와 North & Hargreaves(2008)는 음악 형식 학습이 *반복 
 ## 2.4 관련 도구
 
 본 작업의 가장 가까운 선행 사례는 본 학술지(TISMIR)에 게재된 Dezrann 웹
-플랫폼 (Giraud et al., 2025) 과 Allegraud et al. (2019) 의 소나타 형식
+플랫폼 (Ballester et al., 2025) 과 Allegraud et al. (2019) 의 소나타 형식
 구조 학습 연구이다. 두 작업 모두 음악 형식 주석을 *웹 인터랙티브 1급 객체*
 로 다루며, 모차르트 소나타 악장에 적용되었다. 본 작업은 그 연구 라인을
 따라 다음 세 가지를 추가 기여한다:
@@ -256,7 +256,7 @@ Hargreaves(1986)와 North & Hargreaves(2008)는 음악 형식 학습이 *반복 
 | iAnalyse (Couprie 2008) | ✓ | △ | △ | ✓ | ✓ | △ |
 | Verovio Humdrum Viewer (Sapp 2017) | △ | △ | × | × | ✓ | △ |
 | MuseScore Web (상용) | × | ✓ | × | × | × | ✓ |
-| Dezrann (Giraud et al. 2025) | ✓ (라벨 기반) | ✓ | △ (트랙 라벨) | ✓ | ✓ | ✓ |
+| Dezrann (Ballester et al. 2025) | ✓ (라벨 기반) | ✓ | △ (트랙 라벨) | ✓ | ✓ | ✓ |
 | **본 작업** | **✓ (두 단계)** | **✓** | **✓ (마디 도장)** | **✓** | **✓** | **✓** |
 
 신규성 주장은 "최초의 오픈소스 소나타 형식 시각화" 가 아니라 더 좁다:
@@ -545,7 +545,8 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 검증은 별도의 추후 연구가 필요하다. 후속 연구 방향:
 
 1. **통제군 RCT** — 동일 분석 내용을 동영상 강의·교과서로 전달한 군과
-   본 도구 사용군의 형식 식별 정확도 변화를 비교.
+   본 도구 사용군의 형식 식별 정확도와 시스템 사용성 척도 (System
+   Usability Scale; Brooke, 1996) 를 비교.
 2. **자동 마디 정렬** — NMF 기반 score-audio alignment 통합으로 음반
    종속성 해소 (Nakamura et al., 2017).
 3. **다곡 확장** — Beethoven Op. 49 No. 2, Clementi Op. 36 No. 1 등의
@@ -601,6 +602,16 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 
 # 참고문헌
 
+- Allegraud, P., Bigo, L., Feisthauer, L., Giraud, M., Groult, R.,
+  Leguy, E., & Levé, F. (2019). Learning sonata form structure on
+  Mozart's string quartets. *Transactions of the International
+  Society for Music Information Retrieval*, 2(1), 82–96.
+  https://doi.org/10.5334/tismir.27
+- Ballester, C., Bacot, B., Bigo, L., Borsan, V. N., Couturier, L.,
+  Déguernel, K., et al. (2025). Interacting with annotated and
+  synchronized music corpora on the Dezrann web platform.
+  *Transactions of the International Society for Music Information
+  Retrieval*, 8(1), 121–139. https://doi.org/10.5334/tismir.212
 - Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In *Usability
   Evaluation in Industry* (pp. 189–194). Taylor & Francis.
 - Cannam, C., Landone, C., & Sandler, M. (2010). Sonic Visualiser: An open
@@ -613,12 +624,10 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 - Caplin, W. E. (2009). What are formal functions? In P. Bergé (Ed.),
   *Musical form, forms, & formenlehre* (pp. 21–40). Leuven University
   Press.
-- Cohen, J. (1988). *Statistical Power Analysis for the Behavioral Sciences*
-  (2nd ed.). Erlbaum.
 - Cook, N. (1990). *Music, Imagination, and Culture.* Oxford University Press.
-- Couprie, P. (2008). iAnalyse: a software dedicated to the graphical
-  analysis of music. In *Proceedings of the 5th Sound and Music Computing
-  Conference*.
+- Couprie, P. (2008). iAnalyse: un logiciel d'aide à l'analyse
+  musicale. In *Journées d'Informatique Musicale (JIM)* (pp. 115–121).
+  Albi, France. HAL: hal-00823867.
 - Goto, M. (2006). AIST Annotation for the RWC Music Database. In *Proc.
   ISMIR*.
 - Hargreaves, D. J. (1986). *The Developmental Psychology of Music.*
@@ -637,9 +646,12 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
   Press.
 - Mozart, W. A. (1986). *Neue Mozart-Ausgabe IX/25: Klaviersonaten Bd. 2.*
   Bärenreiter.
+- Müller, M. (2015). *Fundamentals of music processing: Audio,
+  analysis, algorithms, applications.* Springer.
+  https://doi.org/10.1007/978-3-319-21945-5
 - Nakamura, E., Yoshii, K., & Katayose, H. (2017). Performance Error
   Detection and Post-Processing for Fast and Accurate Symbolic Music
-  Alignment. In *Proc. ISMIR*.
+  Alignment. In *Proc. 18th ISMIR Conference* (pp. 347–353).
 - North, A. C., & Hargreaves, D. J. (2008). *The Social and Applied
   Psychology of Music.* Oxford University Press.
 - Paivio, A. (1991). Dual Coding Theory: Retrospect and Current Status.
@@ -647,11 +659,6 @@ S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장
 - Sapp, C. S. (2011). *Computational Methods for the Analysis of Musical
   Structure.* PhD thesis, Stanford CCRMA.
 - Sapp, C. S. (2017). Verovio Humdrum Viewer. In *Music Encoding Conference*.
-- Sauro, J., & Lewis, J. R. (2016). *Quantifying the User Experience:
-  Practical Statistics for User Research* (2nd ed.). Morgan Kaufmann.
-- Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and
-  Quasi-Experimental Designs for Generalized Causal Inference.* Houghton
-  Mifflin.
 
 
 # 부록 A. 시스템 화면
