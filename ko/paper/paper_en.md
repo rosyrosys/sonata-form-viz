@@ -27,14 +27,7 @@ elected repeats, an edge case that no prior open music-visualization
 system addresses with an explicit time map. A WebAudio metronome
 demo mode lets the form visualization function without audio, and
 a bundled Public Domain recording makes the tool work out of the
-box. The work extends two prior TISMIR contributions — Dezrann
-(Ballester et al., 2025) and the Mozart sonata-form learning study
-of Allegraud et al. (2019) — by redirecting their line toward
-learner-facing pedagogy and by making the analysis schema
-*intentionally interoperable* with the Algomus annotation
-conventions. The system is MIT-licensed; the analysis schema is
-CC BY 4.0. Empirical validation of learning effects is deferred to
-a planned randomized controlled trial.
+box.
 
 **Word Count:** *[to be inserted at final submission — current draft
 ≈ 6,100 words including references and appendix]*
