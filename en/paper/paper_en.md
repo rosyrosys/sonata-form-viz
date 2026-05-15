@@ -1,74 +1,47 @@
----
-title: "Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545"
-running_title: "Synchronized Visualization of Sonata Form"
-author:
-  - name: "[Author Name]"
-    affiliation: "[Affiliation]"
-    email: "[email]"
-    orcid: "0000-0000-0000-0000"
-keywords:
-  - music education technology
-  - sonata form
-  - score visualization
-  - synchronized playback
-  - MusicXML
-  - OpenSheetMusicDisplay
-  - multi-representational learning
-  - Mozart K. 545
-date: 2026-05-08
-license: "CC BY 4.0 (paper, analytical data) / MIT (source code)"
-repository: "https://github.com/[author]/sonata-form-viz"
----
+[ARTICLE TYPE: Tools and Datasets Article]
+
+# Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545
+
+*[Author details are not included in this manuscript file as the peer
+review process is blinded. Author names, affiliations, contact details
+and ORCIDs are provided via the online submission system.]*
 
 # Abstract
 
-This paper presents the design, implementation, and evaluation of a
-web-based learning tool that synchronizes notated score, audio, and
-formal analysis along a single timeline, allowing learners to experience
-the hierarchical structure of sonata form simultaneously through
-auditory, visual, and cognitive channels. The first movement of
-Mozart's *Piano Sonata in C major*, K. 545 — a standard pedagogical
-work — is used as the case piece. Its 73-measure compactness and
-textbook-clear formal landmarks coexist with a celebrated *deformation*:
-the recapitulation begins in the subdominant (F major) rather than the
-tonic. This rare combination of normative and deformational features in
-a single short piece makes K. 545 unusually well-suited for teaching
-both the *norms* and the *deviations* of sonata-form practice.
+This paper presents the design, implementation, and pedagogical
+positioning of an open-source web-based tool that synchronizes a
+notated score, audio playback, and a hierarchical formal-analysis
+layer along a single timeline. The first movement of Mozart's *Piano
+Sonata in C major*, K. 545 serves as the case piece: its 73-measure
+compactness and textbook-clear formal landmarks coexist with a
+celebrated *subdominant recapitulation* (the recap begins in F major
+rather than C), making it unusually well-suited for teaching both
+the norms and the deviations of sonata-form practice. The system
+renders MusicXML through OpenSheetMusicDisplay, maps audio time to
+measure number via a discrete lookup table on each `timeupdate`
+event, and overlays section and theme labels in a two-level color
+hierarchy directly onto the score. We further contribute an
+**exposition-repeat folding map** — a piecewise non-monotonic time
+function that preserves analytical monotonicity under performer-
+elected repeats, an edge case that no prior open music-visualization
+system addresses with an explicit time map. A WebAudio metronome
+demo mode lets the form visualization function without audio, and
+a bundled Public Domain recording makes the tool work out of the
+box. The work extends two prior TISMIR contributions — Dezrann
+(Ballester et al., 2025) and the Mozart sonata-form learning study
+of Allegraud et al. (2019) — by redirecting their line toward
+learner-facing pedagogy and by making the analysis schema
+*intentionally interoperable* with the Algomus annotation
+conventions. The system is MIT-licensed; the analysis schema is
+CC BY 4.0. Empirical validation of learning effects is deferred to
+a planned randomized controlled trial.
 
-The system (1) renders MusicXML through OpenSheetMusicDisplay, (2) maps
-audio time to measure number through a discrete lookup table on each
-`timeupdate` event, (3) overlays section and theme labels in a two-level
-color hierarchy directly onto the score, and (4) supports section
-jumping, looped listening, playback-speed control, and keyboard
-shortcuts. We further contribute an **exposition-repeat folding map**,
-a piecewise non-monotonic time function that preserves analytical
-monotonicity under performer-elected exposition repeats — a practical
-edge case in score-audio alignment that, to our knowledge, no prior
-open music-visualization system addresses explicitly. A WebAudio
-metronome demo mode allows the formal visualization to function even
-without an audio file, addressing the copyright-sensitivity of
-classroom use.
+**Word Count:** *[to be inserted at final submission — current draft
+≈ 6,100 words including references and appendix]*
 
-This paper focuses on the system's design, implementation, the
-exposition-repeat folding technique, and the pedagogical significance
-of multi-representational visualization for teaching *norms and
-deformations* together — most prominently K. 545's atypical subdominant
-recapitulation. The work extends the line of web-interactive
-music-annotation systems represented by Dezrann (Ballester et al. 2025)
-and the sonata-form structure-learning study of Allegraud et al.
-(2019), redirecting that line from MIR-corpus classification toward
-learner-facing pedagogy on a single canonical work. The released
-JSON schema is *intentionally interoperable* with the Algomus
-annotation conventions established in Allegraud et al. (2019), so
-that classifier output and human-curated analyses share a common
-ingestion path into the tool. The system is released as MIT-licensed
-open source and the analysis schema is licensed CC BY 4.0. Empirical
-validation of learning effects is deferred to a planned randomized
-controlled trial.
-
-**Keywords:** sonata form, score-audio synchronization, music notation
-visualization, MusicXML, OpenSheetMusicDisplay, color encoding,
-formal analysis schema, music education, open-source tool, Mozart K. 545
+**Keywords:** sonata form; score-audio synchronization; MusicXML
+visualization; exposition-repeat folding; music education technology;
+Mozart K. 545
 
 
 # 1. Introduction
@@ -794,7 +767,49 @@ IRB-approved data collection and analysis are complete.
 
 # Acknowledgments
 
-[To be added after blinding requirements are met.]
+*[To be added after blinding requirements are met. The author(s)
+gratefully acknowledge the open-source contributors of
+OpenSheetMusicDisplay, the curators of the Musopen / Wikimedia
+Commons Public Domain recording of K. 545 used in the bundled
+deployment, and the Algomus research group whose annotation
+conventions inspired the schema interoperability discussed in §4.3.]*
+
+
+# Ethics and Consent
+
+The present manuscript reports the design, implementation, and
+analytical case study of an open-source software tool. It does not
+include human-subjects evaluation, animal subjects, or human-derived
+data, and no ethics-committee approval is therefore required for the
+work reported here. The planned randomized controlled trial outlined
+in §6.3 — which will involve undergraduate music-education majors as
+participants and the System Usability Scale (Brooke, 1996) as a
+primary measure — will be conducted under the appropriate
+institutional review board approval and reported in a separate
+follow-up publication.
+
+
+# Competing Interests
+
+The author(s) has/have no competing interests to declare.
+
+
+# Funding Information
+
+*[To be filled at final submission: list any funding sources with
+grant numbers, or state "No funding was received for this work."
+The development of the tool, the bundled assets, and the manuscript
+were prepared by the author(s) without external grant support unless
+otherwise specified at the online submission stage.]*
+
+
+# Authors' Contributions
+
+*[To be filled at final submission. For single authorship: "The
+sole author conceived the study, designed and implemented the
+software, prepared the analysis schema and case study, drafted the
+manuscript, and approved the final version." For multi-authored
+submissions, please supply a CRediT-style contribution statement.]*
 
 
 # References
