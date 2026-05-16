@@ -5,94 +5,71 @@ note: "Bilingual paragraph-by-paragraph manuscript. English paragraph first, Kor
 date: 2026-05-15
 ---
 
+[ARTICLE TYPE: Tools and Datasets Article]
+[기사 유형: 도구·데이터셋 논문]
+
+# Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545
+# 동기화된 다중 표상 시각화를 통한 소나타 형식 교육: 모차르트 K. 545 를 사례로 한 오픈소스 웹 도구의 설계·구현
+
+*[Author details are not included in this manuscript file as the peer
+review process is blinded. Author names, affiliations, contact details
+and ORCIDs are provided via the online submission system.]*
+
+*[익명 심사를 위해 본 원고에는 저자 정보를 포함하지 않습니다. 저자명,
+소속, 연락처, ORCID 는 온라인 제출 시스템을 통해 별도로 제공됩니다.]*
+
 # Abstract / 초록
 
-> This paper presents the design, implementation, and evaluation of a
-> web-based learning tool that synchronizes notated score, audio, and
-> formal analysis along a single timeline, allowing learners to experience
-> the hierarchical structure of sonata form simultaneously through
-> auditory, visual, and cognitive channels. The first movement of
-> Mozart's *Piano Sonata in C major*, K. 545 — a standard pedagogical
-> work — is used as the case piece. Its 73-measure compactness and
-> textbook-clear formal landmarks coexist with a celebrated *deformation*:
-> the recapitulation begins in the subdominant (F major) rather than the
-> tonic. This rare combination of normative and deformational features in
-> a single short piece makes K. 545 unusually well-suited for teaching
-> both the *norms* and the *deviations* of sonata-form practice.
+> This paper presents the design, implementation, and pedagogical
+> positioning of an open-source web-based tool that synchronizes a
+> notated score, audio playback, and a hierarchical formal-analysis
+> layer along a single timeline. The first movement of Mozart's *Piano
+> Sonata in C major*, K. 545 serves as the case piece: its 73-measure
+> compactness and textbook-clear formal landmarks coexist with a
+> celebrated *subdominant recapitulation* (the recap begins in F major
+> rather than C), making it unusually well-suited for teaching both
+> the norms and the deviations of sonata-form practice. The system
+> renders MusicXML through OpenSheetMusicDisplay, maps audio time to
+> measure number via a discrete lookup table on each `timeupdate`
+> event, and overlays section and theme labels in a two-level color
+> hierarchy directly onto the score. We further contribute an
+> **exposition-repeat folding map** — a piecewise non-monotonic time
+> function that preserves analytical monotonicity under performer-
+> elected repeats, an edge case that no prior open music-visualization
+> system addresses with an explicit time map. A WebAudio metronome
+> demo mode lets the form visualization function without audio, and
+> a bundled Public Domain recording makes the tool work out of the
+> box.
 
-본 논문은 악보·음원·형식 분석을 하나의 시간축에서 동기화하여 학습자가
-소나타 형식의 위계적 구조를 청각·시각·인지의 세 채널로 동시에 경험할
-수 있게 하는 웹 기반 학습 도구의 설계·구현·평가를 제시한다. 사례곡은
-표준 교재로 사용되는 모차르트 *피아노 소나타 다장조* K. 545 의 1악장
-이다. 73마디라는 짧은 분량과 교과서적 형식 지표가 명료하다는 *전형성*
-과 함께, 재현부가 으뜸조(다장조)가 아닌 **하속조(바장조)** 에서 시작
-하는 유명한 *비전형성* 을 동시에 갖는다. 단일 짧은 작품 안에 규범과
-비전형이 공존한다는 이 드문 결합은 K. 545 를 소나타 형식 실천의
-*규범* 과 *예외* 를 동시에 가르치기에 유달리 적합한 교재로 만든다.
+본 논문은 악보·음원·위계적 형식 분석 계층을 단일 시간축에서 동기화하는
+오픈소스 웹 기반 도구의 설계·구현·교수법적 위치 짓기를 제시한다. 사례
+곡은 모차르트 *피아노 소나타 다장조* K. 545 1악장이다 — 73마디의 짧은
+분량과 교과서적 형식 지표가 명료하다는 *전형성* 과, 재현부가 으뜸조
+(다장조) 가 아닌 하속조(바장조)에서 시작하는 유명한 *비전형성* 을
+동시에 갖는 작품으로, 소나타 형식 실천의 규범과 예외를 한 작품에서
+가르치기에 유달리 적합하다. 시스템은 MusicXML 을 OpenSheetMusicDisplay
+로 렌더하고, HTML5 오디오의 `timeupdate` 이벤트마다 이산 룩업 테이블로
+오디오 시간을 마디 번호에 매핑하며, 섹션·주제 영역 라벨을 두 단계 색상
+위계로 *악보 위에 직접* 도장한다. 추가로 **제시부 반복 폴딩 시간 맵**
+을 기여한다 — 연주자가 선택적으로 수행하는 제시부 반복 하에서도
+분석적 단조성을 보존하는 piecewise 비단조 시간 함수로, 저자들이 알기로
+어떤 기존 오픈 음악 시각화 시스템도 이 사례를 명시적으로 처리하지
+않는다. WebAudio 메트로놈 데모 모드는 음원 없이도 형식 시각화가
+작동하게 하고, Public Domain 녹음을 번들 포함하여 도구가 별도 설정
+없이 즉시 작동한다.
 
-> The system (1) renders MusicXML through OpenSheetMusicDisplay, (2) maps
-> audio time to measure number through a discrete lookup table on each
-> `timeupdate` event, (3) overlays section and theme labels in a two-level
-> color hierarchy directly onto the score, and (4) supports section
-> jumping, looped listening, playback-speed control, and keyboard
-> shortcuts. We further contribute an **exposition-repeat folding map**,
-> a piecewise non-monotonic time function that preserves analytical
-> monotonicity under performer-elected exposition repeats — a practical
-> edge case in score-audio alignment that, to our knowledge, no prior
-> open music-visualization system addresses explicitly. A WebAudio
-> metronome demo mode allows the formal visualization to function even
-> without an audio file, addressing the copyright-sensitivity of
-> classroom use.
+> **Word Count:** *[to be inserted at final submission — current
+> draft ≈ 6,000 words including references and appendix]*
 
-본 시스템은 (1) MusicXML 을 OpenSheetMusicDisplay 로 SVG 렌더링하고,
-(2) HTML5 오디오의 `timeupdate` 이벤트마다 이산 룩업 테이블로 오디오
-시간을 마디 번호로 매핑하며, (3) 섹션·주제 영역 라벨을 *두 단계 색상
-위계* 로 악보 위에 직접 오버레이하고, (4) 섹션 점프·구간 반복·재생
-속도 조절·키보드 단축키를 지원한다. 추가로 **제시부 반복 폴딩 맵**
-(exposition-repeat folding map) 을 기여한다. 이는 연주자가 선택적으로
-수행하는 제시부 반복 하에서도 분석적 단조성을 보존하는 piecewise
-비단조 시간 함수이며, 저자들이 알기로 기존 어떤 오픈 음악 시각화
-시스템도 이 사례를 명시적으로 처리하지 않는다. WebAudio 메트로놈
-*데모 모드* 는 음원 파일 없이도 형식 시각화가 작동하게 하여 교실
-환경의 저작권 민감성을 완화한다.
+**단어 수:** *[최종 제출 시 정확한 단어 수 기입 — 현재 초안 약 6,000
+단어 (참고문헌·부록 포함)]*
 
-> This paper focuses on the system's design, implementation, the
-> exposition-repeat folding technique, and the pedagogical significance
-> of multi-representational visualization for teaching *norms and
-> deformations* together — most prominently K. 545's atypical subdominant
-> recapitulation. The work extends the line of web-interactive
-> music-annotation systems represented by Dezrann (Ballester et al. 2025)
-> and the sonata-form structure-learning study of Allegraud et al.
-> (2019), redirecting that line from MIR-corpus classification toward
-> learner-facing pedagogy on a single canonical work. The released
-> JSON schema is *intentionally interoperable* with the Algomus
-> annotation conventions established in Allegraud et al. (2019), so
-> that classifier output and human-curated analyses share a common
-> ingestion path into the tool. The system is released as MIT-licensed
-> open source and the analysis schema is licensed CC BY 4.0. Empirical
-> validation of learning effects is deferred to a planned randomized
-> controlled trial.
+> **Keywords:** sonata form; score-audio synchronization; MusicXML
+> visualization; exposition-repeat folding; music education
+> technology; Mozart K. 545
 
-본 논문은 시스템 설계·구현, 제시부 반복 폴딩 기법, 그리고 *규범과
-비전형* 을 함께 가르치기 위한 다중 표상 시각화의 교수법적 의의 — 특히
-K. 545 의 비전형적인 하속조 재현 — 에 초점을 둔다. 본 작업은 Dezrann
-(Ballester et al. 2025) 으로 대표되는 웹 인터랙티브 음악 주석
-시스템 계열과 Allegraud et al. (2019) 의 소나타 형식 구조 학습 연구
-계열을 잇되, MIR 코퍼스 분류에서 단일 정전(canonical) 작품 위의
-*학습자 친화 교수법* 으로 그 방향을 재조정한다. 공개되는 JSON 스키마는
-Allegraud et al. (2019) 의 Algomus 주석 컨벤션과 *의도적으로 상호운용
-가능* 하도록 설계되어, 분류기 출력과 인간 큐레이팅 분석이 동일한 입력
-경로를 통해 도구로 적재된다. 시스템은 MIT 라이선스 오픈소스로,
-분석 스키마는 CC BY 4.0 으로 공개된다. 학습 효과의 정량적 검증은
-별도의 무작위 통제 시험으로 유보한다.
-
-> **Keywords:** sonata form, score-audio synchronization, music notation
-> visualization, MusicXML, OpenSheetMusicDisplay, color encoding,
-> formal analysis schema, music education, open-source tool, Mozart K. 545
-
-**주제어:** 소나타 형식, 악보-음원 동기화, 음악 기보 시각화, MusicXML,
-OpenSheetMusicDisplay, 색상 인코딩, 형식 분석 스키마, 음악교육공학,
-오픈소스 도구, 모차르트 K. 545
+**주제어:** 소나타 형식; 악보-음원 동기화; MusicXML 시각화;
+제시부 반복 폴딩; 음악교육공학; 모차르트 K. 545
 
 
 # 1. Introduction / 서론
@@ -1387,9 +1364,69 @@ IRB 승인을 받은 수집·분석이 완료되는 대로 OSF.io 에 CC BY 4.0 
 
 # Acknowledgments / 사사
 
-> [To be added after blinding requirements are met.]
+> *[To be added after blinding requirements are met. The author(s)
+> gratefully acknowledge the open-source contributors of
+> OpenSheetMusicDisplay, the curators of the Musopen / Wikimedia
+> Commons Public Domain recording of K. 545 used in the bundled
+> deployment, and the Algomus research group whose annotation
+> conventions inspired the schema interoperability discussed in
+> §4.3.]*
 
-[익명 심사 요건이 충족된 후 추가 예정.]
+*[익명 심사 요건 충족 후 추가 예정. 저자(들)는 OpenSheetMusicDisplay
+오픈소스 기여자, 번들 배포에 사용된 K. 545 Public Domain 녹음을 공개한
+Musopen / Wikimedia Commons, 그리고 §4.3 의 스키마 상호운용성에 영감을
+준 Algomus 연구 그룹에 감사를 표한다.]*
+
+
+# Ethics and Consent / 윤리 및 동의
+
+> The present manuscript reports the design, implementation, and
+> analytical case study of an open-source software tool. It does not
+> include human-subjects evaluation, animal subjects, or human-derived
+> data, and no ethics-committee approval is therefore required for the
+> work reported here. The planned randomized controlled trial outlined
+> in §6.3 — which will involve undergraduate music-education majors as
+> participants and the System Usability Scale (Brooke, 1996) as a
+> primary measure — will be conducted under the appropriate
+> institutional review board approval and reported in a separate
+> follow-up publication.
+
+본 원고는 오픈소스 소프트웨어 도구의 설계·구현과 분석적 사례 연구를
+보고한다. 인간 대상 평가, 동물 대상 실험, 인간 유래 데이터를 포함하지
+않으므로 본 보고에 대해 윤리위원회의 사전 승인은 필요하지 않다. §6.3
+에 제시된 계획된 무작위 통제군 시험 — 학부 음악교육 전공자 참여, 시스템
+사용성 척도 (System Usability Scale; Brooke, 1996) 를 1차 측정치로 사용
+— 은 해당 기관의 IRB 승인을 거쳐 별도 후속 논문으로 보고될 예정이다.
+
+
+# Competing Interests / 이해 충돌
+
+> The author(s) has/have no competing interests to declare.
+
+저자(들) 은 신고할 이해 충돌이 없다.
+
+
+# Funding Information / 자금 정보
+
+> *[To be filled at final submission: list any funding sources with
+> grant numbers, or state "No funding was received for this work."]*
+
+*[최종 제출 시 기입. 펀딩 출처 및 과제 번호 명시 또는 "본 연구는 외부
+자금을 지원받지 않았다" 기재.]*
+
+
+# Authors' Contributions / 저자 기여
+
+> *[To be filled at final submission. For single authorship: "The
+> sole author conceived the study, designed and implemented the
+> software, prepared the analysis schema and case study, drafted the
+> manuscript, and approved the final version." For multi-authored
+> submissions, please supply a CRediT-style contribution statement.]*
+
+*[최종 제출 시 기입. 단독 저자의 경우: "단독 저자가 연구를 구상하고
+소프트웨어를 설계·구현하였으며, 분석 스키마와 사례 연구를 준비하고
+원고를 작성하였으며 최종 본을 승인하였다." 공저의 경우 CRediT 양식의
+기여 진술 기재.]*
 
 
 # References / 참고문헌
