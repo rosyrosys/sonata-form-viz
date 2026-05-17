@@ -1001,6 +1001,9 @@ submissions, please supply a CRediT-style contribution statement.]*
   synchronized music corpora on the Dezrann web platform.
   *Transactions of the International Society for Music Information
   Retrieval, 8*(1), 121–139. https://doi.org/10.5334/tismir.212
+- Braun, V., & Clarke, V. (2006). Using thematic analysis in
+  psychology. *Qualitative Research in Psychology, 3*(2), 77–101.
+  https://doi.org/10.1191/1478088706qp063oa
 - Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W.
   Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.),
   *Usability Evaluation in Industry* (pp. 189–194). Taylor & Francis.
