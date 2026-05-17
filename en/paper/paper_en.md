@@ -756,18 +756,24 @@ is itself a finding: an experienced field expert's instinct, on
 encountering a teaching tool, is to think about *how to extend the
 tool* rather than *how to instrument a study around it*.
 
-### 6.3.4 Multi-piece extension is endorsed by the field expert
+### 6.3.4 Multi-piece extension and real-world deployment endorsed
 
 To the question of single-work depth versus multi-piece breadth
 (C5) the expert responded "*If there were diverse works, I would
 actively use them.*" The verb is significant: not "could use" but
-"actively use." A field expert with fifteen years of teaching
-practice signals that multi-piece extension would move the tool
-from *demonstration artefact* to *recurring classroom resource* in
-their personal practice. This converges with — and elevates the
-priority of — the multi-piece dataset already listed as future work
-in §7 (Beethoven Op. 49 No. 2 mvt. I and Clementi Op. 36 No. 1
-mvt. I, encoded against the same JSON schema).
+"actively use." In an optional open-comment field at the end of
+the survey the expert added, unprompted, "*Personally, I hope this
+program is expanded and turned into a real, deployable tool.*" The
+two statements together signal a single underlying judgement: that
+the tool's current single-work form is a *demonstration artefact*,
+and that the expert's field practice would benefit from its
+maturation into a multi-work, deployment-grade resource. This
+converges with — and elevates the priority of — the multi-piece
+dataset already listed as future work in §7 (Beethoven Op. 49 No.
+2 mvt. I and Clementi Op. 36 No. 1 mvt. I, encoded against the
+same JSON schema), and motivates a parallel commitment to
+production-readiness (documentation, classroom packaging, teacher-
+facing materials) beyond the research prototype reported here.
 
 ## 6.4 Implications for the planned RCT and the tool roadmap
 
@@ -788,6 +794,13 @@ Three concrete revisions follow from the pilot.
    will be added to the corpus *before* the RCT rather than as
    post-RCT future work, so the trial can also assess
    single-work-deep versus multi-piece-comparative conditions.
+4. **Production-readiness track in parallel.** The expert's
+   unprompted comment that the tool should "*become a real,
+   deployable tool*" frames a separate engineering track alongside
+   the research RCT: documentation for non-author teachers,
+   classroom packaging (offline-installable bundle, printable
+   reference card), and a teacher-facing v1.0 release that does
+   not depend on the live deployment URL.
 
 ## 6.5 Limitations of this pilot
 
