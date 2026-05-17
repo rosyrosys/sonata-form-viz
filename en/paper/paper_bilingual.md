@@ -38,13 +38,12 @@ and ORCIDs are provided via the online submission system.]*
 > directly onto the score at the measure level. We introduce an
 > exposition-repeat folding map: a piecewise non-monotonic time
 > function that preserves analytical monotonicity under performer-
-> elected repeats. A WebAudio metronome fallback and a bundled
-> Public Domain reference recording let the tool work without setup
-> on the public deployment, and the analysis schema is
-> interoperable with the Algomus annotation conventions for Mozart
-> sonata corpora. The tool, schema, and reference data are publicly
-> available at https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
-> 10.5281/zenodo.20108497).
+> elected repeats, an edge case that no prior open
+> music-visualization system has addressed with an explicit time
+> map. Together, the tool and the released analysis schema provide
+> an open infrastructure for both classroom teaching of formal
+> hierarchy and downstream computational reuse on other works in
+> the sonata-form repertoire.
 
 소나타 형식은 음악이론·서양음악사 교과의 중핵 주제이지만, 학습자들은
 청취 중 형식 구조를 인지하는 데 보편적으로 어려움을 보고한다. 섹션,
@@ -59,11 +58,10 @@ and ORCIDs are provided via the online submission system.]*
 OpenSheetMusicDisplay 로 렌더하고, 마디 단위로 섹션과 주제 영역 색상을
 악보 자체에 도장한다. 본 연구는 제시부 반복 폴딩 맵을 도입한다: 연주자
 선택 반복 하에서 분석적 단조성을 보존하는 piecewise 비단조 시간
-함수이다. WebAudio 메트로놈 폴백과 번들 Public Domain 참조 녹음이 별도
-설정 없이 도구를 작동하게 하며, 분석 스키마는 모차르트 소나타 코퍼스에
-대한 Algomus 주석 컨벤션과 상호운용 가능하다. 도구, 스키마, 참조
-데이터는 https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
-10.5281/zenodo.20108497) 에서 공개된다.
+함수이며, 저자들이 알기로 어떤 기존 오픈 음악 시각화 시스템도 이 사례를
+명시적 시간 맵으로 처리하지 않는다. 본 도구와 공개되는 분석 스키마는
+형식 위계의 교실 교수와 소나타 형식 레퍼토리의 다른 작품들로의 다운스트림
+컴퓨테이셔널 재사용을 위한 *오픈 인프라* 를 제공한다.
 
 > **Word Count:** *[to be inserted at final submission, current
 > draft ≈ 6,000 words including references and appendix]*

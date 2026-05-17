@@ -25,13 +25,11 @@ through OpenSheetMusicDisplay and paints section and theme-zone
 colors directly onto the score at the measure level. We introduce
 an exposition-repeat folding map: a piecewise non-monotonic time
 function that preserves analytical monotonicity under performer-
-elected repeats. A WebAudio metronome fallback and a bundled Public
-Domain reference recording let the tool work without setup on the
-public deployment, and the analysis schema is interoperable with the
-Algomus annotation conventions for Mozart sonata corpora. The tool,
-schema, and reference data are publicly available at
-https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
-10.5281/zenodo.20108497).
+elected repeats, an edge case that no prior open music-visualization
+system has addressed with an explicit time map. Together, the tool
+and the released analysis schema provide an open infrastructure for
+both classroom teaching of formal hierarchy and downstream
+computational reuse on other works in the sonata-form repertoire.
 
 **Word Count:** *[to be inserted at final submission, current draft
 ≈ 6,100 words including references and appendix]*
