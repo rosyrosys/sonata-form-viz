@@ -187,9 +187,9 @@ recapitulation as such.
 
 The closest precedents for the present work are the Dezrann web
 platform (Ballester et al. 2025) and the sonata-form structure-learning
-study of Allegraud et al. (2019), both published in this journal. Both
-treat formal music annotation as a first-class web-interactive object;
-both have been applied to Mozart sonata movements. The present work
+study of Allegraud et al. (2019). Both papers treat formal music
+annotation as a first-class web-interactive object, and both have been
+applied to Mozart sonata movements. The present work
 follows that line and contributes three differences:
 
 1. **Two-level color encoding native to the score.** Where Dezrann

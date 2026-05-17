@@ -344,16 +344,16 @@ Hargreaves (1986) 와 North & Hargreaves (2008) 은 형식 학습이 *반복
 
 > The closest precedents for the present work are the Dezrann web
 > platform (Ballester et al. 2025) and the sonata-form structure-learning
-> study of Allegraud et al. (2019), both published in this journal. Both
-> treat formal music annotation as a first-class web-interactive object;
-> both have been applied to Mozart sonata movements. The present work
-> follows that line and contributes three differences:
+> study of Allegraud et al. (2019). Both papers treat formal music
+> annotation as a first-class web-interactive object, and both have been
+> applied to Mozart sonata movements. The present work follows that
+> line and contributes three differences:
 
-본 작업의 가장 가까운 선행 사례는 본 학술지(TISMIR) 에 게재된 Dezrann
-웹 플랫폼 (Ballester et al. 2025) 과 Allegraud et al. (2019) 의 소나타
-형식 구조 학습 연구이다. 양자 모두 형식 음악 주석을 일급(first-class)
-웹 인터랙티브 객체로 다루며, 둘 다 모차르트 소나타 악장에 적용되었다.
-본 연구는 이 계열을 잇되 세 가지 차이를 기여한다:
+본 작업의 가장 가까운 선행 사례는 Dezrann 웹 플랫폼 (Ballester et al.
+2025) 과 Allegraud et al. (2019) 의 소나타 형식 구조 학습 연구 두
+논문이다. 양자 모두 형식 음악 주석을 일급(first-class) 웹 인터랙티브
+객체로 다루며, 둘 다 모차르트 소나타 악장에 적용되었다. 본 연구는 이
+계열을 잇되 세 가지 차이를 기여한다:
 
 > 1. **Two-level color encoding native to the score.** Where Dezrann
 >    places annotation labels as discrete markers on a waveform-and-
