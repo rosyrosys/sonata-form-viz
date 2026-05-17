@@ -8,26 +8,30 @@ and ORCIDs are provided via the online submission system.]*
 
 # Abstract
 
-This paper presents the design, implementation, and pedagogical
-positioning of an open-source web-based tool that synchronizes a
-notated score, audio playback, and a hierarchical formal-analysis
-layer along a single timeline. The first movement of Mozart's *Piano
-Sonata in C major*, K. 545 serves as the case piece: its 73-measure
-compactness and textbook-clear formal landmarks coexist with a
-celebrated *subdominant recapitulation* (the recap begins in F major
-rather than C), making it unusually well-suited for teaching both
-the norms and the deviations of sonata-form practice. The system
-renders MusicXML through OpenSheetMusicDisplay, maps audio time to
-measure number via a discrete lookup table on each `timeupdate`
-event, and overlays section and theme labels in a two-level color
-hierarchy directly onto the score. We further contribute an
-**exposition-repeat folding map**, a piecewise non-monotonic time
+Sonata form is a central topic in music-theory and music-history
+curricula, yet learners routinely report difficulty perceiving formal
+structure while listening: the hierarchical relation between sections,
+theme zones, and the moment-to-moment audio is not directly legible
+from a printed score. Existing computational tools for music
+visualization either treat formal annotations as auxiliary metadata
+rather than as first-class data, or have not been designed for the
+practical edge cases of learner-facing use, most prominently the
+performer-elected exposition repeat. We present an open-source,
+web-based tool that synchronizes a MusicXML score, audio playback,
+and a two-level formal-analysis layer (sections × theme zones) along
+a single timeline, demonstrated on Mozart's Piano Sonata in C major,
+K. 545, first movement (73 measures). The system renders MusicXML
+through OpenSheetMusicDisplay and paints section and theme-zone
+colors directly onto the score at the measure level. We introduce
+an exposition-repeat folding map: a piecewise non-monotonic time
 function that preserves analytical monotonicity under performer-
-elected repeats, an edge case that no prior open music-visualization
-system addresses with an explicit time map. A WebAudio metronome
-demo mode lets the form visualization function without audio, and
-a bundled Public Domain recording makes the tool work out of the
-box.
+elected repeats. A WebAudio metronome fallback and a bundled Public
+Domain reference recording let the tool work without setup on the
+public deployment, and the analysis schema is interoperable with the
+Algomus annotation conventions for Mozart sonata corpora. The tool,
+schema, and reference data are publicly available at
+https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
+10.5281/zenodo.20108497).
 
 **Word Count:** *[to be inserted at final submission, current draft
 ≈ 6,100 words including references and appendix]*

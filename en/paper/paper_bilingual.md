@@ -20,43 +20,50 @@ and ORCIDs are provided via the online submission system.]*
 
 # Abstract / 초록
 
-> This paper presents the design, implementation, and pedagogical
-> positioning of an open-source web-based tool that synchronizes a
-> notated score, audio playback, and a hierarchical formal-analysis
-> layer along a single timeline. The first movement of Mozart's *Piano
-> Sonata in C major*, K. 545 serves as the case piece: its 73-measure
-> compactness and textbook-clear formal landmarks coexist with a
-> celebrated *subdominant recapitulation* (the recap begins in F major
-> rather than C), making it unusually well-suited for teaching both
-> the norms and the deviations of sonata-form practice. The system
-> renders MusicXML through OpenSheetMusicDisplay, maps audio time to
-> measure number via a discrete lookup table on each `timeupdate`
-> event, and overlays section and theme labels in a two-level color
-> hierarchy directly onto the score. We further contribute an
-> **exposition-repeat folding map**, a piecewise non-monotonic time
+> Sonata form is a central topic in music-theory and music-history
+> curricula, yet learners routinely report difficulty perceiving
+> formal structure while listening: the hierarchical relation
+> between sections, theme zones, and the moment-to-moment audio is
+> not directly legible from a printed score. Existing computational
+> tools for music visualization either treat formal annotations as
+> auxiliary metadata rather than as first-class data, or have not
+> been designed for the practical edge cases of learner-facing use,
+> most prominently the performer-elected exposition repeat. We
+> present an open-source, web-based tool that synchronizes a
+> MusicXML score, audio playback, and a two-level formal-analysis
+> layer (sections × theme zones) along a single timeline,
+> demonstrated on Mozart's Piano Sonata in C major, K. 545, first
+> movement (73 measures). The system renders MusicXML through
+> OpenSheetMusicDisplay and paints section and theme-zone colors
+> directly onto the score at the measure level. We introduce an
+> exposition-repeat folding map: a piecewise non-monotonic time
 > function that preserves analytical monotonicity under performer-
-> elected repeats, an edge case that no prior open music-visualization
-> system addresses with an explicit time map. A WebAudio metronome
-> demo mode lets the form visualization function without audio, and
-> a bundled Public Domain recording makes the tool work out of the
-> box.
+> elected repeats. A WebAudio metronome fallback and a bundled
+> Public Domain reference recording let the tool work without setup
+> on the public deployment, and the analysis schema is
+> interoperable with the Algomus annotation conventions for Mozart
+> sonata corpora. The tool, schema, and reference data are publicly
+> available at https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
+> 10.5281/zenodo.20108497).
 
-본 논문은 악보·음원·위계적 형식 분석 계층을 단일 시간축에서 동기화하는
-오픈소스 웹 기반 도구의 설계·구현·교수법적 위치 짓기를 제시한다. 사례
-곡은 모차르트 *피아노 소나타 다장조* K. 545 1악장이다, 73마디의 짧은
-분량과 교과서적 형식 지표가 명료하다는 *전형성* 과, 재현부가 으뜸조
-(다장조) 가 아닌 하속조(바장조)에서 시작하는 유명한 *비전형성* 을
-동시에 갖는 작품으로, 소나타 형식 실천의 규범과 예외를 한 작품에서
-가르치기에 유달리 적합하다. 시스템은 MusicXML 을 OpenSheetMusicDisplay
-로 렌더하고, HTML5 오디오의 `timeupdate` 이벤트마다 이산 룩업 테이블로
-오디오 시간을 마디 번호에 매핑하며, 섹션·주제 영역 라벨을 두 단계 색상
-위계로 *악보 위에 직접* 도장한다. 추가로 **제시부 반복 폴딩 시간 맵**
-을 기여한다, 연주자가 선택적으로 수행하는 제시부 반복 하에서도
-분석적 단조성을 보존하는 piecewise 비단조 시간 함수로, 저자들이 알기로
-어떤 기존 오픈 음악 시각화 시스템도 이 사례를 명시적으로 처리하지
-않는다. WebAudio 메트로놈 데모 모드는 음원 없이도 형식 시각화가
-작동하게 하고, Public Domain 녹음을 번들 포함하여 도구가 별도 설정
-없이 즉시 작동한다.
+소나타 형식은 음악이론·서양음악사 교과의 중핵 주제이지만, 학습자들은
+청취 중 형식 구조를 인지하는 데 보편적으로 어려움을 보고한다. 섹션,
+주제 영역, 그리고 매 순간의 오디오 사이의 위계 관계가 인쇄된 악보에서
+직접 가독되지 않기 때문이다. 음악 시각화의 기존 컴퓨테이셔널 도구들은
+형식 주석을 일급(first-class) 데이터가 아닌 보조 메타데이터로 취급
+하거나, 학습자 친화적 사용의 실용적 엣지 케이스(특히 연주자가 시행하는
+제시부 반복)에 대응하도록 설계되지 않았다. 본 연구는 MusicXML 악보,
+음원 재생, 두 단계 형식 분석 계층(섹션 × 주제 영역)을 단일 시간축에서
+동기화하는 오픈소스 웹 기반 도구를 제시하며, 모차르트 피아노 소나타
+다장조 K. 545 1악장(73마디)을 사례로 시연한다. 시스템은 MusicXML 을
+OpenSheetMusicDisplay 로 렌더하고, 마디 단위로 섹션과 주제 영역 색상을
+악보 자체에 도장한다. 본 연구는 제시부 반복 폴딩 맵을 도입한다: 연주자
+선택 반복 하에서 분석적 단조성을 보존하는 piecewise 비단조 시간
+함수이다. WebAudio 메트로놈 폴백과 번들 Public Domain 참조 녹음이 별도
+설정 없이 도구를 작동하게 하며, 분석 스키마는 모차르트 소나타 코퍼스에
+대한 Algomus 주석 컨벤션과 상호운용 가능하다. 도구, 스키마, 참조
+데이터는 https://rosyrosys.github.io/sonata-form-viz/ (Zenodo:
+10.5281/zenodo.20108497) 에서 공개된다.
 
 > **Word Count:** *[to be inserted at final submission, current
 > draft ≈ 6,000 words including references and appendix]*
