@@ -409,14 +409,13 @@ analysis data, and the audio-policy documentation are available
 through the project's GitHub repository and Zenodo archive (see
 *Reproducibility*, §7).
 
-For a TISMIR reader, the architecturally salient property is not the
+The architecturally salient property of the system is not its
 component list but the *coordination*: three representations of the
 same musical present moment are kept in sync, and the user can
 intervene in any one of them. Two design choices deserve specific
-articulation as Tools-and-Datasets contributions: a stable measure-
-painting scheme that survives OSMD re-layout (§4.2), and a non-monotonic
-time-mapping function that handles performer-elected repeats without
-analytical loss (§4.5).
+articulation: a stable measure-painting scheme that survives OSMD
+re-layout (§4.2), and a non-monotonic time-mapping function that
+handles performer-elected repeats without analytical loss (§4.5).
 
 ## 4.1 The Three Representations
 
