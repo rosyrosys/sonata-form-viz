@@ -969,33 +969,34 @@ submissions, please supply a CRediT-style contribution statement.]*
   Leguy, E., & Levé, F. (2019). Learning sonata form structure on
   Mozart's string quartets. *Transactions of the International
   Society for Music Information Retrieval, 2*(1), 82–96.
-  https://doi.org/10.5334/tismir.27
+  DOI: https://doi.org/10.5334/tismir.27
 - Ballester, C., Bacot, B., Bigo, L., Borsan, V. N., Couturier, L.,
   Déguernel, K., et al. (2025). Interacting with annotated and
   synchronized music corpora on the Dezrann web platform.
   *Transactions of the International Society for Music Information
-  Retrieval, 8*(1), 121–139. https://doi.org/10.5334/tismir.212
+  Retrieval, 8*(1), 121–139.
+  DOI: https://doi.org/10.5334/tismir.212
 - Braun, V., & Clarke, V. (2006). Using thematic analysis in
   psychology. *Qualitative Research in Psychology, 3*(2), 77–101.
-  https://doi.org/10.1191/1478088706qp063oa
+  DOI: https://doi.org/10.1191/1478088706qp063oa
 - Brooke, J. (1996). SUS: A "quick and dirty" usability scale. In P. W.
   Jordan, B. Thomas, B. A. Weerdmeester, & I. L. McClelland (Eds.),
-  *Usability Evaluation in Industry* (pp. 189–194). Taylor & Francis.
+  *Usability Evaluation in Industry*, pages 189–194. Taylor & Francis.
 - Cannam, C., Landone, C., & Sandler, M. (2010). Sonic Visualiser: An
   open source application for viewing, analysing, and annotating
   music audio files. In *Proceedings of the ACM Multimedia 2010
-  International Conference* (pp. 1467–1468).
+  International Conference*, pages 1467–1468.
 - Caplin, W. E. (1998). *Classical form: A theory of formal functions
   for the instrumental music of Haydn, Mozart, and Beethoven.* Oxford
   University Press.
 - Caplin, W. E. (2009). What are formal functions? In P. Bergé (Ed.),
-  *Musical form, forms, & formenlehre* (pp. 21–40). Leuven University
+  *Musical form, forms, & formenlehre*, pages 21–40. Leuven University
   Press.
 - Cook, N. (1990). *Music, imagination, and culture.* Oxford University
   Press.
 - Couprie, P. (2008). iAnalyse: un logiciel d'aide à l'analyse
-  musicale. In *Journées d'Informatique Musicale (JIM)* (pp. 115–121).
-  Albi, France. HAL: hal-00823867.
+  musicale. In *Journées d'Informatique Musicale (JIM)*, pages
+  115–121. Albi, France. HAL: hal-00823867.
 - Goto, M. (2006). AIST annotation for the RWC music database. In
   *Proceedings of ISMIR 2006*.
 - Hargreaves, D. J. (1986). *The developmental psychology of music.*
@@ -1006,7 +1007,7 @@ submissions, please supply a CRediT-style contribution statement.]*
 - Kuo, Y.-T., & Chuang, M.-C. (2013). A proposal of a color music
   notation system on a single melody for music beginners.
   *International Journal of Music Education, 31*(4), 394–412.
-  https://doi.org/10.1177/0255761413489082
+  DOI: https://doi.org/10.1177/0255761413489082
 - LaRue, J. (1970). *Guidelines for style analysis.* Norton.
 - Margulis, E. H. (2014). *On repeat: How music plays the mind.*
   Oxford University Press.
@@ -1016,11 +1017,11 @@ submissions, please supply a CRediT-style contribution statement.]*
   Bd. 2.* Bärenreiter.
 - Müller, M. (2015). *Fundamentals of music processing: Audio,
   analysis, algorithms, applications.* Springer.
-  https://doi.org/10.1007/978-3-319-21945-5
+  DOI: https://doi.org/10.1007/978-3-319-21945-5
 - Nakamura, E., Yoshii, K., & Katayose, H. (2017). Performance error
   detection and post-processing for fast and accurate symbolic music
   alignment. In *Proceedings of the 18th International Society for
-  Music Information Retrieval Conference (ISMIR)* (pp. 347–353).
+  Music Information Retrieval Conference (ISMIR)*, pages 347–353.
 - North, A. C., & Hargreaves, D. J. (2008). *The social and applied
   psychology of music.* Oxford University Press.
 - Paivio, A. (1991). Dual coding theory: Retrospect and current status.
