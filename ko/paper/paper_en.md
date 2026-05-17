@@ -21,7 +21,7 @@ renders MusicXML through OpenSheetMusicDisplay, maps audio time to
 measure number via a discrete lookup table on each `timeupdate`
 event, and overlays section and theme labels in a two-level color
 hierarchy directly onto the score. We further contribute an
-**exposition-repeat folding map** — a piecewise non-monotonic time
+**exposition-repeat folding map**, a piecewise non-monotonic time
 function that preserves analytical monotonicity under performer-
 elected repeats, an edge case that no prior open music-visualization
 system addresses with an explicit time map. A WebAudio metronome
@@ -29,7 +29,7 @@ demo mode lets the form visualization function without audio, and
 a bundled Public Domain recording makes the tool work out of the
 box.
 
-**Word Count:** *[to be inserted at final submission — current draft
+**Word Count:** *[to be inserted at final submission, current draft
 ≈ 6,100 words including references and appendix]*
 
 **Keywords:** sonata form; score-audio synchronization; MusicXML
@@ -45,8 +45,8 @@ Sonata form is the principal organizational principle of Western
 instrumental music from the late eighteenth century onwards and remains
 a central topic in music-theory and music-history curricula at both
 secondary and tertiary levels (Caplin, 2009; Hepokoski & Darcy, 2006).
-Despite this curricular centrality, learners — including
-music-conservatory entrants — routinely report difficulty perceiving
+Despite this curricular centrality, learners, including
+music-conservatory entrants, routinely report difficulty perceiving
 formal structure during listening (Cook, 1990; Margulis, 2014). This
 difficulty arises from at least three representational gaps:
 
@@ -80,7 +80,7 @@ code under permissive licenses for community reuse.
   and formal analysis be designed to support effective learning of the
   hierarchical structure of sonata form?
 - **RQ2.** What pedagogical affordances does the first movement of
-  Mozart's K. 545 offer as a case piece — particularly its
+  Mozart's K. 545 offer as a case piece, particularly its
   subdominant-recapitulation deformation?
 - **RQ3.** How does the implemented system perform with respect to (a)
   formal-identification accuracy and (b) system usability?
@@ -95,19 +95,19 @@ layer:
    the browser, with a single external dependency
    (OpenSheetMusicDisplay) and a metronome demo mode for
    copyright-sensitive classroom use.
-2. **An open analysis schema and dataset** (CC BY 4.0) — a
+2. **An open analysis schema and dataset** (CC BY 4.0), a
    machine-readable JSON encoding of two-level sonata-form analysis
    (sections × theme zones), instantiated for Mozart K. 545 mvt. I
    and *intentionally interoperable* with the Algomus annotation
    conventions of Allegraud et al. (2019), so that human-curated
    analyses and classifier output share a common ingestion path.
-3. **An exposition-repeat folding map** — a piecewise non-monotonic
+3. **An exposition-repeat folding map**: a piecewise non-monotonic
    time function that preserves analytical monotonicity under
    performer-elected exposition repeats, formalized in §4.5. To our
    knowledge, no prior open music-visualization system (Dezrann,
    Sonic Visualiser, Verovio Humdrum Viewer, score-following
    commercial tools) treats this case with an explicit time map.
-4. **A pedagogical scenario for the atypical-recapitulation case** —
+4. **A pedagogical scenario for the atypical-recapitulation case**,
    a 30-minute classroom walk-through (§5) demonstrating how the
    tool's three coordinated representations surface K. 545's
    subdominant recapitulation as a functional-logic deduction
@@ -127,10 +127,10 @@ of Sonata Theory (Hepokoski & Darcy, 2006) with the formal-function
 account of Caplin (1998).
 
 **Large sections.**
-- Exposition — presents two thematic complexes in two key areas.
-- Development — recasts and modulates the exposition's material.
-- Recapitulation — restates both thematic complexes in the tonic.
-- Coda — optional closing section (absent in K. 545 mvt. I).
+- Exposition: presents two thematic complexes in two key areas.
+- Development: recasts and modulates the exposition's material.
+- Recapitulation: restates both thematic complexes in the tonic.
+- Coda: optional closing section (absent in K. 545 mvt. I).
 
 **Theme zones.**
 - P (Primary theme zone)
@@ -177,7 +177,7 @@ form-learning is strengthened by *repeated listening* and *active
 comparison*. The present tool therefore supports section-level
 jumping, section looping, playback-speed control, and keyboard
 shortcuts so that learners can perform *A–B comparison* of, for
-example, P in the exposition versus P in the recapitulation — a
+example, P in the exposition versus P in the recapitulation, a
 comparison that is precisely what reveals the K. 545 subdominant
 recapitulation as such.
 
@@ -242,7 +242,7 @@ is a posthumous attribution), the movement is in C major, common time,
 *Allegro*, and runs only 73 measures (Mozart, 1986/NMA IX/25). Its
 near-canonical status in piano pedagogy means that most undergraduate
 music students have *played or heard* the work before they have *analyzed*
-it — a peculiar gap that this paper, and the tool it accompanies, take
+it, a peculiar gap that this paper, and the tool it accompanies, take
 as a pedagogical opportunity. Three properties make Movement I uniquely
 productive as a teaching case:
 
@@ -256,14 +256,14 @@ productive as a teaching case:
    their formal events in dense polyphony.
 3. **A normative-and-deformational character.** The exposition behaves
    *exactly as a textbook sonata exposition should*; the recapitulation
-   does not. This contrast — the same musical material treated two ways
-   — is the analytical heart of the movement and the heart of this
+   does not. This contrast, the same musical material treated two ways
+  , is the analytical heart of the movement and the heart of this
    paper.
 
 ## 3.2 Two-Level Formal Layout
 
 Table 2 presents the formal analysis encoded in the tool. The
-two-level grain — large *sections* containing *theme zones* — follows
+two-level grain, large *sections* containing *theme zones*, follows
 the SHMRG tradition of LaRue (1970) and the *Sonata Theory* framework
 of Hepokoski and Darcy (2006), simplified for pedagogical use by
 collapsing the transition into the primary-theme zone when the latter
@@ -278,7 +278,7 @@ exposition repeat taken.
 | **Exposition** | Primary theme (P) | 1–13 | C major | 0:00 – 0:27 |
 | | Secondary theme (S) | 14–25 | G major | 0:27 – 0:50 |
 | | Codetta | 26–28 | G major | 0:50 – 0:55 |
-| | *Exposition repeated* | — | — | 0:55 – 1:47 |
+| | *Exposition repeated* | - | - | 0:55 – 1:47 |
 | **Development** | (modulating progression) | 29–41 | g → d → a → C → a → F | 1:48 – 2:12 |
 | **Recapitulation** | Primary theme (P) | 42–58 | **F major** ← subdominant | 2:12 – 2:45 |
 | | Secondary theme (S) | 59–70 | C major | 2:45 – 3:07 |
@@ -287,8 +287,8 @@ exposition repeat taken.
 Three features of this table reward attention. *First*, every numbered
 measure has a unique formal address: this is what allows the tool to
 overlay a color block on each measure in the score and a color segment
-on the timeline. *Second*, the exposition's tonal motion — C → G,
-typical for a major-mode sonata — is reproduced *not* in the
+on the timeline. *Second*, the exposition's tonal motion, C → G,
+typical for a major-mode sonata, is reproduced *not* in the
 recapitulation but in *the exposition's own repeat*; this is the
 performer's primary mechanism for letting the listener internalize the
 exposition's harmonic plan. *Third*, the recapitulation reproduces the
@@ -320,7 +320,7 @@ while starting in the tonic:
 > **Hypothetical "tonic recap":** P in C → S in G  (same as exposition)
 
 The result would *fail to fulfill the recapitulation's central
-function* — consolidating *both* themes in the tonic. The secondary
+function*, consolidating *both* themes in the tonic. The secondary
 theme would arrive at G major, exactly as in the exposition, and the
 movement would have *no* resolution of the dominant.
 
@@ -331,7 +331,7 @@ modulating logic carry the music *up* a fifth to the tonic.
 > **Mozart's actual recap:** P in F → S in C  (motion of a fifth upward)
 
 The motion *I → V* of the exposition becomes *IV → I* of the
-recapitulation — exactly the resolution the form requires. The same
+recapitulation, exactly the resolution the form requires. The same
 modulatory mechanism, redirected by a single starting-key shift,
 achieves precisely the opposite tonal effect.
 
@@ -351,23 +351,23 @@ Three observations follow from this analysis:
    key and the larger functional aim.** A listener attending only to
    the surface ("the recap starts in the wrong key") misses the
    resolution; a listener attending only to the tonal goal ("S returns
-   to C") misses Mozart's clever route. Both layers — local key,
-   structural goal — must be simultaneously available to the learner.
+   to C") misses Mozart's clever route. Both layers, local key,
+   structural goal, must be simultaneously available to the learner.
    This is exactly where multi-representational visualization can help:
    color labels make local key audible-at-a-glance, while the timeline
    makes the structural goal visible at a single look.
 
 3. **The recap is not a literal repetition.** Beyond the starting
    transposition, the recapitulation expands the transition (mm. 50–57)
-   relative to the single-measure exposition T at m. 13 — a
+   relative to the single-measure exposition T at m. 13, a
    *recompositional* adjustment necessary to land S correctly in C.
    This is again a teaching point: a recapitulation that "just goes
    back to the beginning" would be unable to negotiate the
    non-symmetric tonal layout.
 
 These three observations are not new to specialists, but the experience
-of *seeing them happen simultaneously* — in color, on the score, at
-playback speed — is, in our experience, when students cease describing
+of *seeing them happen simultaneously*, in color, on the score, at
+playback speed, is, in our experience, when students cease describing
 the recap as "wrong key" and begin describing it as "clever solution."
 
 ### Codetta differences
@@ -376,7 +376,7 @@ A subtler but equally instructive observation concerns the codettas.
 The exposition codetta (mm. 26–28) cadences in G major, providing a
 strong half-cadence-of-the-tonic / authentic-cadence-of-the-dominant
 double function. The recapitulation codetta (mm. 71–73) cadences in C
-major and is — significantly — virtually unchanged in figuration from
+major and is, significantly, virtually unchanged in figuration from
 its exposition counterpart. The tool's color overlay reveals this: the
 codetta color band reappears with identical material at identical
 length, while the *meaning* of the cadence has fundamentally shifted.
@@ -386,7 +386,7 @@ on the harmonic environment.
 
 ### How the tool surfaces these insights
 
-The analytical claims above are not generated by the tool — they are
+The analytical claims above are not generated by the tool, they are
 the analytical content the tool is *designed to reveal*. Three
 features carry the pedagogical work:
 
@@ -394,8 +394,8 @@ features carry the pedagogical work:
    the analysis pane displays "F major" rather than "C major." The
    anomaly is named in real time.
 2. **Auto-commentary on the deformation.** The same pane displays a
-   short framing sentence — *"Subdominant recapitulation: the
-   exposition's modulation plan, redirected toward the tonic"* — which
+   short framing sentence, *"Subdominant recapitulation: the
+   exposition's modulation plan, redirected toward the tonic"*, which
    transforms the local key change into a *functional* event.
 3. **Loop-section A/B comparison.** A single toggle replays the
    exposition's P region followed immediately by the recapitulation's
@@ -444,7 +444,7 @@ Katayose 2017) for tempo-flexible accuracy.
 
 Color encoding follows two principles. First, WCAG 2.1 AA compliance:
 text contrast is maintained at ≥ 4.5:1. Second, color-blind
-accessibility: no information is conveyed by color alone — theme
+accessibility: no information is conveyed by color alone, theme
 zones (P / S / codetta) are also distinguished by accent bars and
 text labels, following the kind of multi-channel encoding practice
 that Kuo and Chuang (2013) systematize at the pitch level for
@@ -461,7 +461,7 @@ beginner notation.
 
 The formal analysis is a versioned JSON object (see *Example 2*
 below). Treating the analysis itself as a peer-reviewable, machine-
-readable artefact — rather than as a hidden pedagogical commentary —
+readable artefact, rather than as a hidden pedagogical commentary,
 opens it to community extension (other works, other forms) and to
 machine reuse by future MIR pipelines. For the present paper this
 matters because it lets us release *both* the tool and the K. 545
@@ -470,9 +470,9 @@ respectively).
 
 ### Interoperability with the Algomus annotation corpus
 
-The schema's structural categories — `sections[].type ∈ {exposition,
+The schema's structural categories, `sections[].type ∈ {exposition,
 development, recapitulation, coda}`, `themes[].type ∈ {P, T, S, K,
-codetta, retransition}`, and `(start_measure, end_measure)` ranges —
+codetta, retransition}`, and `(start_measure, end_measure)` ranges,
 deliberately mirror the analytic categories used in Allegraud et al.
 (2019) for the Mozart string-quartet sonata-form corpus. A thin
 ingestion adapter is sufficient to load the 32-movement Algomus
@@ -491,12 +491,12 @@ classifier output.
 
 Three interactive affordances are pedagogically central:
 
-- **Section jump** — clicking any colored timeline segment seeks the
+- **Section jump**: clicking any colored timeline segment seeks the
   audio to that measure. A teacher can move directly from "exposition
   P" to "recapitulation P" without scrubbing.
-- **Section loop** — toggles playback to repeat the current section,
+- **Section loop**: toggles playback to repeat the current section,
   enabling immediate A–B comparison.
-- **Playback-speed control** — slows passage to 0.5× without altering
+- **Playback-speed control**: slows passage to 0.5× without altering
   pitch, useful for very brief modulating moments.
 
 Keyboard shortcuts (Space, ←/→, L for loop, C for color toggle) make
@@ -505,10 +505,10 @@ cannot.
 
 ## 4.5 Exposition Repeat Folding
 
-When a performer elects to take the exposition repeat — the
+When a performer elects to take the exposition repeat, the
 overwhelming majority of K. 545 recordings in the canonical
 discography, including the Schiff Carnegie Hall (2015) recording used
-in our reference deployment — the audio time-line becomes
+in our reference deployment, the audio time-line becomes
 *non-monotonic* with respect to analytical time. Audio seconds 0:00 –
 0:55 traverse the exposition; audio seconds 0:55 – 1:48 traverse the
 exposition *again*; audio second 1:48 onwards opens the development.
@@ -576,12 +576,12 @@ the analytical claims of §3.3 in a single 30-minute class meeting.
 ## 5.1 First Hearing (5 minutes)
 
 The teacher opens the tool with the audio loaded and *color
-visualization disabled*. The class hears the entire movement once —
-including the exposition repeat — while the score scrolls and the red
+visualization disabled*. The class hears the entire movement once,
+including the exposition repeat, while the score scrolls and the red
 playhead moves along the (still uncolored) timeline. The instruction
 is simply: "Where do you think the movement is divided?" The
 preserved exposition repeat surfaces a useful preliminary observation
-— that the music *returns to the same material* approximately one
+that the music *returns to the same material* approximately one
 minute in.
 
 ## 5.2 Color Reveal and Section Identification (8 minutes)
@@ -617,7 +617,7 @@ make the pedagogical point:
    primary theme in a different key* are now jointly available.
 2. *A / B compare*. The teacher then loop-toggles between exposition
    P and recap P, playing each twice. Most students hear *the same
-   tune in two different keys* — and recognize the recap as
+   tune in two different keys*, and recognize the recap as
    *transposed*, not "wrong."
 
 ## 5.5 Synthesis (4 minutes)
@@ -629,7 +629,7 @@ The teacher displays the schematic comparison:
 
 The schematic is now grounded in what the class has just heard *and*
 seen. The teacher poses the synthesizing question: "Why did Mozart
-start the recap in the 'wrong' key?" — and the class, having seen S
+start the recap in the 'wrong' key?", and the class, having seen S
 land safely in C, has the materials to answer.
 
 The walk-through above is not the only possible use of the tool, and
@@ -646,19 +646,19 @@ make the analytical observation themselves.
 Traditional verbal teaching often presents the recapitulation as
 "return-in-tonic," handling deformations as exceptions; K. 545's
 subdominant recapitulation makes a stronger pedagogical claim
-available — that Mozart *preserves the exposition's modulation pattern*
+available, that Mozart *preserves the exposition's modulation pattern*
 by shifting the starting key down a fifth, so that the secondary
 theme arrives in the tonic on the second hearing. The synchronized
 color-coded view makes this *function-preserving* character of the
 deformation visually self-evident, aligning with current form-functional
 approaches to musical analysis (Caplin, 1998, 2009). The pedagogical
-move — from rules-and-exceptions to functional flexibility — is the
+move, from rules-and-exceptions to functional flexibility, is the
 central educational claim of this work.
 
 ## 6.2 Methodological and Tooling Implications
 
 - **First-class status of formal analysis.** Encoding the analysis as
-  a versioned JSON object — not as ephemeral pedagogical commentary —
+  a versioned JSON object, not as ephemeral pedagogical commentary,
   invites peer review of the analysis itself, machine reuse, and
   reproducibility.
 - **Exposition-repeat folding.** The non-monotonic mapping between
@@ -671,7 +671,7 @@ central educational claim of this work.
   adoption.
 - **Single-dependency architecture.** Course materials with one
   external library age more gracefully than those with complex build
-  pipelines — a non-trivial property for syllabi designed to last
+  pipelines, a non-trivial property for syllabi designed to last
   multiple cohorts.
 
 ## 6.3 Limitations and Future Work
@@ -702,9 +702,9 @@ deferred to subsequent work. Planned next steps:
 This paper has presented an open-source, web-based tool that
 synchronizes score, audio, and a hierarchical formal-analysis layer to
 teach the structure of sonata form, with Mozart's K. 545 mvt. I as the
-case piece. The central pedagogical claim — that synchronized
+case piece. The central pedagogical claim, that synchronized
 multi-representation makes the *function-preserving* nature of
-non-tonic recapitulations visually self-evident — is grounded in
+non-tonic recapitulations visually self-evident, is grounded in
 form-functional theory and instantiated as a runnable, openly licensed
 system. Empirical validation of the learning gains this design
 predicts is the subject of a planned randomized controlled trial; the
@@ -734,11 +734,11 @@ The repository ships with two parallel editions, **`ko/`** (Korean) and
 **`en/`** (English), sharing the same code base and analysis schema.
 
 **A Public Domain recording is bundled.** Each edition ships with
-`assets/mozart_k545_mvt1.ogg` — a Public Domain performance by Robin
+`assets/mozart_k545_mvt1.ogg`, a Public Domain performance by Robin
 Alciatore distributed via Musopen and Wikimedia Commons (2:14,
 2.87 MB). No additional download is required. Users who prefer a
-different recording — for example the András Schiff Carnegie Hall
-(2015) commercial release — can drop their own file at
+different recording, for example the András Schiff Carnegie Hall
+(2015) commercial release, can drop their own file at
 `assets/mozart_k545_mvt1.mp3` (the MP3 source is listed first in
 `index.html`, so it takes precedence over the bundled OGG). The
 interactive tap-calibration mode (press *T* and tap *Space* at six
@@ -775,9 +775,9 @@ analytical case study of an open-source software tool. It does not
 include human-subjects evaluation, animal subjects, or human-derived
 data, and no ethics-committee approval is therefore required for the
 work reported here. The planned randomized controlled trial outlined
-in §6.3 — which will involve undergraduate music-education majors as
+in §6.3, which will involve undergraduate music-education majors as
 participants and the System Usability Scale (Brooke, 1996) as a
-primary measure — will be conducted under the appropriate
+primary measure, will be conducted under the appropriate
 institutional review board approval and reported in a separate
 follow-up publication.
 
