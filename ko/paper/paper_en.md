@@ -641,9 +641,197 @@ the representations to foreground, listen, look, and let students
 make the analytical observation themselves.
 
 
-# 6. Discussion
+# 6. Preliminary Single-Expert Pilot Review
 
-## 6.1 Pedagogical Implications
+Empirical validation of the tool's pedagogical claims through a full
+randomized controlled trial with undergraduate music-education
+learners is reserved for follow-up work (§7.3). As a *preliminary*
+validation aimed at refining the planned RCT and identifying design
+risks before learner-facing deployment, we conducted a single-expert
+pilot review with one domain reviewer holding more than 15 years of
+music-education field experience. We report this as a single-expert
+pilot — not as a generalizable expert panel — and the limitations of
+an n=1 design are discussed in §6.5.
+
+## 6.1 Method
+
+The expert completed an asynchronous self-administered review using
+a Word-format survey instrument that combined (a) a 40-minute guided
+walk-through of the §5 classroom lesson plan with the expert acting
+as the teacher, (b) the 10-item System Usability Scale (Brooke,
+1996), and (c) six open-ended questions covering pedagogical
+fidelity, affordance value, perceived risks of learner misconception,
+missing affordances, single-work depth versus multi-piece breadth,
+and recommendations for the planned RCT. The SUS items were
+translated to Korean by the author following Brooke's (1996)
+original wording; the survey was self-administered, with the expert
+working through the live deployment at
+https://rosyrosys.github.io/sonata-form-viz/ in their own
+environment. Written responses were analysed by the author following
+the thematic-analysis approach of Braun and Clarke (2006), and the
+expert gave written informed consent for anonymous reporting.
+
+The study was treated as expert evaluation rather than human-
+subjects research; consequently no formal IRB approval was required
+by the host institution.
+
+## 6.2 SUS result
+
+**Table 4.** SUS response from the single-expert reviewer.
+
+| | Expert |
+|---|---|
+| Items 1, 3, 5, 7, 9 (positive, raw) | 5 / 5 / 5 / 5 / 5 |
+| Items 2, 4, 6, 8, 10 (negative, raw) | 1 / 1 / 1 / 1 / 1 |
+| Σ converted (each item = 4) | 40 |
+| **SUS score (Σ × 2.5)** | **100 / 100** |
+
+The expert returned the maximum SUS score, with all positive items
+rated 5 and all negatively-worded (reverse-coded) items rated 1. We
+note two things about this pattern. First, the *consistency* of the
+response (5 on every positive item, 1 on every negative item) is
+strong evidence that the expert correctly understood the bipolar
+scale; random responding would yield occasional 5s on negative
+items. Second, a single-expert SUS of 100 is informative but should
+not be over-interpreted: an n=1 sample of an expert evaluator
+predisposed to engage with classroom-tool design is not equivalent
+to a sampled learner population, and SUS norms drawn from learner
+data do not transfer to this case. We therefore report the raw
+score and limit our claims accordingly.
+
+## 6.3 Themes from the qualitative responses
+
+Inductive coding of the six open-ended responses surfaced four
+themes.
+
+### 6.3.1 Three-channel synchronization is the named source of value
+
+Both the *pedagogical fidelity* question (C1) and the *most valuable
+affordance* question (C2) drew the same answer pattern. To the
+fidelity question the expert responded "*Yes, because color is
+shown, music is played, and they are displayed together with the
+score.*" (C1); to the affordance question, "*The function of being
+able to check sections via the score while hearing color and music
+in real time.*" (C2). The expert did not single out any individual
+affordance from the list provided (color encoding, section jump,
+loop, playback-speed control, keyboard shortcuts, demo mode,
+analysis pane); the *integration* of color, audio, and score was
+itself identified as the locus of value. This converges with the
+design claim of §4.1 that the tool's principal pedagogical
+contribution is the *coordinated update* of three representations
+rather than any single one.
+
+### 6.3.2 No learner-misconception risks identified by the expert
+
+In response to the misconception-risk question (C3) the expert
+indicated they did not perceive any (*"There seem to be none."*).
+We read this both as a positive indication that the expert, with
+fifteen years of field experience, did not identify any obvious
+visualization-induced misunderstanding pathway, and as a hypothesis
+to be tested in the planned RCT rather than a confirmed null. An
+expert's *prediction* of no risk is not equivalent to a learner
+study failing to detect risk.
+
+### 6.3.3 Two concrete design recommendations
+
+The expert proposed two specific extensions:
+
+1. **Within-section harmonic detail.** "*It would be better if the
+   chord movements were shown in detail.*" (C4). The current tool
+   displays section- and theme-zone-level key labels (e.g., "C
+   major" / "G major" / "F major") but does not surface internal
+   chord-by-chord progressions. The expert's recommendation is that
+   chord-level harmonic motion be added as a finer visualization
+   layer in a future revision.
+2. **Whole-piece interface affordance.** In response to the
+   RCT-methodology question (C6) the expert returned a design
+   suggestion rather than a methodology suggestion: "*It would be
+   good if one piece and the interface screen could be viewed as a
+   whole.*" We read this as a request for a more whole-piece visual
+   summary affordance — for instance an always-visible mini-map of
+   the form alongside the (currently scrollable) score.
+
+That a methodology question was answered with a design recommendation
+is itself a finding: an experienced field expert's instinct, on
+encountering a teaching tool, is to think about *how to extend the
+tool* rather than *how to instrument a study around it*.
+
+### 6.3.4 Multi-piece extension is endorsed by the field expert
+
+To the question of single-work depth versus multi-piece breadth
+(C5) the expert responded "*If there were diverse works, I would
+actively use them.*" The verb is significant: not "could use" but
+"actively use." A field expert with fifteen years of teaching
+practice signals that multi-piece extension would move the tool
+from *demonstration artefact* to *recurring classroom resource* in
+their personal practice. This converges with — and elevates the
+priority of — the multi-piece dataset already listed as future work
+in §7 (Beethoven Op. 49 No. 2 mvt. I and Clementi Op. 36 No. 1
+mvt. I, encoded against the same JSON schema).
+
+## 6.4 Implications for the planned RCT and the tool roadmap
+
+Three concrete revisions follow from the pilot.
+
+1. **RCT primary measure to include "perceived integration"** — a
+   confidence/integration rating in addition to formal-identification
+   accuracy and SUS. The single-expert response suggests that the
+   *experience of three-channel synchronization* may be a distinct
+   construct that learners can rate independently of accuracy and
+   usability. This will be added to the RCT protocol.
+2. **Pre-RCT tool extension: chord-level harmonic layer.** The
+   expert's C4 recommendation will be incorporated into a v0.2.0
+   release before the RCT, so that the RCT evaluates the version
+   the expert thought *should exist*, not the more limited v0.1.0.
+3. **Multi-piece corpus prioritised.** Per the C5 endorsement,
+   Beethoven Op. 49 No. 2 mvt. I and Clementi Op. 36 No. 1 mvt. I
+   will be added to the corpus *before* the RCT rather than as
+   post-RCT future work, so the trial can also assess
+   single-work-deep versus multi-piece-comparative conditions.
+
+## 6.5 Limitations of this pilot
+
+This is a single-expert pilot review, not a generalizable empirical
+study. Its findings function as *design-stage validation* and as
+input to refining the planned RCT, not as evidence of learner
+outcomes. We list the limitations explicitly:
+
+- **n = 1.** A single expert cannot characterize the distribution of
+  expert opinion on this tool. The four themes reported in §6.3
+  should be read as *hypotheses generated by one informed
+  observer*, not as patterns across a community of experts.
+- **Maximum SUS score.** The SUS of 100 is consistent across the ten
+  items but indicates that this individual expert was strongly
+  positively disposed toward the tool. We do not claim that learner
+  SUS distributions will resemble this.
+- **Brief responses.** All six open-ended responses are short. This
+  prevents the deeper thematic-analytic moves (cross-question
+  triangulation, contradiction-spotting) that a richer interview
+  protocol would have enabled. The responses still function as
+  signal, but signal at lower bandwidth than a fully interviewed
+  expert panel would supply.
+- **Expert orientation toward design, not methodology.** As noted in
+  §6.3.3, the methodology question (C6) was answered with a design
+  suggestion. We treat this as data about the expert's professional
+  orientation rather than as a deficit in the response, but it does
+  mean the pilot yielded fewer methodological refinements for the
+  RCT than initially hoped.
+- **Pilot was self-administered.** The expert worked through the
+  Word survey instrument in their own environment rather than in a
+  researcher-moderated session. This permits the expert greater
+  reflection but loses the live observation of confusions or
+  workarounds that a moderated cognitive walkthrough would have
+  captured.
+
+These limitations are precisely why this pilot is reported as
+*preliminary expert pilot review* rather than as expert validation.
+The RCT planned in §7.3 is the empirical study against which the
+tool's pedagogical claims will properly be tested.
+
+
+# 7. Discussion
+
+## 7.1 Pedagogical Implications
 
 Traditional verbal teaching often presents the recapitulation as
 "return-in-tonic," handling deformations as exceptions; K. 545's
@@ -657,7 +845,7 @@ approaches to musical analysis (Caplin, 1998, 2009). The pedagogical
 move, from rules-and-exceptions to functional flexibility, is the
 central educational claim of this work.
 
-## 6.2 Methodological and Tooling Implications
+## 7.2 Methodological and Tooling Implications
 
 - **First-class status of formal analysis.** Encoding the analysis as
   a versioned JSON object, not as ephemeral pedagogical commentary,
@@ -676,7 +864,7 @@ central educational claim of this work.
   pipelines, a non-trivial property for syllabi designed to last
   multiple cohorts.
 
-## 6.3 Limitations and Future Work
+## 7.3 Limitations and Future Work
 
 This paper limits itself to system design, implementation, and
 pedagogical positioning. Empirical validation of learning effects is
@@ -699,7 +887,7 @@ deferred to subsequent work. Planned next steps:
    tablet and phone form factors.
 
 
-# 7. Conclusion
+# 8. Conclusion
 
 This paper has presented an open-source, web-based tool that
 synchronizes score, audio, and a hierarchical formal-analysis layer to
@@ -718,7 +906,7 @@ under CC BY 4.0. Both invite reuse, extension, and peer scrutiny in
 the spirit of open digital musicology.
 
 
-# 8. Reproducibility
+# 9. Reproducibility
 
 All artifacts are released with persistent identifiers. The source
 code is available at https://github.com/rosyrosys/sonata-form-viz
@@ -752,13 +940,15 @@ conventions inspired the schema interoperability discussed in §4.3.]*
 # Ethics and Consent
 
 The present manuscript reports the design, implementation, and
-analytical case study of an open-source software tool. It does not
-include human-subjects evaluation, animal subjects, or human-derived
-data, and no ethics-committee approval is therefore required for the
-work reported here. The planned randomized controlled trial outlined
-in §6.3, which will involve undergraduate music-education majors as
-participants and the System Usability Scale (Brooke, 1996) as a
-primary measure, will be conducted under the appropriate
+analytical case study of an open-source software tool, supplemented
+by a single-expert pilot review (§6) treated under standard
+expert-evaluation methodology. It does not include learner-subjects
+evaluation, animal subjects, or human-derived data beyond the
+single expert pilot reviewer who provided written informed consent
+for anonymous reporting. The planned randomized controlled trial
+outlined in §7.3, which will involve undergraduate music-education
+majors as participants and the System Usability Scale (Brooke,
+1996) as a primary measure, will be conducted under the appropriate
 institutional review board approval and reported in a separate
 follow-up publication.
 

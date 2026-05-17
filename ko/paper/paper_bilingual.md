@@ -1160,9 +1160,205 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
 보고, 학생들이 스스로 분석적 관찰을 만들도록 두는 것이다.
 
 
-# 6. Discussion / 논의
+# 6. Preliminary Single-Expert Pilot Review / 단일 전문가 사전 파일럿 검토
 
-## 6.1 Pedagogical Implications / 교수법적 함의
+> Empirical validation of the tool's pedagogical claims through a
+> full randomized controlled trial with undergraduate music-
+> education learners is reserved for follow-up work (§7.3). As a
+> *preliminary* validation aimed at refining the planned RCT and
+> identifying design risks before learner-facing deployment, we
+> conducted a single-expert pilot review with one domain reviewer
+> holding more than 15 years of music-education field experience.
+> We report this as a single-expert pilot, not as a generalizable
+> expert panel, and the limitations of an n=1 design are discussed
+> in §6.5.
+
+학부 음악교육 학습자 대상의 전체 무작위 통제군 시험을 통한 도구의
+교수법적 주장의 실증적 검증은 후속 작업(§7.3)으로 유보한다. 학습자
+배포 이전에 계획된 RCT 를 정련하고 설계 위험을 식별하는 *사전*
+검증으로서, 음악교육 현장에서 15년 이상의 경력을 가진 단일 도메인
+전문가와의 파일럿 검토를 수행하였다. 이는 일반화 가능한 전문가 패널이
+아닌 *단일 전문가 파일럿* 으로 보고하며, n=1 설계의 한계는 §6.5 에서
+논의된다.
+
+## 6.1 Method / 방법
+
+> The expert completed an asynchronous self-administered review
+> using a Word-format survey instrument that combined (a) a 40-minute
+> guided walk-through of the §5 classroom lesson plan with the
+> expert acting as the teacher, (b) the 10-item System Usability
+> Scale (Brooke, 1996), and (c) six open-ended questions covering
+> pedagogical fidelity, affordance value, perceived risks of
+> learner misconception, missing affordances, single-work depth
+> versus multi-piece breadth, and recommendations for the planned
+> RCT. The SUS items were translated to Korean by the author
+> following Brooke's (1996) original wording; the survey was
+> self-administered, with the expert working through the live
+> deployment at https://rosyrosys.github.io/sonata-form-viz/ in
+> their own environment. Written responses were analysed by the
+> author following the thematic-analysis approach of Braun and
+> Clarke (2006), and the expert gave written informed consent for
+> anonymous reporting. The study was treated as expert evaluation
+> rather than human-subjects research; consequently no formal IRB
+> approval was required by the host institution.
+
+전문가는 Word 형식의 설문 도구를 사용하여 비동기 자가 기입 검토를
+완료하였다. 본 설문은 (a) 전문가가 교사 역할을 하는 §5 교실 워크-
+스루의 40분 가이드 진행, (b) 10문항 시스템 사용성 척도 (Brooke,
+1996), (c) 교수법적 충실도, affordance 가치, 학습자 오해 위험,
+누락된 기능, 한 작품 깊이 vs 다곡 확장, 그리고 계획된 RCT 권고를
+다루는 6개 개방형 질문을 결합하였다. SUS 문항은 Brooke (1996) 의
+원문에 따라 저자가 한국어로 번역하였으며, 설문은 자가 기입으로
+진행되었고 전문가는 https://rosyrosys.github.io/sonata-form-viz/
+의 라이브 배포를 자신의 환경에서 사용하였다. 작성된 응답은 Braun &
+Clarke (2006) 의 주제 분석 접근법에 따라 저자가 분석하였으며,
+전문가는 익명 보고에 대한 서면 동의를 제공하였다. 본 연구는 인간
+대상 연구가 아닌 전문가 평가로 처리되었으며, 따라서 해당 기관의
+정식 IRB 승인은 요구되지 않았다.
+
+## 6.2 SUS result / SUS 결과
+
+**Table 4 / 표 4.** Single-expert SUS response.
+
+| | Expert |
+|---|---|
+| Items 1, 3, 5, 7, 9 (positive, raw) | 5 / 5 / 5 / 5 / 5 |
+| Items 2, 4, 6, 8, 10 (negative, raw) | 1 / 1 / 1 / 1 / 1 |
+| Σ converted | 40 |
+| **SUS score (Σ × 2.5)** | **100 / 100** |
+
+> The expert returned the maximum SUS score. The consistency of the
+> response pattern (5 on every positive item, 1 on every negative
+> item) is strong evidence that the expert correctly understood the
+> bipolar scale; a single-expert SUS of 100 is informative but
+> should not be over-interpreted, as an n=1 sample of an expert
+> evaluator predisposed to engage with classroom-tool design is not
+> equivalent to a sampled learner population.
+
+전문가는 최대 SUS 점수를 반환하였다. 응답 패턴의 일관성 (긍정 문항
+모두 5점, 부정 문항 모두 1점) 은 전문가가 양극 척도를 올바르게
+이해했다는 강력한 증거이다. 단일 전문가의 SUS 100 은 정보가 되지만
+과대해석되어서는 안 된다. 교실 도구 설계에 적극 참여할 성향이 있는
+전문가 평가자의 n=1 표본은 학습자 표본과 동등하지 않다.
+
+## 6.3 Themes / 주제 (4 themes from inductive coding)
+
+### 6.3.1 Three-channel synchronization is the named source of value
+
+> Both C1 ("*Yes, because color is shown, music is played, and they
+> are displayed together with the score.*") and C2 ("*The function
+> of being able to check sections via the score while hearing color
+> and music in real time.*") identified the *integration* of color,
+> audio, and score as the locus of value, rather than singling out
+> any individual affordance from the list provided. This converges
+> with the design claim of §4.1 that the tool's principal
+> pedagogical contribution is the *coordinated update* of three
+> representations rather than any single one.
+
+C1 ("네, 색상으로 보여주고 음악을 들려주면서 악보와 함께 표시되어
+있으니까요.") 과 C2 ("색상과 음악을 실시간으로 들으면서 악보로
+구간을 확인할 수 있는 기능") 두 응답이 모두 제공된 affordance 목록
+중 어느 *단일* 기능이 아닌, 색상·음원·악보의 *통합* 을 가치의
+원천으로 식별하였다. 이는 도구의 주된 교수법적 기여가 단일 표상이
+아니라 *세 표상의 협응적 업데이트* 라는 §4.1 의 설계 주장과
+수렴한다.
+
+### 6.3.2 No learner-misconception risks identified
+
+> To C3 ("misconception risks?") the expert responded "*There seem
+> to be none.*" We read this both as a positive indication that the
+> expert, with fifteen years of field experience, did not identify
+> any obvious visualization-induced misunderstanding pathway, and
+> as a hypothesis to be tested in the planned RCT rather than a
+> confirmed null. An expert's prediction of no risk is not
+> equivalent to a learner study failing to detect risk.
+
+C3 ("오해 위험?") 에 전문가는 "없을듯 하다" 라고 응답하였다. 이는
+15년 경력의 전문가가 도구의 시각화에서 명백한 학습자 오해 경로를
+식별하지 못했다는 긍정적 지표이자, 계획된 RCT 에서 검증될 가설이지
+확인된 부재가 아니다. 전문가의 *위험 없음 예측* 은 학습자 연구에서
+*위험을 검출하지 못함* 과 동등하지 않다.
+
+### 6.3.3 Two concrete design recommendations
+
+> The expert proposed two specific extensions: (1) within-section
+> harmonic detail (C4: "*It would be better if the chord movements
+> were shown in detail.*"), and (2) a whole-piece interface
+> affordance (C6: "*It would be good if one piece and the
+> interface screen could be viewed as a whole.*"). That C6 — a
+> methodology question — was answered with a design recommendation
+> is itself a finding: an experienced field expert's instinct, on
+> encountering a teaching tool, is to think about *how to extend
+> the tool* rather than *how to instrument a study around it*.
+
+전문가는 두 가지 구체적 확장을 제안하였다: (1) 섹션 내부의 화성
+상세 (C4: "화음의 이동이 상세히 보여지면 더 좋을것 같다") 와 (2)
+한 작품과 인터페이스 전체를 동시에 조망할 수 있는 UI 가능성 (C6:
+"하나의 곡과 인터페이스 화면이 전체로 볼 수 있는 형태이면
+좋겠다"). C6 — RCT 방법론 질문 — 이 *설계 권고* 로 응답된 것
+자체가 하나의 발견이다: 교수 도구를 접한 경력 전문가의 본능은
+*연구를 어떻게 설계할까* 가 아닌 *도구를 어떻게 확장할까* 이다.
+
+### 6.3.4 Multi-piece extension endorsed
+
+> To C5 (single-work depth vs multi-piece breadth) the expert
+> responded "*If there were diverse works, I would actively use
+> them.*" The verb is significant: not "could use" but "actively
+> use." A field expert with fifteen years of teaching practice
+> signals that multi-piece extension would move the tool from
+> demonstration artefact to recurring classroom resource in their
+> personal practice.
+
+C5 (한 작품 깊이 vs 다곡 확장) 에 대해 전문가는 "다양한 작품이
+있다면 적극 활용하겠다" 라고 응답하였다. 동사가 중요하다: "사용할
+수 있다" 가 아닌 "적극 활용". 15년 경력의 현장 전문가가 다곡 확장이
+도구를 *시연 작품* 에서 *반복적 교실 자원* 으로 이동시킬 것임을
+신호한다.
+
+## 6.4 Implications for the RCT and tool roadmap / RCT 및 도구 로드맵 함의
+
+> Three concrete revisions follow:
+> 1. **RCT primary measure to include "perceived integration"**:
+>    a confidence/integration rating in addition to accuracy and SUS.
+> 2. **Pre-RCT tool extension: chord-level harmonic layer** (C4
+>    recommendation) will be incorporated into a v0.2.0 release
+>    before the RCT.
+> 3. **Multi-piece corpus prioritised** (C5 endorsement): Beethoven
+>    Op. 49 No. 2 mvt. I and Clementi Op. 36 No. 1 mvt. I will be
+>    added before the RCT.
+
+세 가지 구체적 수정이 도출된다:
+1. **RCT 1차 측정에 "지각된 통합" 추가** — 정확도와 SUS 외에
+   confidence/integration 평가.
+2. **RCT 전 도구 확장: 화성 진행 레이어** (C4 권고) 를 RCT 이전
+   v0.2.0 릴리스에 통합.
+3. **다곡 코퍼스 우선순위 상향** (C5 지지): Beethoven Op. 49 No. 2
+   1악장과 Clementi Op. 36 No. 1 1악장을 RCT 이전에 추가.
+
+## 6.5 Limitations of this pilot / 본 파일럿의 한계
+
+> This is a single-expert pilot review, not a generalizable
+> empirical study. n=1; the maximum SUS suggests a positively
+> disposed individual rather than a learner-representative outcome;
+> all six open-ended responses are short, limiting deeper thematic
+> analysis; the expert's responses lean toward design rather than
+> methodology; and the pilot was self-administered rather than
+> moderated. The four themes in §6.3 should be read as hypotheses
+> generated by one informed observer, to be tested in the RCT
+> planned in §7.3.
+
+본 파일럿은 단일 전문가 검토이지 일반화 가능한 실증 연구가 아니다.
+n=1; 최대 SUS 점수는 학습자 대표성 결과가 아닌 긍정 성향의 개별
+전문가를 시사함; 6개 개방형 응답 모두 짧아 심층적 주제 분석을
+제한함; 전문가 응답이 방법론보다 *설계* 쪽으로 치우침; 그리고
+파일럿이 사회자 진행이 아닌 자가 기입이었음. §6.3 의 네 주제는
+한 명의 informed observer 가 생성한 *가설* 로 읽혀야 하며, §7.3 에
+계획된 RCT 에서 검증되어야 한다.
+
+
+# 7. Discussion / 논의
+
+## 7.1 Pedagogical Implications / 교수법적 함의
 
 > Traditional verbal teaching often presents the recapitulation as
 > "return-in-tonic," handling deformations as exceptions; K. 545's
@@ -1186,7 +1382,7 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
 정렬되어. 교수법적 이동, 규칙-예외 모델에서 함수적 유연성으로, 이
 본 작업의 중심 교육 주장이다.
 
-## 6.2 Methodological and Tooling Implications / 방법론적·도구적 함의
+## 7.2 Methodological and Tooling Implications / 방법론적·도구적 함의
 
 > - **First-class status of formal analysis.** Encoding the analysis as
 >   a versioned JSON object, not as ephemeral pedagogical commentary,
@@ -1218,7 +1414,7 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
   빌드 파이프라인을 가진 것보다 우아하게 노후화 한다, *여러 코호트에
   걸쳐 지속될 강의 자료* 에 사소하지 않은 속성이다.
 
-## 6.3 Limitations and Future Work / 한계와 후속 연구
+## 7.3 Limitations and Future Work / 한계와 후속 연구
 
 > This paper limits itself to system design, implementation, and
 > pedagogical positioning. Empirical validation of learning effects is
@@ -1257,7 +1453,7 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
 6. **모바일 반응형.** 데스크탑 우선 디자인을 태블릿·폰 폼팩터로 확장.
 
 
-# 7. Conclusion / 결론
+# 8. Conclusion / 결론
 
 > This paper has presented an open-source, web-based tool that
 > synchronizes score, audio, and a hierarchical formal-analysis layer to
@@ -1289,7 +1485,7 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
 초대한다.
 
 
-# 8. Reproducibility / 재현 가능성
+# 9. Reproducibility / 재현 가능성
 
 > All artifacts are released with persistent identifiers. The source
 > code is available at https://github.com/rosyrosys/sonata-form-viz
