@@ -35,15 +35,12 @@ and ORCIDs are provided via the online submission system.]*
 > demonstrated on Mozart's Piano Sonata in C major, K. 545, first
 > movement (73 measures). The system renders MusicXML through
 > OpenSheetMusicDisplay and paints section and theme-zone colors
-> directly onto the score at the measure level. We introduce an
-> exposition-repeat folding map: a piecewise non-monotonic time
-> function that preserves analytical monotonicity under performer-
-> elected repeats, an edge case that no prior open
-> music-visualization system has addressed with an explicit time
-> map. Together, the tool and the released analysis schema provide
-> an open infrastructure for both classroom teaching of formal
-> hierarchy and downstream computational reuse on other works in
-> the sonata-form repertoire.
+> directly onto the score at the measure level, and supports
+> performer-elected exposition repeats through an explicit
+> exposition-repeat folding map. Together, the tool and the released
+> analysis schema provide an open infrastructure for both classroom
+> teaching of formal hierarchy and downstream computational reuse on
+> other works in the sonata-form repertoire.
 
 소나타 형식은 음악이론·서양음악사 교과의 중핵 주제이지만, 학습자들은
 청취 중 형식 구조를 인지하는 데 보편적으로 어려움을 보고한다. 섹션,
@@ -55,12 +52,10 @@ and ORCIDs are provided via the online submission system.]*
 음원 재생, 두 단계 형식 분석 계층(섹션 × 주제 영역)을 단일 시간축에서
 동기화하는 오픈소스 웹 기반 도구를 제시하며, 모차르트 피아노 소나타
 다장조 K. 545 1악장(73마디)을 사례로 시연한다. 시스템은 MusicXML 을
-OpenSheetMusicDisplay 로 렌더하고, 마디 단위로 섹션과 주제 영역 색상을
-악보 자체에 도장한다. 본 연구는 제시부 반복 폴딩 맵을 도입한다: 연주자
-선택 반복 하에서 분석적 단조성을 보존하는 piecewise 비단조 시간
-함수이며, 저자들이 알기로 어떤 기존 오픈 음악 시각화 시스템도 이 사례를
-명시적 시간 맵으로 처리하지 않는다. 본 도구와 공개되는 분석 스키마는
-형식 위계의 교실 교수와 소나타 형식 레퍼토리의 다른 작품들로의 다운스트림
+OpenSheetMusicDisplay 로 렌더하고 마디 단위로 섹션과 주제 영역 색상을
+악보 자체에 도장하며, 연주자 선택 제시부 반복은 명시적 제시부 반복
+폴딩 맵으로 지원한다. 본 도구와 공개되는 분석 스키마는 형식 위계의
+교실 교수와 소나타 형식 레퍼토리의 다른 작품들로의 다운스트림
 컴퓨테이셔널 재사용을 위한 *오픈 인프라* 를 제공한다.
 
 > **Word Count:** *[to be inserted at final submission, current
@@ -165,10 +160,9 @@ OpenSheetMusicDisplay 로 렌더하고, 마디 단위로 섹션과 주제 영역
 
 ## 1.3 Contributions / 연구의 기여
 
-> This work contributes four artifacts to the TISMIR Tools-and-Datasets
-> layer:
+> We make four contributions:
 
-본 연구는 TISMIR Tools-and-Datasets 계층에 네 개의 산출물을 기여한다:
+본 연구는 네 가지를 기여한다:
 
 > 1. **A learner-facing open-source tool** (MIT) that synchronizes
 >    notated score, audio, and a hierarchical formal-analysis layer in

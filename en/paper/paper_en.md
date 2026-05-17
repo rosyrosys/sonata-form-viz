@@ -22,14 +22,12 @@ and a two-level formal-analysis layer (sections × theme zones) along
 a single timeline, demonstrated on Mozart's Piano Sonata in C major,
 K. 545, first movement (73 measures). The system renders MusicXML
 through OpenSheetMusicDisplay and paints section and theme-zone
-colors directly onto the score at the measure level. We introduce
-an exposition-repeat folding map: a piecewise non-monotonic time
-function that preserves analytical monotonicity under performer-
-elected repeats, an edge case that no prior open music-visualization
-system has addressed with an explicit time map. Together, the tool
-and the released analysis schema provide an open infrastructure for
-both classroom teaching of formal hierarchy and downstream
-computational reuse on other works in the sonata-form repertoire.
+colors directly onto the score at the measure level, and supports
+performer-elected exposition repeats through an explicit
+exposition-repeat folding map. Together, the tool and the released
+analysis schema provide an open infrastructure for both classroom
+teaching of formal hierarchy and downstream computational reuse on
+other works in the sonata-form repertoire.
 
 **Word Count:** *[to be inserted at final submission, current draft
 ≈ 6,100 words including references and appendix]*
@@ -89,8 +87,7 @@ code under permissive licenses for community reuse.
 
 ## 1.3 Contributions
 
-This work contributes four artifacts to the TISMIR Tools-and-Datasets
-layer:
+We make four contributions:
 
 1. **A learner-facing open-source tool** (MIT) that synchronizes
    notated score, audio, and a hierarchical formal-analysis layer in
@@ -116,8 +113,8 @@ layer:
    rather than a memorized exception.
 
 Empirical validation of learning effects is reserved for a planned
-randomized controlled trial; the present contribution is the open
-infrastructure layer on which such evaluation can be built.
+randomized controlled trial; the present submission provides the
+open infrastructure on which such evaluation can be built.
 
 
 # 2. Background
