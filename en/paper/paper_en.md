@@ -401,21 +401,20 @@ features carry the pedagogical work:
 
 # 4. The Tool: Three Coordinated Representations
 
-The system is a static, client-side web application (≈600 lines of
-vanilla JavaScript) with one external dependency
-(OpenSheetMusicDisplay) and no build step. A live deployment is
-embedded with this article (see *Example 1* below); source code,
-analysis data, and the audio-policy documentation are available
-through the project's GitHub repository and Zenodo archive (see
-*Reproducibility*, §7).
+The system is a static, client-side web application with one
+external dependency (OpenSheetMusicDisplay) and no build step. The
+source code, analysis data, and audio-policy documentation are
+available through the project's GitHub repository and Zenodo archive
+(§9 *Reproducibility*).
 
-The architecturally salient property of the system is not its
-component list but the *coordination*: three representations of the
-same musical present moment are kept in sync, and the user can
-intervene in any one of them. Two design choices deserve specific
-articulation: a stable measure-painting scheme that survives OSMD
-re-layout (§4.2), and a non-monotonic time-mapping function that
-handles performer-elected repeats without analytical loss (§4.5).
+What makes the system useful for teaching is not any single
+representation but the *coordination* among them: a single musical
+present moment is rendered three ways, and the user can intervene in
+any of them. The remainder of this section describes the three
+representations (§4.1), the color scheme (§4.2), the analysis data
+(§4.3), the listening affordances (§4.4), and one design choice that
+deserves particular attention — how the tool handles performer-elected
+exposition repeats (§4.5).
 
 ## 4.1 The Three Representations
 
@@ -463,17 +462,16 @@ respectively).
 
 ### Interoperability with the Algomus annotation corpus
 
-The schema's structural categories, `sections[].type ∈ {exposition,
-development, recapitulation, coda}`, `themes[].type ∈ {P, T, S, K,
-codetta, retransition}`, and `(start_measure, end_measure)` ranges,
-deliberately mirror the analytic categories used in Allegraud et al.
-(2019) for the Mozart string-quartet sonata-form corpus. A thin
-ingestion adapter is sufficient to load the 32-movement Algomus
-reference analyses into the tool, because the field names map
-one-to-one and the measure-range conventions are shared. We provide
-the schema specification (`data/sonata_structure.schema.json`) and a
-worked example for K. 545; we leave the adapter for the full Algomus
-corpus as a community contribution opportunity. The architectural
+The schema's structural categories — four section types (exposition,
+development, recapitulation, coda), six theme-zone types (P, T, S,
+K, codetta, retransition), and start/end measure ranges — deliberately
+mirror the analytic categories used in Allegraud et al. (2019) for
+the Mozart string-quartet sonata-form corpus. Because the field
+names map one-to-one and the measure-range conventions are shared,
+loading the 32-movement Algomus reference analyses into the tool
+requires only a thin ingestion adapter. We provide the schema and a
+worked example for K. 545; the adapter for the full Algomus corpus
+remains an open community contribution opportunity. The architectural
 point is that our learner-facing tool *amplifies* the classifier and
 annotation work of Allegraud et al. rather than competing with it:
 their corpus becomes loadable content for our visualization, and our
@@ -498,67 +496,41 @@ cannot.
 
 ## 4.5 Exposition Repeat Folding
 
-When a performer elects to take the exposition repeat, the
-overwhelming majority of K. 545 recordings in the canonical
-discography, including the Schiff Carnegie Hall (2015) recording used
-in our reference deployment, the audio time-line becomes
-*non-monotonic* with respect to analytical time. Audio seconds 0:00 –
-0:55 traverse the exposition; audio seconds 0:55 – 1:48 traverse the
-exposition *again*; audio second 1:48 onwards opens the development.
-Two design responses are available:
+When a performer takes the exposition repeat — which most K. 545
+recordings in the canonical discography do, including the Schiff
+Carnegie Hall (2015) recording used in our reference deployment —
+the audio visits the exposition *twice* before reaching the
+development. The first pass runs roughly 0:00 – 0:55; the second
+pass runs roughly 0:55 – 1:48; only at audio second 1:48 onwards
+does the development begin. Two design responses are available.
+The naïve response is to ignore the repeat, in which case the
+cursor advances steadily through audio time and the analytical
+pane displays "development" while the listener is in fact still
+hearing the second exposition — pedagogically misleading. The
+response we adopt is to *fold* the repeat: when the audio enters
+the second exposition, the cursor returns to bar 1 and walks
+forward to bar 28 again, in sync with the second hearing; only
+when the audio crosses the end of the second exposition does the
+cursor advance into the development. This keeps the cursor and
+the listener in agreement across the entire playback.
 
-1. **Ignore the repeat.** The cursor and analytical pane simply
-   continue forward through audio time, and during the repeat the
-   pane displays an off-by-one section ("development") while the
-   listener is still in the exposition. Pedagogically misleading.
-2. **Fold the repeat.** During the repeat, the cursor returns to the
-   exposition's start and re-traverses it; only when the audio passes
-   the second exposition codetta does the cursor advance into the
-   development.
+The repeat boundaries (where the second exposition starts and ends,
+in audio time) can be tap-calibrated against any recording in under
+a minute through keyboard shortcuts (M, [, ]); the calibration is
+persisted in browser `localStorage`. The same folding behaviour
+transfers, without modification, to any sonata-form work with a
+marked exposition repeat.
 
-We adopt the second option. Let *t* be the current audio time and let
-the user-marked or default repeat span be \[*r*₁, *r*₂\]. The
-analytical time *τ* is then a piecewise function:
-
-```
-              ⎧ t                                  if t < r₁
-              ⎪
-   τ(t)   =   ⎨ ((t − r₁) / (r₂ − r₁)) · r₁         if r₁ ≤ t < r₂
-              ⎪
-              ⎩ t − (r₂ − r₁)                      otherwise
-```
-
-Three properties follow:
-
-- **First-pass identity.** For *t* < *r*₁, analytical time equals audio
-  time. The cursor behaves as a simple score-follower until the repeat
-  begins.
-- **Fold-back on repeat.** For *r*₁ ≤ *t* < *r*₂, the cursor re-
-  traverses the analytical interval \[0, *r*₁\] proportionally with
-  the second hearing. The listener hears the exposition a second time
-  while the cursor visibly returns to bar 1 and crawls forward to bar
-  28 again.
-- **Post-repeat offset.** For *t* ≥ *r*₂, analytical time advances at
-  audio rate but offset back by the repeat duration. The development
-  and recapitulation are addressed correctly regardless of repeat
-  length.
-
-The repeat boundaries *r*₁ and *r*₂ are user-adjustable through three
-keyboard shortcuts (M, [, ]) for live calibration against the actual
-recording, and the calibrated values are persisted in
-`localStorage`. The fold is therefore robust to the wide variance in
-recording-specific repeat timings observed across the K. 545
-discography, and the same folding scheme transfers without
-modification to any sonata-form work with a marked exposition repeat.
-
-To our knowledge, no prior open music-visualization system (including
-Dezrann, Sonic Visualiser, and the score-following tools surveyed in
-§2.4) addresses performer-elected repeats with an explicit
-non-monotonic time map. The closest analogue in the MIR literature is
-the structure-following work of Müller (2015, ch. 3), which handles
-repeats by inserting multiple parallel score branches; our approach
-preserves a single score-time axis and is consequently simpler to
-implement and to visualize for a learner.
+To our knowledge, no prior open music-visualization tool treats
+performer-elected repeats with an explicit time-folding behaviour
+of this kind. Sonic Visualiser and Verovio Humdrum Viewer treat the
+score as static and the audio as a separate stream; Dezrann places
+annotation labels alongside the audio but does not fold them; the
+closest analogue in the MIR literature, Müller (2015, ch. 3),
+addresses repeats by inserting multiple parallel score branches,
+which preserves analytical correctness at the cost of multiple
+parallel score views. Our single-score-axis fold is consequently
+simpler both to implement and to visualize for a learner.
 
 
 # 5. A Classroom Walk-Through
