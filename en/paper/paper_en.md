@@ -626,12 +626,11 @@ as the teacher, (b) the 10-item System Usability Scale (Brooke,
 fidelity, affordance value, perceived risks of learner misconception,
 missing affordances, single-work depth versus multi-piece breadth,
 and recommendations for the planned RCT. The SUS items were
-translated to Korean by the author following Brooke's (1996)
-original wording; the survey was self-administered, with the expert
-working through the live deployment at
-https://rosyrosys.github.io/sonata-form-viz/ in their own
-environment. Written responses were analysed by the author following
-the thematic-analysis approach of Braun and Clarke (2006), and the
+administered following Brooke's (1996) original wording. The survey
+was self-administered, with the expert working through the live
+deployment (see §9 *Reproducibility*) in their own environment.
+Written responses were analysed by the author following the
+thematic-analysis approach of Braun and Clarke (2006), and the
 expert gave written informed consent for anonymous reporting.
 
 The study was treated as expert evaluation rather than human-
@@ -1020,9 +1019,8 @@ submissions, please supply a CRediT-style contribution statement.]*
 
 # Appendix A. Screenshots
 
-Three screenshots from the live deployment
-(https://rosyrosys.github.io/sonata-form-viz/en/) are included in the
-submission package under `figures/`. Captions:
+Three screenshots from the live deployment (see §9 *Reproducibility*)
+are included in the submission package under `figures/`. Captions:
 
 - **Figure A.1.** System overview at startup, showing the title
   banner, the section-level timeline (top: pastel-blue exposition,
