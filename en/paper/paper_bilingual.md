@@ -337,59 +337,47 @@ Hargreaves (1986) 와 North & Hargreaves (2008) 은 형식 학습이 *반복
 ## 2.4 Related Tools / 관련 도구
 
 > The closest precedents for the present work are the Dezrann web
-> platform (Ballester et al. 2025) and the sonata-form structure-learning
-> study of Allegraud et al. (2019). Both papers treat formal music
-> annotation as a first-class web-interactive object, and both have been
-> applied to Mozart sonata movements. The present work follows that
-> line and contributes three differences:
+> platform (Ballester et al. 2025) and the sonata-form structure-
+> learning study of Allegraud et al. (2019). Both papers treat
+> formal music annotation as a first-class web-interactive object,
+> and both have been applied to Mozart sonata movements. The
+> present work differs in three respects. Where Dezrann places
+> annotation labels as discrete markers on a waveform-and-score
+> view, our tool paints the score itself with section colors at
+> the measure level (computed via SVG `getBBox` on the OSMD
+> render), so section and theme-zone colors coexist on the same
+> surface the learner is already reading. Our analysis schema
+> (`sonata_structure.json`) is not metadata attached to a Dezrann
+> annotation but a stand-alone, peer-reviewable, versioned CC BY
+> 4.0 object directly reusable in MIR pipelines and in derivative
+> analyses of other works, in the same sense that the Allegraud
+> et al. (2019) sonata-form corpus has been reused. And where
+> Allegraud et al. (2019) address the automatic-detection problem
+> on a 32-quartet corpus for the music-information-retrieval
+> community, the present tool addresses the teaching problem on
+> a single canonical work for the music-education community: a
+> robust classifier and a precise pedagogical instrument are
+> complementary rather than competing, since they need not target
+> the same evaluation metric.
 
 본 작업의 가장 가까운 선행 사례는 Dezrann 웹 플랫폼 (Ballester et al.
 2025) 과 Allegraud et al. (2019) 의 소나타 형식 구조 학습 연구 두
 논문이다. 양자 모두 형식 음악 주석을 일급(first-class) 웹 인터랙티브
-객체로 다루며, 둘 다 모차르트 소나타 악장에 적용되었다. 본 연구는 이
-계열을 잇되 세 가지 차이를 기여한다:
-
-> 1. **Two-level color encoding native to the score.** Where Dezrann
->    places annotation labels as discrete markers on a waveform-and-
->    score view, our tool paints *the score itself* with section colors
->    at the measure level (computed via SVG `getBBox` on the OSMD
->    render). Section and theme-zone colors coexist on the same surface
->    the learner is already reading.
-
-1. **악보 자체에 직접 도장된 두 단계 색상 인코딩.** Dezrann 이
-   waveform-and-score 뷰 위에 주석 라벨을 *이산 마커* 로 배치하는
-   반면, 본 도구는 *악보 자체* 를 마디 단위 섹션 색상으로 칠한다
-   (OSMD 렌더 위의 SVG `getBBox` 로 계산). 섹션 색과 주제 영역 색이
-   학습자가 이미 읽고 있는 동일 표면에 공존한다.
-
-> 2. **A two-level analytical schema treated as primary data.** Our
->    `sonata_structure.json` is not metadata attached to a Dezrann
->    annotation but a stand-alone, peer-reviewable, versioned object
->    licensed CC BY 4.0. This makes it directly reusable in MIR
->    pipelines and in derivative analyses of other works, in the same
->    sense that the Allegraud et al. (2019) sonata-form corpus has been
->    reused.
-
-2. **분석 스키마를 일급 데이터로 취급.** 본 연구의
-   `sonata_structure.json` 은 Dezrann 주석에 첨부된 메타데이터가 아니라
-   *독립된 peer-reviewable, 버전 관리되는 객체* 로 CC BY 4.0 으로 공개
-   된다. 이는 MIR 파이프라인과 다른 작품의 파생 분석에 그대로 재사용
-   가능, Allegraud et al. (2019) 의 소나타 형식 코퍼스가 재사용되어
-   온 것과 같은 의미이다.
-
-> 3. **A learner-facing, single-work focus.** Allegraud et al. (2019)
->    address the *automatic detection* problem on a 32-quartet corpus
->    for the music-information-retrieval community; the present tool
->    addresses the *teaching* problem on a single canonical work for the
->    music-education community. The two are complementary: a robust
->    classifier (Allegraud) and a precise pedagogical instrument
->    (this work) need not target the same evaluation metric.
-
-3. **학습자 친화, 단일 작품 초점.** Allegraud et al. (2019) 은 MIR
-   커뮤니티를 위해 32곡 현악사중주 코퍼스의 *자동 검출* 문제를 다룬다.
-   본 도구는 음악교육 커뮤니티를 위해 단일 정전 작품의 *교수* 문제를
-   다룬다. 두 접근은 상보적, 견고한 분류기(Allegraud) 와 정밀한
-   교수 도구 (본 연구) 가 동일한 평가 지표를 겨냥할 필요는 없다.
+객체로 다루며, 둘 다 모차르트 소나타 악장에 적용되었다. 본 연구는 세
+가지 점에서 다르다. Dezrann 이 waveform-and-score 뷰 위에 주석
+라벨을 이산 마커로 배치하는 반면, 본 도구는 악보 자체를 마디 단위
+섹션 색상으로 칠하며 (OSMD 렌더 위의 SVG `getBBox` 로 계산), 섹션
+색과 주제 영역 색이 학습자가 이미 읽고 있는 동일 표면에 공존한다.
+본 연구의 분석 스키마 (`sonata_structure.json`) 는 Dezrann 주석에
+첨부된 메타데이터가 아니라 독립적으로 peer-review 가 가능하고 버전
+관리되는 CC BY 4.0 객체이며, MIR 파이프라인과 다른 작품의 파생
+분석에 그대로 재사용 가능하다. 이는 Allegraud et al. (2019) 의
+소나타 형식 코퍼스가 재사용되어 온 것과 같은 의미이다. 그리고
+Allegraud et al. (2019) 이 MIR 커뮤니티를 위해 32곡 현악사중주
+코퍼스의 자동 검출 문제를 다룬다면, 본 도구는 음악교육 커뮤니티를
+위해 단일 정전 작품의 교수 문제를 다룬다: 견고한 분류기와 정밀한
+교수 도구는 동일한 평가 지표를 겨냥할 필요가 없으므로 경쟁이 아닌
+상보 관계에 있다.
 
 > Table 1 positions the present work against several adjacent systems.
 

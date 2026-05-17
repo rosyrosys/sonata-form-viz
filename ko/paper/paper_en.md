@@ -186,29 +186,24 @@ The closest precedents for the present work are the Dezrann web
 platform (Ballester et al. 2025) and the sonata-form structure-learning
 study of Allegraud et al. (2019). Both papers treat formal music
 annotation as a first-class web-interactive object, and both have been
-applied to Mozart sonata movements. The present work
-follows that line and contributes three differences:
-
-1. **Two-level color encoding native to the score.** Where Dezrann
-   places annotation labels as discrete markers on a waveform-and-
-   score view, our tool paints *the score itself* with section colors
-   at the measure level (computed via SVG `getBBox` on the OSMD
-   render). Section and theme-zone colors coexist on the same surface
-   the learner is already reading.
-2. **A two-level analytical schema treated as primary data.** Our
-   `sonata_structure.json` is not metadata attached to a Dezrann
-   annotation but a stand-alone, peer-reviewable, versioned object
-   licensed CC BY 4.0. This makes it directly reusable in MIR
-   pipelines and in derivative analyses of other works, in the same
-   sense that the Allegraud et al. (2019) sonata-form corpus has been
-   reused.
-3. **A learner-facing, single-work focus.** Allegraud et al. (2019)
-   address the *automatic detection* problem on a 32-quartet corpus
-   for the music-information-retrieval community; the present tool
-   addresses the *teaching* problem on a single canonical work for the
-   music-education community. The two are complementary: a robust
-   classifier (Allegraud) and a precise pedagogical instrument
-   (this work) need not target the same evaluation metric.
+applied to Mozart sonata movements. The present work differs in
+three respects. Where Dezrann places annotation labels as discrete
+markers on a waveform-and-score view, our tool paints the score
+itself with section colors at the measure level (computed via SVG
+`getBBox` on the OSMD render), so section and theme-zone colors
+coexist on the same surface the learner is already reading. Our
+analysis schema (`sonata_structure.json`) is not metadata attached
+to a Dezrann annotation but a stand-alone, peer-reviewable,
+versioned CC BY 4.0 object directly reusable in MIR pipelines and
+in derivative analyses of other works, in the same sense that the
+Allegraud et al. (2019) sonata-form corpus has been reused. And
+where Allegraud et al. (2019) address the automatic-detection
+problem on a 32-quartet corpus for the music-information-retrieval
+community, the present tool addresses the teaching problem on a
+single canonical work for the music-education community: a robust
+classifier and a precise pedagogical instrument are complementary
+rather than competing, since they need not target the same
+evaluation metric.
 
 Table 1 positions the present work against several adjacent systems.
 
