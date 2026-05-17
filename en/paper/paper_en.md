@@ -720,44 +720,23 @@ the spirit of open digital musicology.
 
 # 8. Reproducibility
 
-All artifacts of this study are released with persistent identifiers.
-
-| Resource | Location |
-|---|---|
-| Source code (HTML / CSS / JS) | https://github.com/rosyrosys/sonata-form-viz |
-| v0.1.0 release | https://github.com/rosyrosys/sonata-form-viz/releases/tag/v0.1.0 |
-| Long-term archive (Zenodo DOI) | [10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497) |
-| Formal-analysis JSON schema | `data/sonata_structure.json` (CC BY 4.0) |
-| Measure-to-time mapping | `data/measure_times.json` (CC BY 4.0) |
-| MusicXML (public domain) | `data/mozart_k545_mvt1.musicxml` |
-| Manuscript drafts (KO / EN) | `paper/paper_ko.md`, `paper/paper_en.md` |
-
-The repository ships with two parallel editions, **`ko/`** (Korean) and
-**`en/`** (English), sharing the same code base and analysis schema.
-
-**A Public Domain recording is bundled.** Each edition ships with
-`assets/mozart_k545_mvt1.ogg`, a Public Domain performance by Robin
-Alciatore distributed via Musopen and Wikimedia Commons (2:14,
-2.87 MB). No additional download is required. Users who prefer a
-different recording, for example the András Schiff Carnegie Hall
-(2015) commercial release, can drop their own file at
-`assets/mozart_k545_mvt1.mp3` (the MP3 source is listed first in
-`index.html`, so it takes precedence over the bundled OGG). The
-interactive tap-calibration mode (press *T* and tap *Space* at six
-landmark measures) re-anchors the measure-to-time mapping for any
-recording in under a minute and persists the calibration in
-`localStorage`. If the bundled audio is removed or fails to load,
-the WebAudio metronome demo mode kicks in automatically so the
-form-analysis visualization still operates.
-
-**Dependencies.** The only external runtime dependency is
-*OpenSheetMusicDisplay* v1.8.7. Browser compatibility is verified on
-Chrome 120+, Edge 120+, and Firefox 121+. Any static-file server suffices
-(e.g., `python -m http.server`).
-
-**Forthcoming RCT data.** Anonymized response data from the planned
-controlled trial will be released under CC BY 4.0 on OSF.io once
-IRB-approved data collection and analysis are complete.
+All artifacts are released with persistent identifiers. The source
+code is available at https://github.com/rosyrosys/sonata-form-viz
+under the MIT License, and the v0.1.0 release is archived at
+[https://doi.org/10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497).
+The analysis schema (`sonata_structure.json`), the measure-to-time
+mapping (`measure_times.json`), and the manuscript itself are
+licensed CC BY 4.0; the bundled reference recording is a Public
+Domain performance distributed via Musopen and Wikimedia Commons.
+The tool has a single external runtime dependency,
+OpenSheetMusicDisplay v1.8.7, and runs from any static-file server.
+A live deployment that bundles the reference recording is available
+at https://rosyrosys.github.io/sonata-form-viz/ for reviewer use.
+Detailed reproducibility notes covering the recording-substitution
+procedure, the tap-calibration flow, browser-version compatibility,
+and the release schedule for the forthcoming randomized controlled
+trial response dataset are provided in the supplementary
+`REPRODUCIBILITY.md` and on the Zenodo record.
 
 
 # Acknowledgments

@@ -1291,80 +1291,39 @@ Sonic Visualiser, score-following 도구 포함) 도 연주자 선택 반복을
 
 # 8. Reproducibility / 재현 가능성
 
-> All artifacts of this study are released with persistent identifiers.
+> All artifacts are released with persistent identifiers. The source
+> code is available at https://github.com/rosyrosys/sonata-form-viz
+> under the MIT License, and the v0.1.0 release is archived at
+> [https://doi.org/10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497).
+> The analysis schema (`sonata_structure.json`), the measure-to-time
+> mapping (`measure_times.json`), and the manuscript itself are
+> licensed CC BY 4.0; the bundled reference recording is a Public
+> Domain performance distributed via Musopen and Wikimedia Commons.
+> The tool has a single external runtime dependency,
+> OpenSheetMusicDisplay v1.8.7, and runs from any static-file server.
+> A live deployment that bundles the reference recording is available
+> at https://rosyrosys.github.io/sonata-form-viz/ for reviewer use.
+> Detailed reproducibility notes covering the recording-substitution
+> procedure, the tap-calibration flow, browser-version compatibility,
+> and the release schedule for the forthcoming randomized controlled
+> trial response dataset are provided in the supplementary
+> `REPRODUCIBILITY.md` and on the Zenodo record.
 
-본 연구의 모든 산출물은 영구 식별자(persistent identifier) 와 함께
-공개된다.
-
-> | Resource | Location |
-> |---|---|
-> | Source code (HTML / CSS / JS) | https://github.com/rosyrosys/sonata-form-viz |
-> | v0.1.0 release | https://github.com/rosyrosys/sonata-form-viz/releases/tag/v0.1.0 |
-> | Long-term archive (Zenodo DOI) | [10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497) |
-> | Formal-analysis JSON schema | `data/sonata_structure.json` (CC BY 4.0) |
-> | Measure-to-time mapping | `data/measure_times.json` (CC BY 4.0) |
-> | MusicXML (public domain) | `data/mozart_k545_mvt1.musicxml` |
-> | Manuscript drafts (KO / EN) | `paper/paper_ko.md`, `paper/paper_en.md` |
-
-| 자원 | 위치 |
-|---|---|
-| 소스 코드 (HTML / CSS / JS) | https://github.com/rosyrosys/sonata-form-viz |
-| v0.1.0 릴리스 | https://github.com/rosyrosys/sonata-form-viz/releases/tag/v0.1.0 |
-| 장기 보관 (Zenodo DOI) | [10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497) |
-| 형식 분석 JSON 스키마 | `data/sonata_structure.json` (CC BY 4.0) |
-| 마디–시간 매핑 | `data/measure_times.json` (CC BY 4.0) |
-| MusicXML (public domain) | `data/mozart_k545_mvt1.musicxml` |
-| 논문 초고 (KO / EN) | `paper/paper_ko.md`, `paper/paper_en.md` |
-
-> The repository ships with two parallel editions, **`ko/`** (Korean) and
-> **`en/`** (English), sharing the same code base and analysis schema.
-
-저장소는 **`ko/`** (한국어판) 과 **`en/`** (영어판) 두 병렬 에디션을
-포함하며, 두 에디션 모두 동일한 코드 베이스와 분석 스키마를 공유한다.
-
-> **A Public Domain recording is bundled.** Each edition ships with
-> `assets/mozart_k545_mvt1.ogg`, a Public Domain performance by Robin
-> Alciatore distributed via Musopen and Wikimedia Commons (2:14,
-> 2.87 MB). No additional download is required. Users who prefer a
-> different recording, for example the András Schiff Carnegie Hall
-> (2015) commercial release, can drop their own file at
-> `assets/mozart_k545_mvt1.mp3` (the MP3 source is listed first in
-> `index.html`, so it takes precedence over the bundled OGG). The
-> interactive tap-calibration mode (press *T* and tap *Space* at six
-> landmark measures) re-anchors the measure-to-time mapping for any
-> recording in under a minute and persists the calibration in
-> `localStorage`. If the bundled audio is removed or fails to load,
-> the WebAudio metronome demo mode kicks in automatically so the
-> form-analysis visualization still operates.
-
-**Public Domain 녹음 번들 포함.** 각 에디션은 `assets/mozart_k545_
-mvt1.ogg`, Musopen 및 Wikimedia Commons 를 통해 배포되는 Robin
-Alciatore 의 Public Domain 연주 (2:14, 2.87 MB), 를 번들로 포함하여
-별도 다운로드 없이 즉시 작동한다. 다른 녹음을 선호하는 사용자 (예:
-András Schiff Carnegie Hall 2015 상용 음반) 는 `assets/mozart_k545_
-mvt1.mp3` 위치에 자신의 파일을 두면 된다 (MP3 source 가 `index.html`
-에 먼저 listed 되어 번들 OGG 보다 우선). *탭 보정 모드 (T 키 + 6개
-마디 지점 Space 탭)* 로 임의 녹음에 대해 마디–시간 매핑을 1분 이내에
-재고정하며 보정값은 `localStorage` 에 영구 저장된다. 번들 음원이
-제거되거나 로드 실패 시 WebAudio 메트로놈 데모 모드가 자동 활성화
-되어 형식 시각화는 계속 작동한다.
-
-> **Dependencies.** The only external runtime dependency is
-> *OpenSheetMusicDisplay* v1.8.7. Browser compatibility is verified on
-> Chrome 120+, Edge 120+, and Firefox 121+. Any static-file server suffices
-> (e.g., `python -m http.server`).
-
-**의존성.** 외부 런타임 의존성은 *OpenSheetMusicDisplay* v1.8.7 하나뿐
-이다. 브라우저 호환성은 Chrome 120+, Edge 120+, Firefox 121+ 에서
-검증되었다. 정적 파일 서버 (예: `python -m http.server`) 면 충분하다.
-
-> **Forthcoming RCT data.** Anonymized response data from the planned
-> controlled trial will be released under CC BY 4.0 on OSF.io once
-> IRB-approved data collection and analysis are complete.
-
-**예정된 RCT 데이터.** 계획된 통제군 시험의 익명화된 응답 데이터는
-IRB 승인을 받은 수집·분석이 완료되는 대로 OSF.io 에 CC BY 4.0 으로
-공개될 예정이다.
+모든 산출물은 영구 식별자와 함께 공개된다. 소스 코드는
+https://github.com/rosyrosys/sonata-form-viz 에서 MIT 라이선스로
+이용 가능하며, v0.1.0 릴리스는
+[https://doi.org/10.5281/zenodo.20108497](https://doi.org/10.5281/zenodo.20108497)
+에 아카이브되어 있다. 분석 스키마 (`sonata_structure.json`),
+마디·시간 매핑 (`measure_times.json`), 그리고 본 원고 자체는 CC BY
+4.0 라이선스이며, 번들 참조 녹음은 Musopen 및 Wikimedia Commons
+를 통해 배포되는 Public Domain 연주이다. 본 도구의 외부 런타임
+의존성은 OpenSheetMusicDisplay v1.8.7 하나뿐이며, 어떤 정적 파일
+서버에서든 작동한다. 참조 녹음이 번들된 라이브 배포는
+https://rosyrosys.github.io/sonata-form-viz/ 에서 reviewer 이용
+가능하다. 녹음 교체 절차, 탭 보정 흐름, 브라우저 호환성 매트릭스,
+그리고 향후 무작위 통제군 시험 응답 데이터셋의 공개 일정 등 상세한
+재현 가능성 노트는 보조자료 `REPRODUCIBILITY.md` 와 Zenodo
+레코드에 제공된다.
 
 
 # Acknowledgments / 사사
