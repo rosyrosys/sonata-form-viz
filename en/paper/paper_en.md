@@ -208,24 +208,17 @@ classifier and a precise pedagogical instrument are complementary
 rather than competing, since they need not target the same
 evaluation metric.
 
-Table 2 positions the present work against several adjacent systems.
-
-**Table 2.** Comparison with related visualization, annotation, and
-score-following tools.
-
-| Tool | Hierarchical formal labels | Score-audio sync | Color on score itself | Section jump | Open source | Learner-facing |
-|---|---|---|---|---|---|---|
-| Sonic Visualiser (Cannam et al. 2010) | △ (annotation only) | × | × | △ | ✓ | △ |
-| Soundslice (commercial) | × | ✓ | × | △ | × | ✓ |
-| iAnalyse (Couprie 2008) | ✓ | △ | △ | ✓ | ✓ | △ |
-| Verovio Humdrum Viewer (Sapp 2017) | △ | △ | × | × | ✓ | △ |
-| MuseScore Web (commercial) | × | ✓ | × | × | × | ✓ |
-| Dezrann (Ballester et al. 2025) | ✓ (label-based) | ✓ | △ (track labels) | ✓ | ✓ | ✓ |
-| **This work** | **✓ (two-level)** | **✓** | **✓ (measure-painted)** | **✓** | **✓** | **✓** |
-
-The novelty claim is therefore narrower than "first open-source
-sonata-form visualization": it is "first open-source, learner-facing
-tool combining measure-painted hierarchical formal color, score-audio
+Several adjacent systems share individual features with the present
+work but not the combination. Sonic Visualiser (Cannam et al. 2010)
+and iAnalyse (Couprie 2008) support free-form annotation but are not
+learner-facing tools for sonata-form pedagogy; Verovio Humdrum Viewer
+(Sapp 2017) renders score but does not synchronize it with audio for
+section navigation; commercial score-followers such as Soundslice and
+MuseScore Web synchronize audio and score but neither expose
+hierarchical formal labels nor release source. The novelty claim is
+therefore narrower than "first open-source sonata-form
+visualization": it is "first open-source, learner-facing tool
+combining measure-painted hierarchical formal color, score-audio
 synchronization, and a separable analysis-as-data schema."
 
 
@@ -259,14 +252,14 @@ productive as a teaching case:
 
 ## 3.2 Two-Level Formal Layout
 
-Table 3 presents the formal analysis encoded in the tool. The
+Table 2 presents the formal analysis encoded in the tool. The
 two-level grain, large *sections* containing *theme zones*, follows
 the SHMRG tradition of LaRue (1970) and the *Sonata Theory* framework
 of Hepokoski and Darcy (2006), simplified for pedagogical use by
 collapsing the transition into the primary-theme zone when the latter
 is harmonically continuous.
 
-**Table 3.** Two-level formal analysis of K. 545, mvt. I (73 measures).
+**Table 2.** Two-level formal analysis of K. 545, mvt. I (73 measures).
 Times are given for a representative recording at ♩ ≈ 132 with the
 exposition repeat taken.
 
@@ -431,9 +424,9 @@ repeats (§4.5).
 ## 4.1 The Three Representations
 
 The three representations and their update behaviour on each
-`timeupdate` event are summarized in Table 4.
+`timeupdate` event are summarized in Table 3.
 
-**Table 4.** The three coordinated representations and their behaviour
+**Table 3.** The three coordinated representations and their behaviour
 on each `timeupdate` event.
 
 | Representation | Encoding | Update on `timeupdate` |
@@ -458,9 +451,9 @@ accessibility: no information is conveyed by color alone, theme
 zones (P / S / codetta) are also distinguished by accent bars and
 text labels, following the kind of multi-channel encoding practice
 that Kuo and Chuang (2013) systematize at the pitch level for
-beginner notation. The mapping is summarized in Table 5.
+beginner notation. The mapping is summarized in Table 4.
 
-**Table 5.** Color encoding scheme for section-level form labels and
+**Table 4.** Color encoding scheme for section-level form labels and
 the now-position cursor.
 
 | Element | Color | Role |
@@ -616,7 +609,7 @@ by the host institution.
 
 ## 6.2 SUS result
 
-**Table 6.** SUS response from the single-expert reviewer.
+**Table 5.** SUS response from the single-expert reviewer.
 
 | | Expert |
 |---|---|
