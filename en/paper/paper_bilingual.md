@@ -1009,131 +1009,49 @@ Visualiser 와 Verovio Humdrum Viewer 는 악보를 정적인 것으로,
 
 # 5. A Classroom Walk-Through / 교실 워크-스루
 
-> This section illustrates how a teacher using the tool might surface
-> the analytical claims of §3.3 in a single 30-minute class meeting.
+> The affordances of §4 are intended to support a teaching grammar of
+> the form *choose a passage, choose the representations to foreground,
+> listen, look, and let students make the analytical observation
+> themselves*. A representative 30-minute lesson on the §3.3 analytical
+> puzzle proceeds in five short stages: (1) a first hearing with color
+> disabled to elicit informal section guesses; (2) a color reveal so
+> students can verify section boundaries on both the timeline and the
+> score; (3) section-jump playback of exposition P (C major) and S
+> (G major), from which students deduce the I→V move rather than being
+> told it; (4) the pedagogical pivot, jumping to recapitulation P
+> (F major) and using section-loop and A/B comparison to make the
+> recap audibly and visibly recognizable as the same theme *transposed*
+> rather than "wrong"; and (5) a synthesis stage in which the schematic
+> *exposition I→V vs. recapitulation IV→I* is now grounded in what the
+> class has just heard and seen, allowing the synthesizing question
+> "why did Mozart start the recap in the 'wrong' key?" to be answered
+> from the materials rather than from authority. This walk-through is
+> not the only possible use of the tool, but it illustrates how the
+> affordances of §4 combine into a complete teaching unit, and it forms
+> the procedure that the expert reviewer in §6 was asked to enact.
 
-본 절은 §3.3 의 분석적 주장을 30분 단일 수업에서 본 도구를 사용해
-어떻게 끌어낼 수 있는지 예시한다.
-
-## 5.1 First Hearing (5 minutes) / 첫 청취 (5분)
-
-> The teacher opens the tool with the audio loaded and *color
-> visualization disabled*. The class hears the entire movement once,
-> including the exposition repeat, while the score scrolls and the red
-> playhead moves along the (still uncolored) timeline. The instruction
-> is simply: "Where do you think the movement is divided?" The
-> preserved exposition repeat surfaces a useful preliminary observation
->, that the music *returns to the same material* approximately one
-> minute in.
-
-교사는 음원을 로딩한 상태로, *색상 시각화를 비활성화* 하고 도구를 연다.
-학급은 악장 전체를 한 번 듣는다, 제시부 반복 포함, 그동안 악보는
-스크롤되고 빨간 재생 헤드는 (아직 색이 없는) 타임라인을 따라 이동한다.
-지시는 단순하다: "이 악장은 어디에서 나뉜다고 생각하나요?" 보존된
-제시부 반복은 유용한 예비 관찰을 표면화한다, 음악이 약 1분 지점에서
-*같은 재료로 돌아온다* 는 사실이다.
-
-## 5.2 Color Reveal and Section Identification (8 minutes) / 색상 공개와 섹션 식별 (8분)
-
-> The teacher toggles section color on. The exposition / development /
-> recapitulation tripartite division is now visible at a glance on the
-> timeline; the same colors are simultaneously painted as measure-level
-> overlays on the score. Students are asked to identify, by clicking
-> the timeline segments, the boundary measures of each section. Because
-> the colored regions are now both *temporal* (timeline) and *spatial*
-> (score), students can verify their guesses on either representation.
-
-교사는 섹션 색상을 켠다. 제시부 / 발전부 / 재현부 의 삼분 구조가 이제
-타임라인에서 한눈에 보이며, 동일한 색상이 동시에 악보 위에 마디 단위
-오버레이로 입혀진다. 학생들은 타임라인 구간을 클릭함으로써 각 섹션의
-경계 마디를 식별하라는 과제를 받는다. 색상 영역이 이제 *시간적* (타임
-라인) 이면서 동시에 *공간적* (악보) 이므로, 학생들은 두 표상 어디에
-서든 자신의 추측을 검증할 수 있다.
-
-## 5.3 Exposition P and S (5 minutes) / 제시부 P 와 S (5분)
-
-> Using the section-jump buttons, the teacher plays just the
-> exposition's P region (mm. 1–13), then just S (mm. 14–25). The
-> analysis pane displays "C major" then "G major"; the boundary is
-> auditorily *and* visually marked. The teacher asks: "What harmonic
-> move did Mozart just make?" The answer (I → V) is no longer something
-> the teacher tells the class but something the class deduces from the
-> visible key change.
-
-섹션 점프 버튼을 사용해 교사는 제시부의 P 영역 (mm. 1–13) 만을, 그
-다음 S (mm. 14–25) 만을 재생한다. 분석 패널은 "다장조" 다음 "사장조"
-를 표시하며, 경계는 청각적 *이면서* 시각적으로 표시된다. 교사는 묻는다:
-"모차르트가 방금 어떤 화성 진행을 했나요?" 답 (I → V) 은 이제 교사가
-학급에게 *말해주는* 것이 아니라, 가시적 조성 변화로부터 학급이 *추론*
-하는 대상이다.
-
-## 5.4 The Critical Moment: Recapitulation P (8 minutes) / 결정적 순간: 재현부 P (8분)
-
-> The teacher jumps to recapitulation P (mm. 42–58, audio time around
-> 2:12). The analysis pane displays "**F major**." This is, in our
-> experience, the moment students lean forward. Two follow-up actions
-> make the pedagogical point:
-
-교사는 재현부 P (mm. 42–58, 음원 시간 약 2:12) 로 점프한다. 분석 패널은
-"**바장조**" 를 표시한다. 저자의 경험상, 이것이 학생들이 앞으로
-기울이는 순간이다. 두 가지 후속 동작이 교수법적 핵심을 만든다:
-
-> 1. *Loop on*. The teacher engages section loop and lets the class
->    hear recap P for one full pass. The label "F major" is held in
->    view. The visual and auditory representations of *the same
->    primary theme in a different key* are now jointly available.
-> 2. *A / B compare*. The teacher then loop-toggles between exposition
->    P and recap P, playing each twice. Most students hear *the same
->    tune in two different keys*, and recognize the recap as
->    *transposed*, not "wrong."
-
-1. *루프 켜기*. 교사는 섹션 루프를 활성화하여 학급이 재현부 P 를 한 번
-   완전히 듣게 한다. "바장조" 라벨은 시야에 유지된다. *동일한 주요
-   주제가 다른 조성에서* 의 시각·청각 표상이 이제 동시에 가용해진다.
-2. *A / B 비교*. 그다음 교사는 제시부 P 와 재현부 P 를 루프 토글하며
-   각각 두 번씩 재생한다. 대부분의 학생들이 *두 다른 조성에서의 같은
-   곡조* 를 듣게 되고, 재현부를 "틀린" 것이 아닌 *전조된* 것으로
-   인식한다.
-
-## 5.5 Synthesis (4 minutes) / 종합 (4분)
-
-> The teacher displays the schematic comparison:
->
-> > Exposition: P in C → S in G  *(I → V, motion of a fifth up)*
-> > Recapitulation: P in F → S in C  *(IV → I, motion of a fifth up)*
-
-교사는 도식적 비교를 표시한다:
-
-> 제시부: P 다장조 → S 사장조 *(I → V, 5도 위로 이동)*
-> 재현부: P 바장조 → S 다장조 *(IV → I, 5도 위로 이동)*
-
-> The schematic is now grounded in what the class has just heard *and*
-> seen. The teacher poses the synthesizing question: "Why did Mozart
-> start the recap in the 'wrong' key?", and the class, having seen S
-> land safely in C, has the materials to answer.
-
-이 도식은 이제 학급이 방금 듣고 *또* 본 것에 근거한다. 교사는 종합
-질문을 던진다: "왜 모차르트는 '틀린' 조성에서 재현부를 시작했을까요?"
-그리고 학급은, S 가 다장조에 안전하게 도착하는 것을 보았기에, 답할
-재료를 가지고 있다.
-
-> The walk-through above is not the only possible use of the tool, and
-> not every passage requires color or looping. But it illustrates the
-> basic *grammar of teaching with the tool*: choose a passage, choose
-> the representations to foreground, listen, look, and let students
-> make the analytical observation themselves.
-
-위 워크-스루가 본 도구의 유일한 사용법은 아니며, 모든 구간이 색상이나
-루프를 필요로 하는 것도 아니다. 그러나 이는 *본 도구로 가르치는 기본
-문법* 을 예시한다: 한 구간을 선택하고, 전경화할 표상을 선택하고, 듣고,
-보고, 학생들이 스스로 분석적 관찰을 만들도록 두는 것이다.
+§4 의 affordance 들은 *한 구간을 선택하고, 전경화할 표상을 선택하고,
+듣고, 보고, 학생들이 스스로 분석적 관찰을 만들도록 두는* 교수 문법을
+지원하도록 설계되어 있다. §3.3 의 분석적 퍼즐을 다루는 대표적 30분
+수업은 다섯 단계로 진행된다: (1) 색상을 끈 상태의 첫 청취로 비공식적
+섹션 추측을 유도하고, (2) 색상을 켜서 학생들이 타임라인과 악보 양쪽
+에서 섹션 경계를 검증하게 하고, (3) 섹션 점프로 제시부 P (다장조) 와
+S (사장조) 를 재생하여 학생들이 I→V 진행을 *듣고* 추론하게 하고,
+(4) 교수법적 전환점인 재현부 P (바장조) 로 점프하여 섹션 루프와 A/B
+비교로 재현부가 "틀린" 것이 아니라 *전조된 같은 주제* 임을 청각·시각
+양쪽에서 알아보게 하며, (5) 종합 단계에서 *제시부 I→V 대 재현부
+IV→I* 도식이 학급이 방금 듣고 본 것에 근거하여, "왜 모차르트는
+'틀린' 조성에서 재현부를 시작했을까?" 라는 종합 질문에 권위가 아닌
+재료로 답할 수 있게 한다. 본 워크-스루는 본 도구의 유일한 사용법이
+아니지만, §4 의 affordance 가 어떻게 하나의 완결된 교수 단위로 결합
+되는지를 예시하며, §6 의 전문가 검토자가 수행하도록 요청받은 절차이다.
 
 
 # 6. Preliminary Single-Expert Pilot Review / 단일 전문가 사전 파일럿 검토
 
 > Empirical validation of the tool's pedagogical claims through a
 > full randomized controlled trial with undergraduate music-
-> education learners is reserved for follow-up work (§7.3). As a
+> education learners is reserved for follow-up work (§7). As a
 > *preliminary* validation aimed at refining the planned RCT and
 > identifying design risks before learner-facing deployment, we
 > conducted a single-expert pilot review with one domain reviewer
@@ -1143,7 +1061,7 @@ Visualiser 와 Verovio Humdrum Viewer 는 악보를 정적인 것으로,
 > in §6.5.
 
 학부 음악교육 학습자 대상의 전체 무작위 통제군 시험을 통한 도구의
-교수법적 주장의 실증적 검증은 후속 작업(§7.3)으로 유보한다. 학습자
+교수법적 주장의 실증적 검증은 후속 작업(§7)으로 유보한다. 학습자
 배포 이전에 계획된 RCT 를 정련하고 설계 위험을 식별하는 *사전*
 검증으로서, 음악교육 현장에서 15년 이상의 경력을 가진 단일 도메인
 전문가와의 파일럿 검토를 수행하였다. 이는 일반화 가능한 전문가 패널이
@@ -1329,112 +1247,56 @@ C5 (한 작품 깊이 vs 다곡 확장) 에 대해 전문가는 "다양한 작�
 > methodology; and the pilot was self-administered rather than
 > moderated. The four themes in §6.3 should be read as hypotheses
 > generated by one informed observer, to be tested in the RCT
-> planned in §7.3.
+> planned in §7.
 
 본 파일럿은 단일 전문가 검토이지 일반화 가능한 실증 연구가 아니다.
 n=1; 최대 SUS 점수는 학습자 대표성 결과가 아닌 긍정 성향의 개별
 전문가를 시사함; 6개 개방형 응답 모두 짧아 심층적 주제 분석을
 제한함; 전문가 응답이 방법론보다 *설계* 쪽으로 치우침; 그리고
 파일럿이 사회자 진행이 아닌 자가 기입이었음. §6.3 의 네 주제는
-한 명의 informed observer 가 생성한 *가설* 로 읽혀야 하며, §7.3 에
+한 명의 informed observer 가 생성한 *가설* 로 읽혀야 하며, §7 에
 계획된 RCT 에서 검증되어야 한다.
 
 
 # 7. Discussion / 논의
 
-## 7.1 Pedagogical Implications / 교수법적 함의
+> The synchronized color-coded view makes K. 545's subdominant
+> recapitulation visually self-evident as a *function-preserving*
+> deformation rather than a rule-breaking exception, the central
+> educational claim of this work and one that aligns with current
+> form-functional approaches to musical analysis (Caplin, 1998, 2009).
+> Methodologically, the contribution rests on three choices: treating
+> formal analysis as a versioned JSON object suitable for peer review
+> and machine reuse rather than ephemeral commentary; folding the
+> exposition repeat so analytical time remains monotonic under
+> performer-elected repeats; and a single-dependency architecture that
+> ages gracefully across the lifespan of a syllabus. The paper limits
+> itself to system design, implementation, and pedagogical positioning;
+> empirical validation of learning effects is deferred to a planned
+> randomized controlled trial comparing the synchronized condition
+> against audio + score and audio-only baselines, with subsequent work
+> extending the schema to additional sonata-form works (Beethoven Op.
+> 49 No. 2 mvt. I, Clementi Op. 36 No. 1 mvt. I), to other formal types
+> (rondo, theme-and-variations, fugue), to automatic score-audio
+> alignment (Nakamura et al., 2017), to a learner-driven authoring
+> mode, and to mobile form factors.
 
-> Traditional verbal teaching often presents the recapitulation as
-> "return-in-tonic," handling deformations as exceptions; K. 545's
-> subdominant recapitulation makes a stronger pedagogical claim
-> available, that Mozart *preserves the exposition's modulation pattern*
-> by shifting the starting key down a fifth, so that the secondary
-> theme arrives in the tonic on the second hearing. The synchronized
-> color-coded view makes this *function-preserving* character of the
-> deformation visually self-evident, aligning with current form-functional
-> approaches to musical analysis (Caplin, 1998, 2009). The pedagogical
-> move, from rules-and-exceptions to functional flexibility, is the
-> central educational claim of this work.
-
-전통적인 언어 중심 교수법은 재현부를 흔히 "으뜸조로의 회귀" 로 제시
-하며 비전형을 *예외* 로 처리한다. K. 545 의 하속조 재현은 더 강한
-교수법적 주장을 가용하게 한다, 모차르트는 시작 조성을 5도 아래로
-옮김으로써 *제시부의 전조 패턴을 보존* 하고, 결과적으로 부주제가 두
-번째 청취에서 으뜸조에 도착하게 한다. 동기화된 색상 코드 뷰는 이러한
-비전형의 *함수 보존(function-preserving)* 성격을 시각적으로 자명히
-만든다, 음악 분석의 현행 형식-함수 접근 (Caplin, 1998, 2009) 과
-정렬되어. 교수법적 이동, 규칙-예외 모델에서 함수적 유연성으로, 이
-본 작업의 중심 교육 주장이다.
-
-## 7.2 Methodological and Tooling Implications / 방법론적·도구적 함의
-
-> - **First-class status of formal analysis.** Encoding the analysis as
->   a versioned JSON object, not as ephemeral pedagogical commentary,
->   invites peer review of the analysis itself, machine reuse, and
->   reproducibility.
-> - **Exposition-repeat folding.** The non-monotonic mapping between
->   audio time and analytical time during performer-elected repeats is a
->   practical solution to a problem common across sonata-form recordings
->   and applicable wherever the form contains an indicated repeat.
-> - **Demo mode as a copyright-pragmatic default.** The WebAudio
->   metronome allows the form layer to function in environments where
->   no PD/CC audio is at hand, lowering the barrier to classroom
->   adoption.
-> - **Single-dependency architecture.** Course materials with one
->   external library age more gracefully than those with complex build
->   pipelines, a non-trivial property for syllabi designed to last
->   multiple cohorts.
-
-- **형식 분석의 일급(first-class) 지위.** 분석을 *덧없는 교수법 주석*
-  이 아닌 버전 관리되는 JSON 객체로 부호화하는 것은 *분석 자체에 대한
-  동료 검토*, 기계 재사용, 재현 가능성을 가능하게 한다.
-- **제시부 반복 폴딩.** 연주자 선택 반복 동안의 오디오 시간 ↔ 분석
-  시간 비단조 매핑은 소나타 형식 녹음에 보편적인 문제에 대한 실용적
-  해법이며, *표기된 반복이 있는 어떤 형식에든* 적용 가능하다.
-- **저작권-실용 디폴트로서의 데모 모드.** WebAudio 메트로놈은 PD/CC
-  음원이 손에 없는 환경에서도 형식 계층이 작동하게 하여 교실 채택
-  장벽을 낮춘다.
-- **단일 의존성 아키텍처.** 단일 외부 라이브러리로 구성된 교재는 복잡한
-  빌드 파이프라인을 가진 것보다 우아하게 노후화 한다, *여러 코호트에
-  걸쳐 지속될 강의 자료* 에 사소하지 않은 속성이다.
-
-## 7.3 Limitations and Future Work / 한계와 후속 연구
-
-> This paper limits itself to system design, implementation, and
-> pedagogical positioning. Empirical validation of learning effects is
-> deferred to subsequent work. Planned next steps:
-
-본 논문은 시스템 설계·구현·교수법적 위치 짓기에 자신을 한정한다. 학습
-효과의 정량적 검증은 별도의 후속 연구로 유보한다. 계획된 후속 단계:
-
-> 1. **Randomized controlled trial** comparing the synchronized condition
->    to (a) audio + score without synchronization and (b) audio + verbal
->    lecture only, with form-identification accuracy and the System
->    Usability Scale (Brooke, 1996) as primary measures.
-> 2. **Automatic score-audio alignment** (Nakamura et al., 2017) to
->    eliminate recording-dependence.
-> 3. **Multi-piece dataset.** Beethoven Op. 49 No. 2 mvt. I and Clementi
->    Op. 36 No. 1 mvt. I encoded against the same JSON schema for
->    comparative form study.
-> 4. **Authoring mode.** Learners label their own compositions with
->    formal regions, producing reusable analysis artefacts.
-> 5. **Other formal types.** Rondo, theme-and-variations, and fugue,
->    each requiring schema extension.
-> 6. **Mobile responsiveness.** Extending the desktop-first design to
->    tablet and phone form factors.
-
-1. **무작위 통제군 시험**: 동기화된 조건을 (a) 동기화 없는 음원 +
-   악보, (b) 음원 + 언어 강의 단독 과 비교하며, 형식 식별 정확도와
-   시스템 사용성 척도 (System Usability Scale; Brooke, 1996) 를 1차
-   측정치로 사용.
-2. **자동 score-audio alignment** (Nakamura et al., 2017), 녹음
-   의존성 해소.
-3. **다곡 데이터셋.** Beethoven Op. 49 No. 2 1악장 및 Clementi Op. 36
-   No. 1 1악장을 동일 JSON 스키마로 부호화하여 형식 비교 연구.
-4. **작성(authoring) 모드.** 학습자가 자신의 작곡에 형식 영역을 라벨
-   링하여 재사용 가능한 분석 산출물을 생산.
-5. **다른 형식 유형.** 론도, 주제와 변주, 푸가, 각각 스키마 확장 필요.
-6. **모바일 반응형.** 데스크탑 우선 디자인을 태블릿·폰 폼팩터로 확장.
+동기화된 색상 코드 뷰는 K. 545 의 하속조 재현부를 규칙 위반의 예외가
+아닌 *함수 보존(function-preserving)* 비전형으로 시각적으로 자명히
+만들며, 이는 본 작업의 중심 교육 주장이자 음악 분석의 현행 형식-함수
+접근 (Caplin, 1998, 2009) 과 정렬되는 입장이다. 방법론적으로 본 기여는
+세 가지 선택에 근거한다: 형식 분석을 덧없는 교수법 주석이 아니라
+동료 검토와 기계 재사용에 적합한 버전 관리 JSON 객체로 다룬다는 점,
+연주자 선택 반복 하에서도 분석 시간이 단조 유지되도록 제시부 반복을
+폴딩한다는 점, 그리고 강의 자료의 수명 주기에 걸쳐 우아하게 노후화
+하는 단일 의존성 아키텍처를 택했다는 점이다. 본 논문은 시스템 설계·
+구현·교수법적 위치 짓기에 한정하며, 학습 효과의 정량 검증은 동기화된
+조건을 음원 + 악보 및 음원 단독 기준선과 비교하는 무작위 통제군 시험
+계획으로 유보한다. 후속 작업은 스키마를 다른 소나타 형식 작품
+(Beethoven Op. 49 No. 2 1악장, Clementi Op. 36 No. 1 1악장) 으로,
+다른 형식 유형 (론도, 주제와 변주, 푸가) 으로, 자동 score-audio
+alignment (Nakamura et al., 2017) 로, 학습자 주도 작성(authoring)
+모드로, 그리고 모바일 폼팩터로 확장할 것이다.
 
 
 # 8. Conclusion / 결론

@@ -558,80 +558,33 @@ simpler both to implement and to visualize for a learner.
 
 # 5. A Classroom Walk-Through
 
-This section illustrates how a teacher using the tool might surface
-the analytical claims of §3.3 in a single 30-minute class meeting.
-
-## 5.1 First Hearing (5 minutes)
-
-The teacher opens the tool with the audio loaded and *color
-visualization disabled*. The class hears the entire movement once,
-including the exposition repeat, while the score scrolls and the red
-playhead moves along the (still uncolored) timeline. The instruction
-is simply: "Where do you think the movement is divided?" The
-preserved exposition repeat surfaces a useful preliminary observation
-that the music *returns to the same material* approximately one
-minute in.
-
-## 5.2 Color Reveal and Section Identification (8 minutes)
-
-The teacher toggles section color on. The exposition / development /
-recapitulation tripartite division is now visible at a glance on the
-timeline; the same colors are simultaneously painted as measure-level
-overlays on the score. Students are asked to identify, by clicking
-the timeline segments, the boundary measures of each section. Because
-the colored regions are now both *temporal* (timeline) and *spatial*
-(score), students can verify their guesses on either representation.
-
-## 5.3 Exposition P and S (5 minutes)
-
-Using the section-jump buttons, the teacher plays just the
-exposition's P region (mm. 1–13), then just S (mm. 14–25). The
-analysis pane displays "C major" then "G major"; the boundary is
-auditorily *and* visually marked. The teacher asks: "What harmonic
-move did Mozart just make?" The answer (I → V) is no longer something
-the teacher tells the class but something the class deduces from the
-visible key change.
-
-## 5.4 The Critical Moment: Recapitulation P (8 minutes)
-
-The teacher jumps to recapitulation P (mm. 42–58, audio time around
-2:12). The analysis pane displays "**F major**." This is, in our
-experience, the moment students lean forward. Two follow-up actions
-make the pedagogical point:
-
-1. *Loop on*. The teacher engages section loop and lets the class
-   hear recap P for one full pass. The label "F major" is held in
-   view. The visual and auditory representations of *the same
-   primary theme in a different key* are now jointly available.
-2. *A / B compare*. The teacher then loop-toggles between exposition
-   P and recap P, playing each twice. Most students hear *the same
-   tune in two different keys*, and recognize the recap as
-   *transposed*, not "wrong."
-
-## 5.5 Synthesis (4 minutes)
-
-The teacher displays the schematic comparison:
-
-> Exposition: P in C → S in G  *(I → V, motion of a fifth up)*
-> Recapitulation: P in F → S in C  *(IV → I, motion of a fifth up)*
-
-The schematic is now grounded in what the class has just heard *and*
-seen. The teacher poses the synthesizing question: "Why did Mozart
-start the recap in the 'wrong' key?", and the class, having seen S
-land safely in C, has the materials to answer.
-
-The walk-through above is not the only possible use of the tool, and
-not every passage requires color or looping. But it illustrates the
-basic *grammar of teaching with the tool*: choose a passage, choose
-the representations to foreground, listen, look, and let students
-make the analytical observation themselves.
+The affordances of §4 are intended to support a teaching grammar of
+the form *choose a passage, choose the representations to foreground,
+listen, look, and let students make the analytical observation
+themselves*. A representative 30-minute lesson on the §3.3 analytical
+puzzle proceeds in five short stages: (1) a first hearing with color
+disabled to elicit informal section guesses; (2) a color reveal so
+students can verify section boundaries on both the timeline and the
+score; (3) section-jump playback of exposition P (C major) and S (G
+major), from which students deduce the I→V move rather than being
+told it; (4) the pedagogical pivot, jumping to recapitulation P
+(F major) and using section-loop and A/B comparison to make the
+recap audibly and visibly recognizable as the same theme *transposed*
+rather than "wrong"; and (5) a synthesis stage in which the schematic
+*exposition I→V vs. recapitulation IV→I* is now grounded in what the
+class has just heard and seen, allowing the synthesizing question
+"why did Mozart start the recap in the 'wrong' key?" to be answered
+from the materials rather than from authority. This walk-through is
+not the only possible use of the tool, but it illustrates how the
+affordances of §4 combine into a complete teaching unit, and it forms
+the procedure that the expert reviewer in §6 was asked to enact.
 
 
 # 6. Preliminary Single-Expert Pilot Review
 
 Empirical validation of the tool's pedagogical claims through a full
 randomized controlled trial with undergraduate music-education
-learners is reserved for follow-up work (§7.3). As a *preliminary*
+learners is reserved for follow-up work (§7). As a *preliminary*
 validation aimed at refining the planned RCT and identifying design
 risks before learner-facing deployment, we conducted a single-expert
 pilot review with one domain reviewer holding more than 15 years of
@@ -824,66 +777,32 @@ outcomes. We list the limitations explicitly:
 
 These limitations are precisely why this pilot is reported as
 *preliminary expert pilot review* rather than as expert validation.
-The RCT planned in §7.3 is the empirical study against which the
+The RCT planned in §7 is the empirical study against which the
 tool's pedagogical claims will properly be tested.
 
 
 # 7. Discussion
 
-## 7.1 Pedagogical Implications
-
-Traditional verbal teaching often presents the recapitulation as
-"return-in-tonic," handling deformations as exceptions; K. 545's
-subdominant recapitulation makes a stronger pedagogical claim
-available, that Mozart *preserves the exposition's modulation pattern*
-by shifting the starting key down a fifth, so that the secondary
-theme arrives in the tonic on the second hearing. The synchronized
-color-coded view makes this *function-preserving* character of the
-deformation visually self-evident, aligning with current form-functional
-approaches to musical analysis (Caplin, 1998, 2009). The pedagogical
-move, from rules-and-exceptions to functional flexibility, is the
-central educational claim of this work.
-
-## 7.2 Methodological and Tooling Implications
-
-- **First-class status of formal analysis.** Encoding the analysis as
-  a versioned JSON object, not as ephemeral pedagogical commentary,
-  invites peer review of the analysis itself, machine reuse, and
-  reproducibility.
-- **Exposition-repeat folding.** The non-monotonic mapping between
-  audio time and analytical time during performer-elected repeats is a
-  practical solution to a problem common across sonata-form recordings
-  and applicable wherever the form contains an indicated repeat.
-- **Demo mode as a copyright-pragmatic default.** The WebAudio
-  metronome allows the form layer to function in environments where
-  no PD/CC audio is at hand, lowering the barrier to classroom
-  adoption.
-- **Single-dependency architecture.** Course materials with one
-  external library age more gracefully than those with complex build
-  pipelines, a non-trivial property for syllabi designed to last
-  multiple cohorts.
-
-## 7.3 Limitations and Future Work
-
-This paper limits itself to system design, implementation, and
-pedagogical positioning. Empirical validation of learning effects is
-deferred to subsequent work. Planned next steps:
-
-1. **Randomized controlled trial** comparing the synchronized condition
-   to (a) audio + score without synchronization and (b) audio + verbal
-   lecture only, with form-identification accuracy and the System
-   Usability Scale (Brooke, 1996) as primary measures.
-2. **Automatic score-audio alignment** (Nakamura et al., 2017) to
-   eliminate recording-dependence.
-3. **Multi-piece dataset.** Beethoven Op. 49 No. 2 mvt. I and Clementi
-   Op. 36 No. 1 mvt. I encoded against the same JSON schema for
-   comparative form study.
-4. **Authoring mode.** Learners label their own compositions with
-   formal regions, producing reusable analysis artefacts.
-5. **Other formal types.** Rondo, theme-and-variations, and fugue,
-   each requiring schema extension.
-6. **Mobile responsiveness.** Extending the desktop-first design to
-   tablet and phone form factors.
+The synchronized color-coded view makes K. 545's subdominant
+recapitulation visually self-evident as a *function-preserving*
+deformation rather than a rule-breaking exception, the central
+educational claim of this work and one that aligns with current
+form-functional approaches to musical analysis (Caplin, 1998, 2009).
+Methodologically, the contribution rests on three choices: treating
+formal analysis as a versioned JSON object suitable for peer review
+and machine reuse rather than ephemeral commentary; folding the
+exposition repeat so analytical time remains monotonic under
+performer-elected repeats; and a single-dependency architecture that
+ages gracefully across the lifespan of a syllabus. The paper limits
+itself to system design, implementation, and pedagogical positioning;
+empirical validation of learning effects is deferred to a planned
+randomized controlled trial comparing the synchronized condition
+against audio + score and audio-only baselines, with subsequent work
+extending the schema to additional sonata-form works (Beethoven Op.
+49 No. 2 mvt. I, Clementi Op. 36 No. 1 mvt. I), to other formal types
+(rondo, theme-and-variations, fugue), to automatic score-audio
+alignment (Nakamura et al., 2017), to a learner-driven authoring
+mode, and to mobile form factors.
 
 
 # 8. Conclusion
@@ -945,7 +864,7 @@ expert-evaluation methodology. It does not include learner-subjects
 evaluation, animal subjects, or human-derived data beyond the
 single expert pilot reviewer who provided written informed consent
 for anonymous reporting. The planned randomized controlled trial
-outlined in §7.3, which will involve undergraduate music-education
+outlined in §7, which will involve undergraduate music-education
 majors as participants and the System Usability Scale (Brooke,
 1996) as a primary measure, will be conducted under the appropriate
 institutional review board approval and reported in a separate
