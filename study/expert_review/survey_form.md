@@ -224,4 +224,4 @@ W. A. 모차르트, *피아노 소나타 다장조*, K. 545, 1악장
 **연구 책임자:** [성명], [소속], [이메일]
 **투고 예정 학술지:** *Transactions of the International Society for Music Information Retrieval* (TISMIR), Tools-and-Datasets 트랙
 **도구 URL:** https://rosyrosys.github.io/sonata-form-viz/
-**저장소:** https://github.com/rosyrosys/sonata-form-viz (Zenodo DOI: 10.5281/zenodo.20108497)
+**저장소:** https://github.com/rosyrosys/sonata-form-viz (Zenodo DOI: 10.5281/zenodo.20269419)

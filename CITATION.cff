@@ -15,8 +15,8 @@ authors:
     affiliation: "[Affiliation]"
     # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
 type: software
-version: "0.1.0"
-date-released: "2026-05-10"
+version: "0.1.1"
+date-released: "2026-05-18"
 url: "https://github.com/rosyrosys/sonata-form-viz"
 repository-code: "https://github.com/rosyrosys/sonata-form-viz"
 license: MIT
@@ -33,6 +33,6 @@ keywords:
   - digital musicology
   - multimodal learning
 identifiers:
-  - description: "DOI issued by Zenodo for v0.1.0."
+  - description: "DOI issued by Zenodo for v0.1.1 (software-only archive)."
     type: doi
-    value: "10.5281/zenodo.20108497"
+    value: "10.5281/zenodo.20269419"
