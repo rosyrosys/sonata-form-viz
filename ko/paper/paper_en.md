@@ -1,6 +1,6 @@
 [ARTICLE TYPE: Tools and Datasets Article]
 
-# Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545
+# Teaching Sonata Form Through Synchronized Visualization: Mozart's K. 545
 
 *[Author details are not included in this manuscript file as the peer
 review process is blinded. Author names, affiliations, contact details

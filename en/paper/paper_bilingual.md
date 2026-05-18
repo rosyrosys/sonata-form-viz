@@ -1,6 +1,6 @@
 ---
-title: "Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545"
-title_ko: "동기화된 다중 표상 시각화를 통한 소나타 형식 교육: 모차르트 K. 545 를 사례로 한 오픈소스 웹 도구의 설계·구현·평가"
+title: "Teaching Sonata Form Through Synchronized Visualization: Mozart's K. 545"
+title_ko: "동기화 시각화를 통한 소나타 형식 교육: 모차르트 K. 545"
 note: "Bilingual paragraph-by-paragraph manuscript. English paragraph first, Korean translation immediately below in blockquote form. Generated for translation review and side-by-side reading; not the submission file."
 date: 2026-05-15
 ---
@@ -8,8 +8,8 @@ date: 2026-05-15
 [ARTICLE TYPE: Tools and Datasets Article]
 [기사 유형: 도구·데이터셋 논문]
 
-# Teaching Sonata Form Through Synchronized Multi-Representational Visualization: Design, Implementation, and Evaluation of an Open-Source Web Tool Using Mozart's K. 545
-# 동기화된 다중 표상 시각화를 통한 소나타 형식 교육: 모차르트 K. 545 를 사례로 한 오픈소스 웹 도구의 설계·구현
+# Teaching Sonata Form Through Synchronized Visualization: Mozart's K. 545
+# 동기화 시각화를 통한 소나타 형식 교육: 모차르트 K. 545
 
 *[Author details are not included in this manuscript file as the peer
 review process is blinded. Author names, affiliations, contact details
