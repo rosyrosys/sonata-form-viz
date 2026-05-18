@@ -59,20 +59,19 @@ sonata-form-viz/
 │   │   ├── sonata_structure.json   formal analysis (sections / themes)
 │   │   ├── measure_times.json      measure ↔ time mapping
 │   │   └── mozart_k545_mvt1.musicxml + .mxl
-│   ├── paper/
-│   │   ├── paper_ko.md / .docx     Korean paper draft
-│   │   ├── paper_en.md / .docx     English paper draft
-│   │   ├── submission_targets.md   Korean journal recommendations
-│   │   └── submission_targets_en.md
 │   └── assets/README.md            audio sourcing instructions
 └── en/                 English edition (same structure, translated)
 ```
 
+The accompanying manuscript is maintained in a separate location
+and is not bundled with the tool source; see the *Citation* section
+below for the persistent identifier and the published version when
+available.
+
 ## License
 
-- **Code** (`*.js`, `*.css`, `*.html`, `*.ps1`): MIT (see [LICENSE](./LICENSE))
-- **Analysis data** (`data/*.json`) and **paper drafts** (`paper/*.md`):
-  CC BY 4.0
+- **Code** (`*.js`, `*.css`, `*.html`): MIT (see [LICENSE](./LICENSE))
+- **Analysis data** (`data/*.json`): CC BY 4.0
 - **MusicXML** of K. 545 included is in the public domain (Mozart, 1788)
 - **Audio is NOT included.** Users must supply their own legally obtained
   recording. Public-domain recordings are available from
