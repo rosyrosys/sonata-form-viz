@@ -276,19 +276,24 @@ OpenSheetMusicDisplay 로 렌더하고 마디 단위로 섹션과 주제 영역 
 > and that activating both channels increases learning efficiency.
 > Mayer's (2009) cognitive theory of multimedia learning extends this to
 > instructional design through three principles particularly relevant
-> here:
+> here, which the tool implements as summarized in Table 1.
 
 Paivio (1991) 의 이중 부호화 이론(dual coding theory) 은 언어적·비언어적
 표상이 *분리된 인지 채널* 을 통해 처리되며, 두 채널을 동시에 활성화할
 때 학습 효율이 증가한다고 본다. Mayer (2009) 의 멀티미디어 학습
 인지이론은 이를 수업 설계로 확장한다. 본 연구와 특히 관련 있는 세
-원리:
+원리를 본 도구가 어떻게 구현하는지는 표 1 에 정리되어 있다.
 
+> **Table 1.** Three Mayer (2009) multimedia-learning principles and
+> their implementation in the present tool.
+>
 > | Mayer's Principle | Implementation in This Tool |
 > |---|---|
 > | Modality | Audio (auditory) + score (visual) + label (verbal) co-presented |
 > | Temporal contiguity | All representations updated within a single render frame on `timeupdate` |
 > | Spatial contiguity | Color overlay drawn *directly on the score itself*, not in a separate panel |
+
+**표 1.** Mayer (2009) 의 세 가지 멀티미디어 학습 원리와 본 도구에서의 구현.
 
 | Mayer 원리 | 본 도구에서의 구현 |
 |---|---|
@@ -379,11 +384,11 @@ Allegraud et al. (2019) 이 MIR 커뮤니티를 위해 32곡 현악사중주
 교수 도구는 동일한 평가 지표를 겨냥할 필요가 없으므로 경쟁이 아닌
 상보 관계에 있다.
 
-> Table 1 positions the present work against several adjacent systems.
+> Table 2 positions the present work against several adjacent systems.
 
-표 1 은 본 연구를 인접 시스템들과 비교 배치한다.
+표 2 는 본 연구를 인접 시스템들과 비교 배치한다.
 
-> **Table 1.** Comparison with related visualization, annotation, and
+> **Table 2.** Comparison with related visualization, annotation, and
 > score-following tools.
 >
 > | Tool | Hierarchical formal labels | Score-audio sync | Color on score itself | Section jump | Open source | Learner-facing |
@@ -396,7 +401,7 @@ Allegraud et al. (2019) 이 MIR 커뮤니티를 위해 32곡 현악사중주
 > | Dezrann (Ballester et al. 2025) | ✓ (label-based) | ✓ | △ (track labels) | ✓ | ✓ | ✓ |
 > | **This work** | **✓ (two-level)** | **✓** | **✓ (measure-painted)** | **✓** | **✓** | **✓** |
 
-**표 1.** 관련 시각화·주석·악보 추종 도구와의 비교.
+**표 2.** 관련 시각화·주석·악보 추종 도구와의 비교.
 
 | 도구 | 위계적 형식 라벨 | 악보-음원 동기화 | 악보 자체 위 색상 | 섹션 점프 | 오픈소스 | 학습자 친화 |
 |---|---|---|---|---|---|---|
@@ -473,23 +478,23 @@ NMA IX/25). 피아노 교수법에서 거의 정전(canonical) 의 위상을 갖
 
 ## 3.2 Two-Level Formal Layout / 두 단계 형식 배치
 
-> Table 2 presents the formal analysis encoded in the tool. The
+> Table 3 presents the formal analysis encoded in the tool. The
 > two-level grain, large *sections* containing *theme zones*, follows
 > the SHMRG tradition of LaRue (1970) and the *Sonata Theory* framework
 > of Hepokoski and Darcy (2006), simplified for pedagogical use by
 > collapsing the transition into the primary-theme zone when the latter
 > is harmonically continuous.
 
-표 2 는 본 도구에 부호화된 형식 분석을 제시한다. 두 단계 입자성, *대
+표 3 은 본 도구에 부호화된 형식 분석을 제시한다. 두 단계 입자성, *대
 섹션* 이 *주제 영역* 을 포함하는, 은 LaRue (1970) 의 SHMRG 전통과
 Hepokoski & Darcy (2006) 의 *Sonata Theory* 프레임을 따르되, 경과부가
 화성적으로 연속될 때는 주주제 영역에 합쳐 교수법적 단순화를 적용한다.
 
-> **Table 2.** Two-level formal analysis of K. 545, mvt. I (73 measures).
+> **Table 3.** Two-level formal analysis of K. 545, mvt. I (73 measures).
 > Times are given for a representative recording at ♩ ≈ 132 with the
 > exposition repeat taken.
 
-**표 2.** K. 545 1악장 (73마디) 의 두 단계 형식 분석. 시간은 ♩ ≈ 132
+**표 3.** K. 545 1악장 (73마디) 의 두 단계 형식 분석. 시간은 ♩ ≈ 132
 의 대표 녹음에서 제시부 반복 포함 기준이다.
 
 > | Section | Theme zone | Measures | Key | Time |
@@ -780,11 +785,21 @@ OSMD 렌더링 악보가 함께 배치된 모습 — 을 보여준다. 이 섹�
 
 ## 4.1 The Three Representations / 세 가지 표상
 
+> The three representations and their update behaviour on each
+> `timeupdate` event are summarized in Table 4.
+
+세 가지 표상과 `timeupdate` 이벤트에서의 갱신 동작은 표 4 에 정리되어 있다.
+
+> **Table 4.** The three coordinated representations and their behaviour
+> on each `timeupdate` event.
+>
 > | Representation | Encoding | Update on `timeupdate` |
 > |---|---|---|
 > | **Color timeline** | Horizontal bar, two-level color, proportional widths | Red playhead advances |
 > | **Score** | MusicXML rendered as SVG; current measure highlighted | Cursor moves to current note |
 > | **Analytical pane** | Section + theme labels, current key, auto-commentary | Re-renders on label change |
+
+**표 4.** 세 가지 좌표 표상과 `timeupdate` 이벤트에서의 동작.
 
 | 표상 | 인코딩 | `timeupdate` 시 갱신 |
 |---|---|---|
@@ -815,20 +830,26 @@ ms) 1회 실행된다. 현재 마디가 세 표상 모두로 라우팅되어 단
 > zones (P / S / codetta) are also distinguished by accent bars and
 > text labels, following the kind of multi-channel encoding practice
 > that Kuo and Chuang (2013) systematize at the pitch level for
-> beginner notation.
+> beginner notation. The mapping is summarized in Table 5.
 
 색상 인코딩은 두 원칙을 따른다. 첫째, WCAG 2.1 AA 준수: 텍스트 대비가
 ≥ 4.5:1 유지된다. 둘째, 색맹 접근성: 정보를 색상만으로 전달하지 않는다
 주제 영역 (P / S / codetta) 은 액센트 막대와 텍스트 라벨로도 구분
 되며, 이는 Kuo and Chuang (2013) 이 초보자 기보에서 음높이 수준으로
-체계화한 다채널 인코딩 관행을 형식 위계 수준으로 확장한 것이다.
+체계화한 다채널 인코딩 관행을 형식 위계 수준으로 확장한 것이다. 매핑은
+표 5 에 정리되어 있다.
 
+> **Table 5.** Color encoding scheme for section-level form labels and
+> the now-position cursor.
+>
 > | Element | Color | Role |
 > |---|---|---|
 > | Exposition | Pastel blue | Stable, presenting |
 > | Development | Pastel amber | Tonally exploratory |
 > | Recapitulation | Pastel green | Returning, resolving |
 > | Now-position | Red | Playhead, score cursor |
+
+**표 5.** 섹션 단위 형식 라벨과 현재 위치 커서의 색상 인코딩 도식.
 
 | 요소 | 색상 | 역할 |
 |---|---|---|
@@ -1166,7 +1187,7 @@ https://rosyrosys.github.io/sonata-form-viz/ 의 라이브 배포를
 
 ## 6.2 SUS result / SUS 결과
 
-**Table 4 / 표 4.** Single-expert SUS response.
+**Table 6 / 표 6.** Single-expert SUS response.
 
 | | Expert |
 |---|---|

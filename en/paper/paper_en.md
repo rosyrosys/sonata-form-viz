@@ -149,7 +149,10 @@ representations are processed through *separate cognitive channels*,
 and that activating both channels increases learning efficiency.
 Mayer's (2009) cognitive theory of multimedia learning extends this to
 instructional design through three principles particularly relevant
-here:
+here, which the tool implements as summarized in Table 1.
+
+**Table 1.** Three Mayer (2009) multimedia-learning principles and
+their implementation in the present tool.
 
 | Mayer's Principle | Implementation in This Tool |
 |---|---|
@@ -205,9 +208,9 @@ classifier and a precise pedagogical instrument are complementary
 rather than competing, since they need not target the same
 evaluation metric.
 
-Table 1 positions the present work against several adjacent systems.
+Table 2 positions the present work against several adjacent systems.
 
-**Table 1.** Comparison with related visualization, annotation, and
+**Table 2.** Comparison with related visualization, annotation, and
 score-following tools.
 
 | Tool | Hierarchical formal labels | Score-audio sync | Color on score itself | Section jump | Open source | Learner-facing |
@@ -256,14 +259,14 @@ productive as a teaching case:
 
 ## 3.2 Two-Level Formal Layout
 
-Table 2 presents the formal analysis encoded in the tool. The
+Table 3 presents the formal analysis encoded in the tool. The
 two-level grain, large *sections* containing *theme zones*, follows
 the SHMRG tradition of LaRue (1970) and the *Sonata Theory* framework
 of Hepokoski and Darcy (2006), simplified for pedagogical use by
 collapsing the transition into the primary-theme zone when the latter
 is harmonically continuous.
 
-**Table 2.** Two-level formal analysis of K. 545, mvt. I (73 measures).
+**Table 3.** Two-level formal analysis of K. 545, mvt. I (73 measures).
 Times are given for a representative recording at ♩ ≈ 132 with the
 exposition repeat taken.
 
@@ -427,6 +430,12 @@ repeats (§4.5).
 
 ## 4.1 The Three Representations
 
+The three representations and their update behaviour on each
+`timeupdate` event are summarized in Table 4.
+
+**Table 4.** The three coordinated representations and their behaviour
+on each `timeupdate` event.
+
 | Representation | Encoding | Update on `timeupdate` |
 |---|---|---|
 | **Color timeline** | Horizontal bar, two-level color, proportional widths | Red playhead advances |
@@ -449,7 +458,10 @@ accessibility: no information is conveyed by color alone, theme
 zones (P / S / codetta) are also distinguished by accent bars and
 text labels, following the kind of multi-channel encoding practice
 that Kuo and Chuang (2013) systematize at the pitch level for
-beginner notation.
+beginner notation. The mapping is summarized in Table 5.
+
+**Table 5.** Color encoding scheme for section-level form labels and
+the now-position cursor.
 
 | Element | Color | Role |
 |---|---|---|
@@ -651,7 +663,7 @@ by the host institution.
 
 ## 6.2 SUS result
 
-**Table 4.** SUS response from the single-expert reviewer.
+**Table 6.** SUS response from the single-expert reviewer.
 
 | | Expert |
 |---|---|
