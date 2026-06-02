@@ -13,29 +13,18 @@ visual, and cognitive channels.
 
 This work is uniquely suited to teaching sonata form because it combines
 textbook-clear formal landmarks (P → S → codetta in the exposition) with a
-celebrated *deformation*: the recapitulation begins in the **subdominant
+celebrated *variant*: the recapitulation begins in the **subdominant
 (F major)** rather than the tonic.
-
-## Two language editions
-
-| Folder | URL when run locally |
-|---|---|
-| [`ko/`](./ko) | Korean edition — 한국어 |
-| [`en/`](./en) | English edition |
-
-Both editions share the same code, MusicXML, and analysis schema. They differ
-only in the text of the UI labels and analysis annotations.
 
 ## Quick start
 
 ```bash
-# from either ko/ or en/
+# from the en/ directory
 npx http-server . -p 8000     # or: python -m http.server 8000
 # then open http://localhost:8000/
 ```
 
 Place an audio file at `assets/mozart_k545_mvt1.mp3` (see
-[`ko/assets/README.md`](./ko/assets/README.md) or
 [`en/assets/README.md`](./en/assets/README.md) for legal sources).
 
 ## Features
@@ -53,14 +42,13 @@ Place an audio file at `assets/mozart_k545_mvt1.mp3` (see
 
 ```
 sonata-form-viz/
-├── ko/                 Korean edition
-│   ├── index.html · style.css · app.js
-│   ├── data/
-│   │   ├── sonata_structure.json   formal analysis (sections / themes)
-│   │   ├── measure_times.json      measure ↔ time mapping
-│   │   └── mozart_k545_mvt1.musicxml + .mxl
-│   └── assets/README.md            audio sourcing instructions
-└── en/                 English edition (same structure, translated)
+└── en/                 the tool
+    ├── index.html · style.css · app.js
+    ├── data/
+    │   ├── sonata_structure.json   formal analysis (sections / themes)
+    │   ├── measure_times.json      measure ↔ time mapping
+    │   └── mozart_k545_mvt1.musicxml + .mxl
+    └── assets/README.md            audio sourcing instructions
 ```
 
 The accompanying manuscript is maintained in a separate location
@@ -80,9 +68,9 @@ available.
 ## Citation
 
 If you use this tool in research or teaching, please cite the accompanying
-paper:
+article:
 
 ```
-[Author] (2026). 악보-음원-형식 동기화 시각화를 통한 소나타 형식
-학습 도구의 설계와 구현. [Journal name pending].
+[Author] (forthcoming). The Subdominant Recapitulation in Mozart's
+K. 545, with an Interactive Guide.
 ```
