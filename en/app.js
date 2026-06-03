@@ -26,6 +26,7 @@ const nowSection = $("now-section");
 const nowSubsection = $("now-subsection");
 const nowKey = $("now-key");
 const nowMeasure = $("now-measure");
+const nowHarmony = $("now-harmony");
 const analysisText = $("analysis-text");
 const timelineTrack = $("timeline-track");
 const timelinePlayhead = $("timeline-playhead");
@@ -456,6 +457,18 @@ function highlightCurrentOverlay(measureNumber) {
   });
 }
 
+function findHarmonicEventByMeasure(m) {
+  const events = structure && structure.harmonic_events;
+  if (!events || events.length === 0) return null;
+  // Find the most recent event whose measure is <= current measure.
+  let active = null;
+  for (const ev of events) {
+    if (ev.measure <= m) active = ev;
+    else break;
+  }
+  return active;
+}
+
 function updateNowPlaying(m, t) {
   const seg = findSegmentByMeasure(m);
   if (!seg) return;
@@ -467,6 +480,20 @@ function updateNowPlaying(m, t) {
   nowKey.textContent = seg.key;
   nowMeasure.textContent = `m. ${m}`;
   analysisText.textContent = seg.note || "";
+
+  // Harmonic-context badge (Roman-numeral analysis)
+  if (nowHarmony) {
+    const harm = findHarmonicEventByMeasure(m);
+    if (harm) {
+      nowHarmony.textContent = harm.label;
+      nowHarmony.title = harm.description || "";
+      nowHarmony.classList.toggle("key-moment", !!harm.key_moment);
+    } else {
+      nowHarmony.textContent = "—";
+      nowHarmony.title = "";
+      nowHarmony.classList.remove("key-moment");
+    }
+  }
 
   document.querySelectorAll(".jump-buttons button").forEach(b => {
     b.classList.toggle("active", b.dataset.section === seg.section);

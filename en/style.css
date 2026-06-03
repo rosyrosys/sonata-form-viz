@@ -131,6 +131,8 @@ body {
 .badge.subsection  { color: var(--c-P); border-color: var(--c-P); }
 .badge.key         { font-style: italic; color: var(--muted); }
 .badge.measure     { font-family: "JetBrains Mono", monospace; font-size: 0.8rem; }
+.badge.harmony     { font-family: "JetBrains Mono", monospace; font-size: 0.85rem; background: #f8f4ee; border-color: #d9c9a8; color: #5a3e10; }
+.badge.harmony.key-moment { background: #fff3c4; border-color: #d4a92e; color: #6a4a00; font-weight: 600; }
 
 /* ----- 3) 악보 ----- */
 #score-area {

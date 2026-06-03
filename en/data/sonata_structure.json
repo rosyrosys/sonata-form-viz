@@ -11,6 +11,62 @@
     "total_measures": 73
   },
   "analysis_source": "User-provided form analysis + Schiff Carnegie Hall 2015 timing",
+  "harmonic_events": [
+    {
+      "measure": 1,
+      "label": "C: I",
+      "description": "Primary theme establishes the tonic.",
+      "key_moment": false
+    },
+    {
+      "measure": 14,
+      "label": "G: I  (= C: V)",
+      "description": "Secondary theme arrives in the dominant. The exposition has moved I → V.",
+      "key_moment": true
+    },
+    {
+      "measure": 26,
+      "label": "G: V → I",
+      "description": "Codetta confirms the dominant.",
+      "key_moment": false
+    },
+    {
+      "measure": 29,
+      "label": "Development (modulating)",
+      "description": "Bass-line motion through g → d → a → C → a → F.",
+      "key_moment": false
+    },
+    {
+      "measure": 42,
+      "label": "F: I  (= C: IV)",
+      "description": "Subdominant recapitulation. The 'wrong key' is the structural starting point that allows the secondary theme to arrive in the tonic.",
+      "key_moment": true
+    },
+    {
+      "measure": 50,
+      "label": "Interpolation (mm. 50–53)",
+      "description": "Four bars added to manage the larger F → C modulatory distance; no counterpart in the exposition.",
+      "key_moment": false
+    },
+    {
+      "measure": 54,
+      "label": "Transition continues",
+      "description": "Modulatory motion toward the secondary theme's tonic arrival.",
+      "key_moment": false
+    },
+    {
+      "measure": 59,
+      "label": "C: I  (= F: V)",
+      "description": "Secondary theme arrives in the tonic. The form's central function (resolution to C) is achieved. The exposition's I → V is now reading as IV → I.",
+      "key_moment": true
+    },
+    {
+      "measure": 71,
+      "label": "C: V → I",
+      "description": "Codetta confirms the tonic with the same figuration as the exposition codetta — but now resolving authentically in C.",
+      "key_moment": false
+    }
+  ],
   "sections": [
     {
       "id": "exposition",
