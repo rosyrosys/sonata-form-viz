@@ -89,12 +89,24 @@ async function initScore() {
     drawComposer: false,
     drawCredits: false,
     drawPartNames: false,
+    drawSlurs: false,
     followCursor: false,
     pageFormat: "Endless",
     cursorsOptions: [
       { type: 0, color: "#d4504a", alpha: 0.55, follow: true }
     ],
   });
+  // Hide slurs: visual noise for a form/harmony analysis tool. Ties (which
+  // affect note duration) remain. Some OSMD versions expose this through
+  // EngravingRules instead of the constructor option, so set both.
+  try {
+    if (osmd.EngravingRules) {
+      osmd.EngravingRules.RenderSlurs = false;
+    }
+    if (osmd.rules && typeof osmd.rules.RenderSlurs !== "undefined") {
+      osmd.rules.RenderSlurs = false;
+    }
+  } catch (_) {}
   try {
     const r = await fetch(SCORE_URL);
     if (!r.ok) throw new Error("MusicXML missing (HTTP " + r.status + ")");
