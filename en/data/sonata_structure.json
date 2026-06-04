@@ -11,16 +11,6 @@
     "total_measures": 73
   },
   "analysis_source": "User-provided form analysis + Schiff Carnegie Hall 2015 timing",
-  "analytical_events": [
-    { "measure": 1,  "claim": "P: C baseline",            "ref": "§3.4",  "weight": 1 },
-    { "measure": 14, "claim": "S in V (I→V done)",        "ref": "§3.4",  "weight": 2 },
-    { "measure": 26, "claim": "Codetta in V (PAC/HC)",    "ref": "§3.6",  "weight": 2 },
-    { "measure": 29, "claim": "Development",              "ref": "§3.7",  "weight": 1 },
-    { "measure": 42, "claim": "★ Recap onset in IV",      "ref": "§3.9",  "weight": 3 },
-    { "measure": 50, "claim": "★ 4-bar interpolation",    "ref": "§3.14", "weight": 3 },
-    { "measure": 59, "claim": "★ S in I (IV→I done)",     "ref": "§3.11", "weight": 3 },
-    { "measure": 71, "claim": "Codetta in I (re-func.)",  "ref": "§3.16", "weight": 2 }
-  ],
   "harmonic_events": [
     {
       "measure": 1,

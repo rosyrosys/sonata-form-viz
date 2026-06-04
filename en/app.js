@@ -27,7 +27,6 @@ const nowSubsection = $("now-subsection");
 const nowKey = $("now-key");
 const nowMeasure = $("now-measure");
 const nowHarmony = $("now-harmony");
-const nowAnalytical = $("now-analytical");
 const analysisText = $("analysis-text");
 const timelineTrack = $("timeline-track");
 const timelinePlayhead = $("timeline-playhead");
@@ -470,18 +469,6 @@ function findHarmonicEventByMeasure(m) {
   return active;
 }
 
-function findAnalyticalEventByMeasure(m) {
-  const events = structure && structure.analytical_events;
-  if (!events || events.length === 0) return null;
-  // Find the most recent event whose measure is <= current measure.
-  let active = null;
-  for (const ev of events) {
-    if (ev.measure <= m) active = ev;
-    else break;
-  }
-  return active;
-}
-
 function updateNowPlaying(m, t) {
   const seg = findSegmentByMeasure(m);
   if (!seg) return;
@@ -505,22 +492,6 @@ function updateNowPlaying(m, t) {
       nowHarmony.textContent = "—";
       nowHarmony.title = "";
       nowHarmony.classList.remove("key-moment");
-    }
-  }
-
-  // Analytical-context badge (paper's core analytical claims)
-  if (nowAnalytical) {
-    const ana = findAnalyticalEventByMeasure(m);
-    nowAnalytical.classList.remove("weight-1", "weight-2", "weight-3");
-    if (ana) {
-      const refTxt = ana.ref ? ` [${ana.ref}]` : "";
-      nowAnalytical.textContent = ana.claim + refTxt;
-      nowAnalytical.title = ana.claim + (ana.ref ? `  (see ${ana.ref})` : "");
-      const w = Math.max(1, Math.min(3, ana.weight || 1));
-      nowAnalytical.classList.add("weight-" + w);
-    } else {
-      nowAnalytical.textContent = "—";
-      nowAnalytical.title = "";
     }
   }
 
