@@ -158,6 +158,16 @@ body {
 }
 #score-loading.hidden { display: none; }
 
+/* OSMD/VexFlow 가 그리는 슬러·phrasing curve 직접 차단 (form/harmony 도구
+   목적상 phrasing mark 는 visual noise). Ties 는 보통 별도 class 라 영향
+   없음. 만약 ties 도 사라지면 selector 를 좁힐 것. */
+#osmd-container svg .vf-curve,
+#osmd-container svg .vf-slur,
+#osmd-container svg g[class*="slur"],
+#osmd-container svg g[class*="curve"] {
+  display: none !important;
+}
+
 /* OSMD 측마다 배경 오버레이 (JS가 measure 박스 위에 div 삽입) */
 .measure-overlay {
   position: absolute;

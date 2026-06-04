@@ -96,17 +96,6 @@ async function initScore() {
       { type: 0, color: "#d4504a", alpha: 0.55, follow: true }
     ],
   });
-  // Hide slurs: visual noise for a form/harmony analysis tool. Ties (which
-  // affect note duration) remain. Some OSMD versions expose this through
-  // EngravingRules instead of the constructor option, so set both.
-  try {
-    if (osmd.EngravingRules) {
-      osmd.EngravingRules.RenderSlurs = false;
-    }
-    if (osmd.rules && typeof osmd.rules.RenderSlurs !== "undefined") {
-      osmd.rules.RenderSlurs = false;
-    }
-  } catch (_) {}
   try {
     const r = await fetch(SCORE_URL);
     if (!r.ok) throw new Error("MusicXML missing (HTTP " + r.status + ")");
@@ -122,6 +111,15 @@ async function initScore() {
       data = await r.text();
     }
     await osmd.load(data);
+    // Hide slurs AFTER load (load() can reset EngravingRules). Ties remain.
+    // Belt-and-suspenders: also CSS-hide vf-curve in style.css.
+    try {
+      const er = osmd.EngravingRules || (osmd.rules);
+      if (er) {
+        er.RenderSlurs = false;
+        if (typeof er.RenderPhrasingSlurs !== "undefined") er.RenderPhrasingSlurs = false;
+      }
+    } catch (_) {}
     // 기본 줌(또는 사용자 저장값) 을 load 후 render 전에 적용
     const savedZoom = parseFloat(localStorage.getItem("osmdZoom"));
     osmd.Zoom = isFinite(savedZoom) ? savedZoom : 0.7;
