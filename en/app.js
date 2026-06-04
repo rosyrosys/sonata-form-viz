@@ -314,10 +314,7 @@ function paintMeasureOverlays() {
     const x = a.AbsolutePosition.x * unitToVB * sx + offsetX;
     const y = a.AbsolutePosition.y * unitToVB * sy + offsetY;
     const w = a.Size.width * unitToVB * sx;
-    // bass staff bottom = top of bass staff + bass staff height (estimated as same as treble).
-    // Avoid b.Size.height which includes inter-system margin → makes overlays span next system.
-    const staffH = a.Size.height || 4;
-    const h = (b.AbsolutePosition.y - a.AbsolutePosition.y + staffH) * unitToVB * sy;
+    const h = (b.AbsolutePosition.y + b.Size.height - a.AbsolutePosition.y) * unitToVB * sy;
 
     const overlay = document.createElement("div");
     overlay.className = `measure-overlay ${seg.section}`;
