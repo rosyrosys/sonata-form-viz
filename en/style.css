@@ -162,7 +162,7 @@ body {
 .measure-overlay {
   position: absolute;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.15;
   border-radius: 2px;
   z-index: 1;
 }
